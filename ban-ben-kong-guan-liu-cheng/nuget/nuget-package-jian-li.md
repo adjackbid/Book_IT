@@ -40,7 +40,7 @@ Windows可以接直在Microsoft商店中直接下載安裝
 
 ![](../../.gitbook/assets/image%20%2815%29.png)
 
-在lib資料上按下右鍵→Add.NET folder→選擇版本\(若有多版本情下；亦可選擇no version\)
+在lib資料上按下右鍵→Add.NET folder→選擇版本\(若有多版本情下，可以建立多筆或是選擇no version不分版本\)
 
 ![](../../.gitbook/assets/image%20%2824%29.png)
 
