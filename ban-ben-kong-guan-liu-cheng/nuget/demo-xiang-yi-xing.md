@@ -7,7 +7,7 @@
 * LogTool\(負責處理Log Handling\)
 * DBTool\(負責處理DB層資料CRUD\)
 
-![](../../.gitbook/assets/image%20%2850%29.png)
+![](../../.gitbook/assets/image%20%2855%29.png)
 
 LogTool在寫入Log時，需要寫入DB，因此會使用到DBTools
 
@@ -15,7 +15,7 @@ LogTool在寫入Log時，需要寫入DB，因此會使用到DBTools
 
 在Nuget Package Explorer中，編輯Package metadata
 
-![](../../.gitbook/assets/image%20%2845%29.png)
+![](../../.gitbook/assets/image%20%2849%29.png)
 
 點選Edit dependencies
 
@@ -23,21 +23,21 @@ LogTool在寫入Log時，需要寫入DB，因此會使用到DBTools
 
 新增Group
 
-![](../../.gitbook/assets/image%20%2834%29.png)
+![](../../.gitbook/assets/image%20%2836%29.png)
 
 若相依的套件，有發佈在Nuget Server上\(私有或公有都可\)，即可點選下方按紐選擇套件
 
-![](../../.gitbook/assets/image%20%2849%29.png)
+![](../../.gitbook/assets/image%20%2854%29.png)
 
 Package Source選擇自架的Nuget Server
 
 點選相依的Nuget套件
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2851%29.png)
 
 加入後，按下ok即可
 
-![](../../.gitbook/assets/image%20%2854%29.png)
+![](../../.gitbook/assets/image%20%2860%29.png)
 
 存檔後，即可看到metadata中會顯示Dependencies
 
@@ -45,9 +45,9 @@ Package Source選擇自架的Nuget Server
 
 後續專案在安裝LogTool套件時，則會自動連同相依的DBTools套件一併安裝
 
-![](../../.gitbook/assets/image%20%2836%29.png)
+![](../../.gitbook/assets/image%20%2839%29.png)
 
 ![](../../.gitbook/assets/image%20%2827%29.png)
 
-![](../../.gitbook/assets/image%20%2848%29.png)
+![](../../.gitbook/assets/image%20%2853%29.png)
 

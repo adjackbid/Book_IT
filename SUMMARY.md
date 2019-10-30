@@ -21,7 +21,8 @@
 
 ## 開發工具
 
-* [Visual Studio](kai-fa-gong-ju/visual-studio.md)
+* [Visual Studio](kai-fa-gong-ju/visual-studio/README.md)
+  * [多重選取](kai-fa-gong-ju/visual-studio/duo-zhong-xuan-qu.md)
 
 ## 資料庫相關
 
