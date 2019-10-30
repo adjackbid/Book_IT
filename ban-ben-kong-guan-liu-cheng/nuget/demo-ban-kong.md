@@ -1,6 +1,6 @@
 # Demo-版控
 
-一般大型程式，通常會引用多個外部元件，例如以下，參考了DBTools.dll、LogTool.dll
+一般大型程式，通常會引用多個外部元件，例如以下範例程式，參考了DBTools.dll、LogTool.dll
 
 ![](../../.gitbook/assets/image%20%2853%29.png)
 
@@ -20,7 +20,7 @@
 
 ![](../../.gitbook/assets/image%20%2862%29.png)
 
-第一次專案開啟後，會出現參考移失的警告
+第一次專案開啟後，會出現參考遺失的警告
 
 ![](../../.gitbook/assets/image%20%2861%29.png)
 
@@ -38,7 +38,7 @@
 
 點選安裝即可完成更版。
 
-此版控程式，搭配CI/CD \(Jenkins/DevOps工具\)可有效管理/更新dll檔使用及避免用錯版本問題
+此版控程式，搭配CI/CD \(Jenkins等DevOps工具\)可有效管理/更新dll檔使用及避免用錯版本問題
 
 ![](../../.gitbook/assets/image%20%2851%29.png)
 
