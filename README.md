@@ -1,5 +1,11 @@
 # Index
 
+## 2019.10.30
+
+### Added
+
+* Visual Studio - 多重選取
+
 ## 2019.10.28
 
 ### Added
