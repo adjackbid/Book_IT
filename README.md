@@ -5,6 +5,7 @@
 ### Added
 
 * SignalR - ChatRoom \(ASP.Net Core Demo\)
+* ASP.Net Core - IIS Deployment
 
 ## 2019.10.30
 
