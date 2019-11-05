@@ -1,3 +1,7 @@
+---
+description: ASP.Net Core搭配SignalR示範ChatRoom功能
+---
+
 # ChatRoom
 
 ## 專案建立
@@ -208,6 +212,8 @@ namespace ChatRoom
 Debug Mode，開啟兩個視窗即可測試SignalR即時回應功能
 
 ![](../../.gitbook/assets/image%20%2888%29.png)
+
+以上參考微軟官方Demo範例\([https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/signalr?view=aspnetcore-3.0&tabs=visual-studio](https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/signalr?view=aspnetcore-3.0&tabs=visual-studio)\)
 
 ## 功能修改 - 新增連線功能及線上人數
 
