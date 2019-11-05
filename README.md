@@ -4,30 +4,30 @@
 
 ### Added
 
-* [SignalR - ChatRoom \(ASP.Net Core Demo\)](wang-ye-ji-shu/signalr/)
-* [ASP.Net Core - IIS Deployment](wang-ye-ji-shu/asp.net-core/)
+* [SignalR - ChatRoom \(ASP.Net Core Demo\)](wang-ye-ji-shu/signalr/chatroom.md)
+* [ASP.Net Core - IIS Deployment](wang-ye-ji-shu/asp.net-core/iis-deployment.md)
 
 ## 2019.10.30
 
 ### Added
 
-* Visual Studio - 多重選取
+* [Visual Studio - 多重選取](kai-fa-gong-ju/visual-studio/duo-zhong-xuan-qu.md)
 
 ## 2019.10.28
 
 ### Added
 
-* Nuget Package建立
-* Nuget Package發佈
-* Nuget Package安裝
-* Demo-相依性
-* Demo-版控
+* [Nuget Package建立](ban-ben-kong-guan-liu-cheng/nuget/nuget-package-jian-li.md)
+* [Nuget Package發佈](ban-ben-kong-guan-liu-cheng/nuget/nuget-package-fa-bu.md)
+* [Nuget Package安裝](ban-ben-kong-guan-liu-cheng/nuget/nuget-package-an-zhuang.md)
+* [Demo-相依性](ban-ben-kong-guan-liu-cheng/nuget/demo-xiang-yi-xing.md)
+* [Demo-版控](ban-ben-kong-guan-liu-cheng/nuget/demo-ban-kong.md)
 
 ## 2019.10.25
 
 ### Added
 
-* Nuget Server建置說明
+* [Nuget Server建置說明](ban-ben-kong-guan-liu-cheng/nuget/nuget-server-jian-zhi.md)
 
 
 
