@@ -4,11 +4,11 @@ ASP.Net Core Web應用程式在IIS佈署之注意事項
 
 假設網站實體位置如下：c:\Sample
 
-![](../../.gitbook/assets/image%20%2897%29.png)
+![](../../.gitbook/assets/image%20%2898%29.png)
 
 在Visual Studio中，點選專案→發佈
 
-![](../../.gitbook/assets/image%20%2899%29.png)
+![](../../.gitbook/assets/image%20%28100%29.png)
 
 點選「資料夾」，選擇c:\Sample，按下發佈即可
 
