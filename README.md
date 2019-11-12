@@ -1,5 +1,11 @@
 # Index
 
+## 2019.11.12
+
+### Added
+
+* [OPEN SOURCE - Dash Board - Grafana簡介及建置說明](open-source/grafana.md)
+
 ## 2019.11.05
 
 ### Added
