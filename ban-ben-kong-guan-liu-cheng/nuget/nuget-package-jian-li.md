@@ -18,7 +18,7 @@ Windows可以接直在Microsoft商店中直接下載安裝
 
 開啟後，點選「Create a new package」
 
-![](../../.gitbook/assets/image%20%28115%29.png)
+![](../../.gitbook/assets/image%20%28120%29.png)
 
 在Package metadata區塊中，可以編輯套件的資訊\(名稱、版本、作者、相依性\)
 
@@ -28,7 +28,7 @@ Windows可以接直在Microsoft商店中直接下載安裝
 
 將id、版本、title等資訊修改好，按下確認即可
 
-![](../../.gitbook/assets/image%20%2846%29.png)
+![](../../.gitbook/assets/image%20%2847%29.png)
 
 接著要將自製的dll檔打包至這個Package中
 
@@ -42,31 +42,31 @@ Windows可以接直在Microsoft商店中直接下載安裝
 
 在lib資料上按下右鍵→Add.NET folder→選擇版本\(若有多版本情下，可以建立多筆或是選擇no version不分版本\)
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2848%29.png)
 
 接著在新建的folder中加入dll檔
 
 ![](../../.gitbook/assets/image%20%2820%29.png)
 
-![&#x8A3B;&#xFF1A;.pdb&#x6A94;&#x53EF;&#x8996;&#x60C5;&#x6CC1;&#x52A0;&#x5165;&#xFF0C;&#x5176;&#x53EF;&#x8B93;&#x4F7F;&#x7528;&#x7AEF;debug tracing&#x7528;](../../.gitbook/assets/image%20%2863%29.png)
+![&#x8A3B;&#xFF1A;.pdb&#x6A94;&#x53EF;&#x8996;&#x60C5;&#x6CC1;&#x52A0;&#x5165;&#xFF0C;&#x5176;&#x53EF;&#x8B93;&#x4F7F;&#x7528;&#x7AEF;debug tracing&#x7528;](../../.gitbook/assets/image%20%2864%29.png)
 
-![](../../.gitbook/assets/image%20%2890%29.png)
+![](../../.gitbook/assets/image%20%2894%29.png)
 
 加入完成後，在存檔前，可以先用工具分析Package是否有設定問題
 
 Tools→Analyze Packge
 
-![](../../.gitbook/assets/image%20%2850%29.png)
+![](../../.gitbook/assets/image%20%2851%29.png)
 
 Package Analysis出現無任何問題，即可存檔
 
-![](../../.gitbook/assets/image%20%2894%29.png)
+![](../../.gitbook/assets/image%20%2898%29.png)
 
 File→Save As
 
 ![](../../.gitbook/assets/image%20%285%29.png)
 
-![](../../.gitbook/assets/image%20%2861%29.png)
+![](../../.gitbook/assets/image%20%2862%29.png)
 
 後續將產生的.nupkg檔發佈至Nuget Server上即可使用
 
