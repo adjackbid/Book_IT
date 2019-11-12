@@ -2,6 +2,10 @@
 
 * [Index](README.md)
 
+## 工作經驗
+
+* [MES工程師](gong-zuo-jing-yan/mes-gong-cheng-shi.md)
+
 ## 程式碼控管相關 <a id="ban-ben-kong-guan-liu-cheng"></a>
 
 * [Git工作流程](ban-ben-kong-guan-liu-cheng/git-gong-zuo-liu-cheng.md)
