@@ -8,7 +8,7 @@ description: ASP.Net Core搭配SignalR示範ChatRoom功能
 
 建立ASP.Net Core Web應用程式
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2848%29.png)
 
 ![](../../.gitbook/assets/image%20%2822%29.png)
 
@@ -28,9 +28,9 @@ description: ASP.Net Core搭配SignalR示範ChatRoom功能
 
 安裝 =&gt; 將signalr.js安裝至專案根目錄wwwroot/lib/@microsoft/signalr中
 
-![](../../.gitbook/assets/image%20%2885%29.png)
+![](../../.gitbook/assets/image%20%2887%29.png)
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](../../.gitbook/assets/image%20%2860%29.png)
 
 ## Hub建立
 
@@ -38,7 +38,7 @@ description: ASP.Net Core搭配SignalR示範ChatRoom功能
 
 建立ChatHub類別
 
-![](../../.gitbook/assets/image%20%2870%29.png)
+![](../../.gitbook/assets/image%20%2872%29.png)
 
 ```text
 using Microsoft.AspNetCore.SignalR;
@@ -60,7 +60,7 @@ namespace ChatRoom.Hubs
 
 Index頁面，新增2個input\(text\)、1個button、訊息列\(messagelist\)
 
-![](../../.gitbook/assets/image%20%2862%29.png)
+![](../../.gitbook/assets/image%20%2863%29.png)
 
 ```text
 @page
@@ -97,7 +97,7 @@ Index頁面，新增2個input\(text\)、1個button、訊息列\(messagelist\)
 
 新增chat.js \(~/js/目錄下\)
 
-![](../../.gitbook/assets/image%20%2880%29.png)
+![](../../.gitbook/assets/image%20%2882%29.png)
 
 chat.js
 
@@ -135,7 +135,7 @@ document.getElementById("sendButton").addEventListener("click", function (event)
 
 將signalr.js copy至js資料下 \(從lib\@microsoft\signalr\dist\browser\)
 
-![](../../.gitbook/assets/image%20%2851%29.png)
+![](../../.gitbook/assets/image%20%2852%29.png)
 
 ## 服務DI注入
 
@@ -211,7 +211,7 @@ namespace ChatRoom
 
 Debug Mode，開啟兩個視窗即可測試SignalR即時回應功能
 
-![](../../.gitbook/assets/image%20%2893%29.png)
+![](../../.gitbook/assets/image%20%2895%29.png)
 
 以上參考微軟官方Demo範例\([https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/signalr?view=aspnetcore-3.0&tabs=visual-studio](https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/signalr?view=aspnetcore-3.0&tabs=visual-studio)\)
 
@@ -219,7 +219,7 @@ Debug Mode，開啟兩個視窗即可測試SignalR即時回應功能
 
 UI調整\(Index.cshtml\) 新增連線Button、目前人數Label
 
-![](../../.gitbook/assets/image%20%2849%29.png)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
 ```text
 @page
@@ -389,9 +389,9 @@ namespace ChatRoom.Hubs
 
 註：測試時，若chat.js沒有重新載入修改後的版本\(因為有catch\)，可按Ctrl+F5即會重新載入js檔
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](../../.gitbook/assets/image%20%2853%29.png)
 
 ![](../../.gitbook/assets/image%20%2838%29.png)
 
-![](../../.gitbook/assets/image%20%2846%29.png)
+![](../../.gitbook/assets/image%20%2847%29.png)
 

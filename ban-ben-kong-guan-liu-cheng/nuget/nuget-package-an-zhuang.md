@@ -14,19 +14,19 @@ Visual Studio中工具→Nuget套件管理員→套件管理員設定 \(VS2013�
 
 在NuGet套件管理員→套件來源中新增http://localhost/NugetServer/Nuget
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](../../.gitbook/assets/image%20%2857%29.png)
 
 設定完畢後，即可點選Nuget套件管理員→管理方案的Nuget套件
 
-![](../../.gitbook/assets/image%20%2895%29.png)
+![](../../.gitbook/assets/image%20%2897%29.png)
 
 開啟後，在套件來源選擇處，將來源改成剛才所的來源\(例如CIM\)
 
-![](../../.gitbook/assets/image%20%2887%29.png)
+![](../../.gitbook/assets/image%20%2889%29.png)
 
 選取完畢後，即可看到該Server中目前可使用的Nuget套件
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2868%29.png)
 
 點選套件按下安裝即可
 
