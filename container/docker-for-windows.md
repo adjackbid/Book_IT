@@ -4,7 +4,7 @@
 
 
 
-![](../.gitbook/assets/image%20%28177%29.png)
+![](../.gitbook/assets/image%20%28178%29.png)
 
 
 
@@ -16,7 +16,7 @@ Windows中使用Docker，需要開啟Containers及Hyper-V功能
 
 勾選Containers、Hyper-V
 
-![](../.gitbook/assets/image%20%28176%29.png)
+![](../.gitbook/assets/image%20%28177%29.png)
 
 ## 安裝前準備2：BIOS - VTx設定
 
@@ -28,15 +28,15 @@ BIOS - Virtualization Technology設定需打開，否則可能在Docker Containe
 
 下載路徑：[https://docs.docker.com/docker-for-windows/install/](https://docs.docker.com/docker-for-windows/install/)
 
-![](../.gitbook/assets/image%20%28121%29.png)
+![](../.gitbook/assets/image%20%28122%29.png)
 
 安裝大約900mb
 
-![](../.gitbook/assets/image%20%28139%29.png)
+![](../.gitbook/assets/image%20%28140%29.png)
 
 安裝過程原則上依指示下一步到底即可 \(此頁面可以把Use Windows Containers選項打勾\)
 
-![](../.gitbook/assets/image%20%28149%29.png)
+![](../.gitbook/assets/image%20%28150%29.png)
 
 跳出此警告時，按ok即可\(會重開機\)
 
@@ -112,7 +112,7 @@ docker run --name testapp1 -p 1000:80 -d 7becd5ccb930
 docker exec -it testapp1 cmd
 ```
 
-![](../.gitbook/assets/image%20%28123%29.png)
+![](../.gitbook/assets/image%20%28124%29.png)
 
 ![](../.gitbook/assets/image%20%2848%29.png)
 
@@ -126,7 +126,7 @@ docker exec -it testapp1 cmd
 echo test > index.aspx
 ```
 
-![](../.gitbook/assets/image%20%28172%29.png)
+![](../.gitbook/assets/image%20%28173%29.png)
 
 測試
 
@@ -136,9 +136,9 @@ echo test > index.aspx
 
 asptestweb目錄如下
 
-![](../.gitbook/assets/image%20%28161%29.png)
+![](../.gitbook/assets/image%20%28162%29.png)
 
-![](../.gitbook/assets/image%20%28159%29.png)
+![](../.gitbook/assets/image%20%28160%29.png)
 
 docker容器中可以mount位置到Host磁碟 \(讓容器可以取得host資料\)，因此先刪除已建立的容器testapp1
 
@@ -161,7 +161,7 @@ docker run --name testapp1 -p 1000:80 -v D:\WebFile\ASPTestWeb:c:\webfile -d 7be
 docker exec -it testapp1 cmd
 ```
 
-![](../.gitbook/assets/image%20%28128%29.png)
+![](../.gitbook/assets/image%20%28129%29.png)
 
 將檔案copy到inetpub/wwwroot資料夾\(iis根目錄\)
 
@@ -169,7 +169,7 @@ docker exec -it testapp1 cmd
 xcopy /s c:\webfile c:\inetpub\wwwroot
 ```
 
-![](../.gitbook/assets/image%20%28153%29.png)
+![](../.gitbook/assets/image%20%28154%29.png)
 
 ![](../.gitbook/assets/image%20%2876%29.png)
 
@@ -192,7 +192,7 @@ docker stop testapp1
 docker commit testapp1 img_test
 ```
 
-![](../.gitbook/assets/image%20%28171%29.png)
+![](../.gitbook/assets/image%20%28172%29.png)
 
 ![](../.gitbook/assets/image%20%2821%29.png)
 
@@ -202,7 +202,7 @@ docker commit testapp1 img_test
 docker images
 ```
 
-![](../.gitbook/assets/image%20%28138%29.png)
+![](../.gitbook/assets/image%20%28139%29.png)
 
 透過新建的img\_test建立一個新的容器測試testapp2
 
@@ -214,11 +214,21 @@ docker run --name testapp2 -p 2000:80 -d img_test
 
 容器testapp2建立完成後，即可以測試localhost:2000
 
-![](../.gitbook/assets/image%20%28156%29.png)
+![](../.gitbook/assets/image%20%28157%29.png)
 
 透過此方式，即可以快速部署web應用程式至任何有docker的環境上，該server不需要安裝iis、.net framework及相關複雜的設定，因此這些設定都在建立image時已經設定完畢
 
+補充：img\_test是利用asp.net 4.8 Image建立出來的Image，其Size為5.66GB
+
+testweb則是使用asp.net core Image建立的Image，可以發現Size僅有519MB，主要原因為asp.net為了支援跨平台，因此不需綁定許多windows元件，因此空間會相對小許多 \(如果需要entity framework或其它功能仍可再加裝上去\)
+
+![](../.gitbook/assets/image%20%28120%29.png)
+
 ### 5.使用Dockfile建立Image
+
+To Do：待補
+
+### 6.Visual Studio整合Docker
 
 To Do：待補
 
