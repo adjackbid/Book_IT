@@ -37,7 +37,7 @@ Package Source選擇自架的Nuget Server
 
 加入後，按下ok即可
 
-![](../../.gitbook/assets/image%20%28156%29.png)
+![](../../.gitbook/assets/image%20%28157%29.png)
 
 存檔後，即可看到metadata中會顯示Dependencies
 
