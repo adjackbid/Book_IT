@@ -218,9 +218,15 @@ docker run --name testapp2 -p 2000:80 -d img_test
 
 透過此方式，即可以快速部署web應用程式至任何有docker的環境上，該server不需要安裝iis、.net framework及相關複雜的設定，因此這些設定都在建立image時已經設定完畢
 
-**補充**：img\_test是利用asp.net 4.8 Image建立出來的Image，其Size為**5.66GB**
+**小結**：
 
-testweb則是使用asp.net core Image建立的Image，可以發現Size僅有**519MB**，主要原因為asp.net為了支援跨平台，因此不需綁定許多windows元件，因此空間會相對小許多 \(如果需要entity framework或其它功能仍可再加裝上去\)
+img\_test是利用asp.net 4.8 Image建立出來的Image，其Size為**5.66GB**
+
+testweb則是使用asp.net core nanoserver版\(精簡\) Image建立的Image，可以發現Size僅有**519MB**，主要原因為asp.net為了支援跨平台，因此不需綁定許多windows元件，因此空間會相對小許多 \(如果需要entity framework或其它功能仍可再加裝上去\)
+
+使用容器主要目的為serverless、microservice，去除不必要的gui介面、不需要的元件後，Image可以做到100mb以下，如此可以讓服務啟動時間大幅增加、減少不要必的磁碟、記憶體使用
+
+\(一台Docker Server可以起N個容器服務\)
 
 ![](../.gitbook/assets/image%20%28120%29.png)
 
