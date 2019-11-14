@@ -179,7 +179,7 @@ copy完成後，可以測試網站localhost:1000
 
 ### 4.將container封裝成Image檔
 
-因此如果要建一個裡面已經有特定服務/網頁的Image時，可以使用docker commit指令將目前的container封裝成Image檔 \(一般ci/cd流程不一定會這麼做\)
+如果要建一個裡面已經有特定服務/網頁的Image時，可以使用docker commit指令將目前的container封裝成Image檔 \(一般ci/cd流程不一定會這麼做\)
 
 ```text
 docker commit container_id image_name
