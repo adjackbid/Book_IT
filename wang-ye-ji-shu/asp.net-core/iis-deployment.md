@@ -4,29 +4,29 @@ ASP.Net Core Web應用程式在IIS佈署之注意事項
 
 假設網站實體位置如下：c:\Sample
 
-![](../../.gitbook/assets/image%20%28172%29.png)
+![](../../.gitbook/assets/image%20%28184%29.png)
 
 在Visual Studio中，點選專案→發佈
 
-![](../../.gitbook/assets/image%20%28180%29.png)
+![](../../.gitbook/assets/image%20%28192%29.png)
 
 點選「資料夾」，選擇c:\Sample，按下發佈即可
 
-![](../../.gitbook/assets/image%20%2843%29.png)
+![](../../.gitbook/assets/image%20%2844%29.png)
 
 發佈完成後，至該資料夾如下：程式碼、html部分會被建立在dll檔中
 
-![](../../.gitbook/assets/image%20%2823%29.png)
+![](../../.gitbook/assets/image%20%2824%29.png)
 
 IIS中，新增應用程式集：.NET CLR版本選擇**沒有受控碼**
 
-![](../../.gitbook/assets/image%20%28136%29.png)
+![](../../.gitbook/assets/image%20%28146%29.png)
 
 新增網站
 
-![](../../.gitbook/assets/image%20%2874%29.png)
+![](../../.gitbook/assets/image%20%2879%29.png)
 
-![](../../.gitbook/assets/image%20%2834%29.png)
+![](../../.gitbook/assets/image%20%2835%29.png)
 
 測試網站：localhost:100
 
@@ -36,7 +36,7 @@ IIS中，新增應用程式集：.NET CLR版本選擇**沒有受控碼**
 
 測試ok
 
-![](../../.gitbook/assets/image%20%28169%29.png)
+![](../../.gitbook/assets/image%20%28181%29.png)
 
 ## 「錯誤500.19」補充：
 
