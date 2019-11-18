@@ -1,5 +1,11 @@
 # Index
 
+## 2019.11.18
+
+### Added
+
+* [Container - Docker For Windows - 6.Visual Studio整合Docker](container/docker-for-windows.md#6visual-studio-zheng-he-docker)
+
 ## 2019.11.15
 
 ### Added
