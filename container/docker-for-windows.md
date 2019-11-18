@@ -4,7 +4,7 @@
 
 ## 簡介
 
-DevOps議題中難免會提到Serverless、MicroService\(微服務\)，主要原因希望可以簡單、加速服務的部署並同時減少資源的浪費
+DevOps議題中難免會提到Serverless、MicroService\(微服務\)，主要原因是希望可以簡單、加速服務的部署並同時減少資源的浪費
 
 Docker基本架構如下：OS核心為共用，Container中只要安裝服務所需要的軟體即可\(例如iis\)
 
