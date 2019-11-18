@@ -2,11 +2,23 @@
 
 {% embed url="https://www.docker.com/products/docker-desktop" %}
 
+## 簡介
 
+DevOps議題中難免會提到Serverless、MicroService\(微服務\)，主要原因希望可以簡單、加速服務的部署並同時減少資源的浪費
+
+Docker基本架構如下：OS核心為共用，Container中只要安裝服務所需要的軟體即可\(例如iis\)
 
 ![](../.gitbook/assets/image%20%28204%29.png)
 
+傳統VM，每一個網站Server都需要有自己的os核心\(例如windows\)，再外加網站所需的服務\(例如iis\)
 
+然後os核心，以windows為例非常佔空間、記憶體，因此用此方式想做到MicroService勢必需要花費很多資料，故Docker才會在近年被愈來愈多軟體業廣範使用
+
+簡單的說，使用Docker的好處：可以透過建立好的Image檔，快速將服務啟動在Container\(容器\)中
+
+而這台Server本身不需要安裝iis、appach等軟體\(因為這些在Image中已設定完畢\)
+
+以.NET Core網站為例，Images大小約100mb，因此在任意有安裝Docker的Server，透過此Image檔都可以簡單、快速把網站服務建立完畢
 
 ## 安裝前準備1：Windows功能開啟 - Containers / Hyper-V
 
