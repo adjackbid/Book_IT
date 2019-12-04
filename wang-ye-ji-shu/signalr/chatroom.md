@@ -40,7 +40,7 @@ description: ASP.Net Core搭配SignalR示範ChatRoom功能
 
 ![](../../.gitbook/assets/image%20%28150%29.png)
 
-```text
+```csharp
 using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
 
@@ -62,7 +62,7 @@ Index頁面，新增2個input\(text\)、1個button、訊息列\(messagelist\)
 
 ![](../../.gitbook/assets/image%20%28131%29.png)
 
-```text
+```aspnet
 @page
 <div class="container">
     <div class="row">&nbsp;</div>
@@ -101,7 +101,7 @@ Index頁面，新增2個input\(text\)、1個button、訊息列\(messagelist\)
 
 chat.js
 
-```text
+```csharp
 "use strict";
 
 var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
@@ -145,7 +145,7 @@ Startup.cs中將SignalR注入 \(ConfigureService Method中\)
 
 ![](../../.gitbook/assets/image%20%2869%29.png)
 
-```text
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -221,7 +221,7 @@ UI調整\(Index.cshtml\) 新增連線Button、目前人數Label
 
 ![](../../.gitbook/assets/image%20%28101%29.png)
 
-```text
+```aspnet
 @page
     <div class="container">
         <div class="row">&nbsp;</div>
@@ -271,7 +271,7 @@ connectToHub物件加入Click EvenListener：按下連線Button後，才進行�
 
 chat.js
 
-```text
+```csharp
 "use strict";
 
 var connection; 
@@ -346,7 +346,7 @@ document.getElementById("connectToHub").addEventListener("click", function (even
 
 ![](../../.gitbook/assets/image%20%284%29.png)
 
-```text
+```csharp
 using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
 using System;
