@@ -358,6 +358,29 @@ docker run --name testapp3 -p 3000:80 -d testweb
 
 ![](../.gitbook/assets/image%20%28177%29.png)
 
+```csharp
+FROM microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1803 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM microsoft/dotnet:2.1-sdk-nanoserver-1803 AS build
+WORKDIR /src
+COPY ["TestWeb/TestWeb.csproj", "TestWeb/"]
+RUN dotnet restore "TestWeb/TestWeb.csproj"
+COPY . .
+WORKDIR "/src/TestWeb"
+RUN dotnet build "TestWeb.csproj" -c Release -o /app
+
+FROM build AS publish
+RUN dotnet publish "TestWeb.csproj" -c Release -o /app
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app .
+ENTRYPOINT ["dotnet", "TestWeb.dll"]
+```
+
 ### 6.Visual Studio整合Docker
 
 Visual Studio 2019以後，有跟Docker整合，可以直接在Visual Studio中快速產生Docker Image並且可以在Container中進行debug
