@@ -31,6 +31,8 @@
 
 ## 資料庫相關
 
+* [Oracle Client](oracle-client.md)
+
 ## Open Source
 
 * [Grafana](open-source/grafana.md)
