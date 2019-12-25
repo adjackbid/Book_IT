@@ -2,8 +2,6 @@
 
 * [Index](README.md)
 
-## 工作經驗
-
 ## 程式碼控管相關 <a id="ban-ben-kong-guan-liu-cheng"></a>
 
 * [Git](ban-ben-kong-guan-liu-cheng/git-gong-zuo-liu-cheng/README.md)
@@ -36,6 +34,7 @@
 ## Open Source
 
 * [Grafana](open-source/grafana.md)
+* [Serilog & Datalust-Seq](open-source/serilog-and-datalust-seq.md)
 
 ## Container
 
