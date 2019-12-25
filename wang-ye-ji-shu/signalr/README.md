@@ -1,3 +1,7 @@
+---
+description: 適合即時更新、顯示之應用；例如聊天室、DashBoard
+---
+
 # SignalR
 
 ![](../../.gitbook/assets/image%20%28234%29.png)
