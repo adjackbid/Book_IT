@@ -18,17 +18,17 @@ Windows可以接直在Microsoft商店中直接下載安裝
 
 開啟後，點選「Create a new package」
 
-![](../../.gitbook/assets/image%20%28218%29.png)
+![](../../.gitbook/assets/image%20%28219%29.png)
 
 在Package metadata區塊中，可以編輯套件的資訊\(名稱、版本、作者、相依性\)
 
 點選編輯圖示即可以修改
 
-![](../../.gitbook/assets/image%20%2868%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 將id、版本、title等資訊修改好，按下確認即可
 
-![](../../.gitbook/assets/image%20%2889%29.png)
+![](../../.gitbook/assets/image%20%2890%29.png)
 
 接著要將自製的dll檔打包至這個Package中
 
@@ -38,37 +38,37 @@ Windows可以接直在Microsoft商店中直接下載安裝
 
 新增完lib資料夾後，如下圖，該資料可以放至需要被安裝至專案的dll檔
 
-![](../../.gitbook/assets/image%20%2849%29.png)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
 在lib資料上按下右鍵→Add.NET folder→選擇版本\(若有多版本情下，可以建立多筆或是選擇no version不分版本\)
 
-![](../../.gitbook/assets/image%20%2890%29.png)
+![](../../.gitbook/assets/image%20%2891%29.png)
 
 接著在新建的folder中加入dll檔
 
-![](../../.gitbook/assets/image%20%2837%29.png)
+![](../../.gitbook/assets/image%20%2838%29.png)
 
-![&#x8A3B;&#xFF1A;.pdb&#x6A94;&#x53EF;&#x8996;&#x60C5;&#x6CC1;&#x52A0;&#x5165;&#xFF0C;&#x5176;&#x53EF;&#x8B93;&#x4F7F;&#x7528;&#x7AEF;debug tracing&#x7528;](../../.gitbook/assets/image%20%28117%29.png)
+![&#x8A3B;&#xFF1A;.pdb&#x6A94;&#x53EF;&#x8996;&#x60C5;&#x6CC1;&#x52A0;&#x5165;&#xFF0C;&#x5176;&#x53EF;&#x8B93;&#x4F7F;&#x7528;&#x7AEF;debug tracing&#x7528;](../../.gitbook/assets/image%20%28118%29.png)
 
-![](../../.gitbook/assets/image%20%28168%29.png)
+![](../../.gitbook/assets/image%20%28169%29.png)
 
 加入完成後，在存檔前，可以先用工具分析Package是否有設定問題
 
 Tools→Analyze Packge
 
-![](../../.gitbook/assets/image%20%2894%29.png)
+![](../../.gitbook/assets/image%20%2895%29.png)
 
 Package Analysis出現無任何問題，即可存檔
 
-![](../../.gitbook/assets/image%20%28173%29.png)
+![](../../.gitbook/assets/image%20%28174%29.png)
 
 File→Save As
 
 ![](../../.gitbook/assets/image%20%286%29.png)
 
-![](../../.gitbook/assets/image%20%28111%29.png)
+![](../../.gitbook/assets/image%20%28112%29.png)
 
 後續將產生的.nupkg檔發佈至Nuget Server上即可使用
 
-![](../../.gitbook/assets/image%20%2874%29.png)
+![](../../.gitbook/assets/image%20%2875%29.png)
 

@@ -1,4 +1,12 @@
+---
+description: log管理工具
+---
+
 # Serilog & Datalust-Seq
+
+使用Serilog\(比Nlog效能較佳\)並搭配Seq平台，可有效管理log紀錄
+
+![](../.gitbook/assets/image%20%2830%29.png)
 
 ## Serilog
 
@@ -6,23 +14,23 @@
 
 測試用專案\(ASP.Net Core Web應用程式\)
 
-![](../.gitbook/assets/image%20%2882%29.png)
+![](../.gitbook/assets/image%20%2883%29.png)
 
-![](../.gitbook/assets/image%20%28112%29.png)
+![](../.gitbook/assets/image%20%28113%29.png)
 
-![](../.gitbook/assets/image%20%28158%29.png)
+![](../.gitbook/assets/image%20%28159%29.png)
 
 建置，確認網站可正常運作
 
-![](../.gitbook/assets/image%20%2888%29.png)
+![](../.gitbook/assets/image%20%2889%29.png)
 
-![](../.gitbook/assets/image%20%28211%29.png)
+![](../.gitbook/assets/image%20%28212%29.png)
 
 ### 安裝Serilog套件
 
 測試專案為asp.net.core專案，因此安裝Serilog.AspNetCore套件
 
-![](../.gitbook/assets/image%20%2853%29.png)
+![](../.gitbook/assets/image%20%2854%29.png)
 
 ### 設定Log
 
@@ -30,7 +38,7 @@
 
 修改Program.cs
 
-![](../.gitbook/assets/image%20%28197%29.png)
+![](../.gitbook/assets/image%20%28198%29.png)
 
 ```csharp
 using System;
@@ -88,23 +96,23 @@ namespace Web1
 
 因目前是將log輸出至console - 如下圖\(WriteTo.Console\)
 
-![](../.gitbook/assets/image%20%2887%29.png)
+![](../.gitbook/assets/image%20%2888%29.png)
 
 因此log會被輸出至console介面，為方便測試，可以在專案資料中開啟命令提示字元\(cmd\)，並輸入dotnet run
 
-![](../.gitbook/assets/image%20%28209%29.png)
+![](../.gitbook/assets/image%20%28210%29.png)
 
 輸入後，可以看到console中出現相關log即表示
 
-![](../.gitbook/assets/image%20%28246%29.png)
+![](../.gitbook/assets/image%20%28247%29.png)
 
 實際進去網站後，再看log，可以該套件會寫入非常完整的log紀錄，並有View / Action執行的時間
 
-![](../.gitbook/assets/image%20%28178%29.png)
+![](../.gitbook/assets/image%20%28179%29.png)
 
 若要在Controller中自行加入log訊息，直接用logger物件即可，例如以下
 
-![](../.gitbook/assets/image%20%2870%29.png)
+![](../.gitbook/assets/image%20%2871%29.png)
 
 ```csharp
         public IActionResult Index()
@@ -118,6 +126,8 @@ namespace Web1
 
 ![](../.gitbook/assets/image%20%289%29.png)
 
+Serilog相關操作說明可參照官網：[https://github.com/serilog/serilog/wiki/Getting-Started](https://github.com/serilog/serilog/wiki/Getting-Started)
+
 ### 匯整Log至Datalust - Seq
 
 Datalust - Seq，這個平台可以將log以xml方式儲存並支援sql語法查詢
@@ -128,7 +138,7 @@ Datalust - Seq，這個平台可以將log以xml方式儲存並支援sql語法查
 
 修改專案Program.cs - 新增WriteTo.Seq 設定將Log寫入Seq系統中 \(Seq系統預設網址為localhost:5341\)
 
-![](../.gitbook/assets/image%20%28217%29.png)
+![](../.gitbook/assets/image%20%28218%29.png)
 
 安裝Datalust Seq平台\(服務\)
 
@@ -136,33 +146,33 @@ Seq官網：[https://datalust.co/seq](https://datalust.co/seq)
 
 點選Download即可\(有Docker Images 或Windows安裝檔\)
 
-![](../.gitbook/assets/image%20%28127%29.png)
+![](../.gitbook/assets/image%20%28128%29.png)
 
 若為Windows環境可以直接用windows安裝檔即可，安裝完後會在該電腦上起Seq服務
 
-![](../.gitbook/assets/image%20%28187%29.png)
+![](../.gitbook/assets/image%20%28188%29.png)
 
 安裝完畢後，第一次啟動時，需要設定網址及Log存放位置
 
-![](../.gitbook/assets/image%20%28223%29.png)
+![](../.gitbook/assets/image%20%28224%29.png)
 
 設定完畢後，可以登入Seq的網頁\(即localhost:5341\) \(目前無log\)
 
-![](../.gitbook/assets/image%20%28114%29.png)
+![](../.gitbook/assets/image%20%28115%29.png)
 
 透過dotnet run指令再次將測試專案啟動
 
-![](../.gitbook/assets/image%20%28123%29.png)
+![](../.gitbook/assets/image%20%28124%29.png)
 
 Seq介面
 
-![](../.gitbook/assets/image%20%2876%29.png)
+![](../.gitbook/assets/image%20%2877%29.png)
 
 可直接下sql或點選右方Queries
 
-![](../.gitbook/assets/image%20%2862%29.png)
+![](../.gitbook/assets/image%20%2863%29.png)
 
 Seq有內建Dash Board平台
 
-![](../.gitbook/assets/image%20%28166%29.png)
+![](../.gitbook/assets/image%20%28167%29.png)
 
