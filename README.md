@@ -1,5 +1,11 @@
 # Index
 
+## 2019.12.25
+
+### Added
+
+*  [Open Source - Serilog & Datalust-Seq](open-source/serilog-and-datalust-seq.md)
+
 ## 2019.11.18
 
 ### Added
