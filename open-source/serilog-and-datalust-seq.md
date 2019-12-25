@@ -12,7 +12,7 @@ description: log管理工具
 
 ### 準備測試用專案\(可略\)
 
-測試用專案\(ASP.Net Core Web應用程式\)
+測試用專案\(ASP.Net Core Web應用程式\) \(Serilog不僅只支援ASP.Net Core\)
 
 ![](../.gitbook/assets/image%20%2883%29.png)
 
@@ -106,7 +106,7 @@ namespace Web1
 
 ![](../.gitbook/assets/image%20%28247%29.png)
 
-實際進去網站後，再看log，可以該套件會寫入非常完整的log紀錄，並有View / Action執行的時間
+實際進去網站後，再看log，可以發現該套件會寫入非常完整的log紀錄，並有View / Action執行的時間
 
 ![](../.gitbook/assets/image%20%28179%29.png)
 
