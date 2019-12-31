@@ -4,15 +4,15 @@ ASP.Net Core Web應用程式在IIS佈署之注意事項
 
 假設網站實體位置如下：c:\Sample
 
-![](../../.gitbook/assets/image%20%28252%29.png)
+![](../../.gitbook/assets/image%20%28256%29.png)
 
 在Visual Studio中，點選專案→發佈
 
-![](../../.gitbook/assets/image%20%28260%29.png)
+![](../../.gitbook/assets/image%20%28264%29.png)
 
 點選「資料夾」，選擇c:\Sample，按下發佈即可
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](../../.gitbook/assets/image%20%2860%29.png)
 
 發佈完成後，至該資料夾如下：程式碼、html部分會被建立在dll檔中
 
@@ -20,11 +20,11 @@ ASP.Net Core Web應用程式在IIS佈署之注意事項
 
 IIS中，新增應用程式集：.NET CLR版本選擇**沒有受控碼**
 
-![](../../.gitbook/assets/image%20%28195%29.png)
+![](../../.gitbook/assets/image%20%28197%29.png)
 
 新增網站
 
-![](../../.gitbook/assets/image%20%28105%29.png)
+![](../../.gitbook/assets/image%20%28106%29.png)
 
 ![](../../.gitbook/assets/image%20%2846%29.png)
 
@@ -36,7 +36,7 @@ IIS中，新增應用程式集：.NET CLR版本選擇**沒有受控碼**
 
 測試ok
 
-![](../../.gitbook/assets/image%20%28249%29.png)
+![](../../.gitbook/assets/image%20%28253%29.png)
 
 ## 「錯誤500.19」補充：
 
