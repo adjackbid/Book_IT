@@ -1,5 +1,11 @@
 # Index
 
+## 2019.12.31
+
+### Added
+
+* **OPEN Source - Serilog -** [**ASP.Net WebForm + Serilog**](open-source/serilog-and-datalust-seq.md#asp-net-webform-serilog)\*\*\*\*
+
 ## 2019.12.25
 
 ### Added
