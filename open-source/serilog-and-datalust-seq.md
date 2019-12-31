@@ -180,6 +180,8 @@ ASP.Net Webform要使用Serilog時，目前沒有像ASP.Net Core有實作好的�
 
 因此需要自行依需求實作，但難度不高，以下做簡單Demo
 
+註：Datalust - Seq平台請參考 - [匯整Log至Datalust - Seq](serilog-and-datalust-seq.md#hui-zheng-log-zhi-datalust-seq)
+
 #### 1.專案建立
 
 以VS2017/2019建立ASP.Net應用程式\(非.Net Core\)
