@@ -1,5 +1,13 @@
 # Index
 
+## 2020.01.02
+
+### Updated
+
+* **OPEN Source - Serilog -** [**ASP.Net WebForm + Serilog**](open-source/serilog-and-datalust-seq.md#asp-net-webform-serilog)\*\*\*\*
+
+動態加入事件參數說明修改及新增寫法2
+
 ## 2019.12.31
 
 ### Added
