@@ -14,7 +14,7 @@ Grafana為開源的Dash Board管理平台\(Go語言編寫\)，可動態建立資
 
 Grafana有提供安裝程式，可於官網中Download頁面下載安裝檔
 
-![](../.gitbook/assets/image%20%28280%29.png)
+![](../.gitbook/assets/image%20%28281%29.png)
 
 Windows安裝時，可直接下載打包好的安裝檔即可
 
@@ -60,7 +60,7 @@ Windows安裝時，可直接下載打包好的安裝檔即可
 
 接著即可建立Dash Board
 
-![](../.gitbook/assets/image%20%28295%29.png)
+![](../.gitbook/assets/image%20%28296%29.png)
 
 點選Choose Visualization - 選擇圖表類型
 
@@ -86,7 +86,7 @@ Windows安裝時，可直接下載打包好的安裝檔即可
 
 圖表亦可以新增管制上下限
 
-![](../.gitbook/assets/image%20%28286%29.png)
+![](../.gitbook/assets/image%20%28287%29.png)
 
 ![](../.gitbook/assets/image%20%2890%29.png)
 
@@ -96,7 +96,7 @@ Windows安裝時，可直接下載打包好的安裝檔即可
 
 一個Dash Board可以新增多個圖表\(Panel\)，大小、位置可自行拖拉
 
-![](../.gitbook/assets/image%20%28248%29.png)
+![](../.gitbook/assets/image%20%28249%29.png)
 
 
 
@@ -108,7 +108,7 @@ Windows安裝時，可直接下載打包好的安裝檔即可
 
 圖表區會在Panel類別
 
-![](../.gitbook/assets/image%20%28271%29.png)
+![](../.gitbook/assets/image%20%28272%29.png)
 
 點選欲安裝的Plugin，例如Pie Chart。頁面中會有簡介及安裝說明\(一些元件會寫在Installation\)
 
@@ -130,5 +130,5 @@ grafana-cli程式放置在bin資料夾下
 
 安裝完畢後，服務需要重啟才會生效，可至工作管理員→服務→grafana點選重新啟動即可
 
-![](../.gitbook/assets/image%20%28287%29.png)
+![](../.gitbook/assets/image%20%28288%29.png)
 

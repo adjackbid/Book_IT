@@ -211,7 +211,7 @@ namespace ChatRoom
 
 Debug Mode，開啟兩個視窗即可測試SignalR即時回應功能
 
-![](../../.gitbook/assets/image%20%28268%29.png)
+![](../../.gitbook/assets/image%20%28269%29.png)
 
 以上參考微軟官方Demo範例\([https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/signalr?view=aspnetcore-3.0&tabs=visual-studio](https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/signalr?view=aspnetcore-3.0&tabs=visual-studio)\)
 

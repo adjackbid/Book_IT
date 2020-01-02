@@ -6,13 +6,15 @@
 
 DevOps議題中難免會提到Serverless、MicroService\(微服務\)，主要原因是希望可以簡單、加速服務的部署並同時減少資源的浪費
 
-Docker基本架構如下：OS核心為共用，Container中只要安裝服務所需要的軟體即可\(例如iis\)
+Container基本架構如下：OS核心為共用，Container中只要安裝服務所需要的軟體即可\(例如iis\)
 
-![](../.gitbook/assets/image%20%28290%29.png)
+![](../.gitbook/assets/image%20%28291%29.png)
 
 傳統VM，每一個網站Server都需要有自己的os核心\(例如windows\)，再外加網站所需的服務\(例如iis\)
 
 然後os核心，以windows為例非常佔空間、記憶體，因此用此方式想做到MicroService勢必需要花費很多資料，故Docker才會在近年被愈來愈多軟體業廣範使用
+
+![Container vs VM](../.gitbook/assets/image%20%28248%29.png)
 
 簡單的說，使用Docker的好處：可以透過建立好的Image檔，快速將服務啟動在Container\(容器\)中
 
@@ -28,7 +30,7 @@ Windows中使用Docker，需要開啟Containers及Hyper-V功能
 
 勾選Containers、Hyper-V
 
-![](../.gitbook/assets/image%20%28289%29.png)
+![](../.gitbook/assets/image%20%28290%29.png)
 
 ## 安裝前準備2：BIOS - VTx設定
 
@@ -138,7 +140,7 @@ docker exec -it testapp1 cmd
 echo test > index.aspx
 ```
 
-![](../.gitbook/assets/image%20%28285%29.png)
+![](../.gitbook/assets/image%20%28286%29.png)
 
 測試
 
@@ -148,9 +150,9 @@ echo test > index.aspx
 
 asptestweb目錄如下
 
-![](../.gitbook/assets/image%20%28265%29.png)
+![](../.gitbook/assets/image%20%28266%29.png)
 
-![](../.gitbook/assets/image%20%28260%29.png)
+![](../.gitbook/assets/image%20%28261%29.png)
 
 docker容器中可以mount位置到Host磁碟 \(讓容器可以取得host資料\)，因此先刪除已建立的容器testapp1
 
@@ -204,7 +206,7 @@ docker stop testapp1
 docker commit testapp1 img_test
 ```
 
-![](../.gitbook/assets/image%20%28282%29.png)
+![](../.gitbook/assets/image%20%28283%29.png)
 
 ![](../.gitbook/assets/image%20%2831%29.png)
 
@@ -226,7 +228,7 @@ docker run --name testapp2 -p 2000:80 -d img_test
 
 容器testapp2建立完成後，即可以測試localhost:2000
 
-![](../.gitbook/assets/image%20%28256%29.png)
+![](../.gitbook/assets/image%20%28257%29.png)
 
 透過此方式，即可以快速部署web應用程式至任何有docker的環境上，該server不需要安裝iis、.net framework及相關複雜的設定，因此這些設定都在建立image時已經設定完畢
 
@@ -258,11 +260,11 @@ testweb則是使用asp.net core nanoserver版\(精簡\) Image建立的Image，�
 
 在此根目錄新增檔案Dockerfile \(不一定要叫這個名稱\)，內容空白即可，並去除附檔名
 
-![](../.gitbook/assets/image%20%28262%29.png)
+![](../.gitbook/assets/image%20%28263%29.png)
 
 用文字編輯器開啟Dockerfile\(建議用vscode\)
 
-![](../.gitbook/assets/image%20%28261%29.png)
+![](../.gitbook/assets/image%20%28262%29.png)
 
 Dockerfile大致上需要做到的是
 
@@ -411,7 +413,7 @@ Visual Studio 2019以後，有跟Docker整合，可以直接在Visual Studio中�
 
 Debug模式下 - 可以在container內偵錯，如下圖，其中172.26.197.81為container的虛擬ip
 
-![](../.gitbook/assets/image%20%28275%29.png)
+![](../.gitbook/assets/image%20%28276%29.png)
 
 可以觀察按下建置後，可以發現Visual Studio其實是先建置後，再執行Docker Build、docker run指令
 
@@ -439,5 +441,5 @@ release模式：tag為lastest；debug模式：tag為dev
 
 一般在偵錯時，建議還是先選擇IIS Express \(不用做docker build / docker run\)
 
-![](../.gitbook/assets/image%20%28274%29.png)
+![](../.gitbook/assets/image%20%28275%29.png)
 
