@@ -132,7 +132,7 @@ namespace Web1
 
 Serilog相關操作說明可參照官網：[https://github.com/serilog/serilog/wiki/Getting-Started](https://github.com/serilog/serilog/wiki/Getting-Started)
 
-### 匯整Log至Datalust - Seq
+### 安裝Datalust - Seq
 
 Datalust - Seq，這個平台可以將log以xml方式儲存並支援sql語法查詢
 
@@ -184,7 +184,7 @@ ASP.Net Webform要使用Serilog時，目前沒有像ASP.Net Core有實作好的�
 
 因此需要自行依需求實作，但難度不高，以下做簡單Demo
 
-註：Datalust - Seq平台請參考 - [匯整Log至Datalust - Seq](serilog-and-datalust-seq.md#hui-zheng-log-zhi-datalust-seq)
+註：需使用Datalust - Seq平台，可參考 - [安裝Datalust - Seq](serilog-and-datalust-seq.md#an-zhuang-datalust-seq)
 
 #### 1.專案建立
 
