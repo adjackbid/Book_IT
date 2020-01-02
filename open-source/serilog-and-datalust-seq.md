@@ -6,9 +6,15 @@ description: log管理工具
 
 Serilog：功能類似Nlog，但效能較佳
 
+{% embed url="https://serilog.net/" %}
+
+![](../.gitbook/assets/image%20%28296%29.png)
+
 Datalust Seq平台：可自架，以檔案方式存儲log，但可以用類似SQL語法查詢log紀錄
 
 並提供Dashboard、alarm等功能\(可搭配Serilog使用\)
+
+{% embed url="https://datalust.co/seq" %}
 
 ![](../.gitbook/assets/image%20%2832%29.png)
 
