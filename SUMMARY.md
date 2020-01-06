@@ -29,6 +29,7 @@
 
 ## 資料庫相關
 
+* [Oracle Toad](oracle-toad.md)
 * [Oracle Client](oracle-client.md)
 
 ## Open Source
