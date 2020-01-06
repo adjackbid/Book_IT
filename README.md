@@ -1,5 +1,11 @@
 # Index
 
+## 2020.01.06
+
+### Added
+
+* [Oracle Toad Tips](oracle-toad.md)
+
 ## 2020.01.02
 
 ### Updated
