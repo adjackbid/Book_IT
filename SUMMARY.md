@@ -36,6 +36,7 @@
 
 * [Grafana](open-source/grafana.md)
 * [Serilog & Datalust-Seq](open-source/serilog-and-datalust-seq.md)
+* [Tesseract OCR](open-source/tesseract-ocr.md)
 
 ## Container
 
