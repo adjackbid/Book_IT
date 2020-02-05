@@ -15,41 +15,41 @@ VS2017/VS2019建立ASP網頁應用程式\(空白\)
 
 以下以VS2019為例
 
-![](../../.gitbook/assets/image%20%2845%29.png)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
-![](../../.gitbook/assets/image%20%28313%29.png)
+![](../../.gitbook/assets/image%20%28332%29.png)
 
-![](../../.gitbook/assets/image%20%28208%29.png)
+![](../../.gitbook/assets/image%20%28220%29.png)
 
 安裝Nuget.Server套件 \(工具=&gt;Nuget套件管理員=&gt;管理方案的Nuget套件\)
 
-![](../../.gitbook/assets/image%20%28232%29.png)
+![](../../.gitbook/assets/image%20%28247%29.png)
 
 輸入Nuget.Server
 
-![](../../.gitbook/assets/image%20%28198%29.png)
+![](../../.gitbook/assets/image%20%28209%29.png)
 
 點選安裝
 
-![](../../.gitbook/assets/image%20%28288%29.png)
+![](../../.gitbook/assets/image%20%28306%29.png)
 
 安裝完畢，Nuget Server物件將自動產生如下：
 
-![](../../.gitbook/assets/image%20%28134%29.png)
+![](../../.gitbook/assets/image%20%28142%29.png)
 
 發佈網站至IIS資料夾
 
-![](../../.gitbook/assets/image%20%2848%29.png)
+![](../../.gitbook/assets/image%20%2853%29.png)
 
-![](../../.gitbook/assets/image%20%28295%29.png)
+![](../../.gitbook/assets/image%20%28314%29.png)
 
 註：需將NugetServer根目錄下Packages資料權限進行調整
 
-![](../../.gitbook/assets/image%20%2881%29.png)
+![](../../.gitbook/assets/image%20%2886%29.png)
 
 需給予IIS\_IUSR寫入權限\(以避免未來使用時，權限不足問題\)
 
-![](../../.gitbook/assets/image%20%2824%29.png)
+![](../../.gitbook/assets/image%20%2827%29.png)
 
 Server建置完後，即可測試，例如：http://localhost/NugetServer
 
