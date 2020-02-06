@@ -16,7 +16,7 @@ Tesseract OCR是一個開源OCR Opensource，可針對各國語言進行OCR
 
 作法：在此限制下，執行概念如下
 
-![](../.gitbook/assets/image%20%28387%29.png)
+![](../.gitbook/assets/image%20%28389%29.png)
 
 ## 2. Develop
 
@@ -46,7 +46,7 @@ Visual Studio \(2017/2019\)建立新專案
 
 ![](../.gitbook/assets/image%20%28116%29.png)
 
-![](../.gitbook/assets/image%20%28338%29.png)
+![](../.gitbook/assets/image%20%28339%29.png)
 
 畫面左方中加入一個Button - Load Image：為了選取圖片來源
 
@@ -60,7 +60,7 @@ Visual Studio \(2017/2019\)建立新專案
 
 Button LoadImage Click事件處理
 
-![](../.gitbook/assets/image%20%28395%29.png)
+![](../.gitbook/assets/image%20%28398%29.png)
 
 開啟FileDialog，並限制可選擇的副檔名為bmp / jpg / png
 
@@ -230,7 +230,7 @@ Button LoadImage Click事件處理
 
 測試可以正常顯示座標位置
 
-![](../.gitbook/assets/image%20%28380%29.png)
+![](../.gitbook/assets/image%20%28382%29.png)
 
 新增方法ReportAllLocation方法顯示左上、右下座標並在Mouse UP事件中呼叫此方法\(Mouse Up為框選結束時間點\)
 
@@ -308,7 +308,7 @@ Button LoadImage Click事件處理
         }
 ```
 
-![](../.gitbook/assets/image%20%28318%29.png)
+![](../.gitbook/assets/image%20%28319%29.png)
 
 解決座標問題後，接著新增DataGridView，以顯示、記錄每一個框選的Label名稱、座標資料
 
@@ -369,6 +369,12 @@ Button LoadImage Click事件處理
 
 * [ ] 讀取Label設定 - 取得座標位置並將對應圖片取出
 * [ ] 圖片處理
+
+![](../.gitbook/assets/image%20%28306%29.png)
+
+![](../.gitbook/assets/image%20%28395%29.png)
+
+![](../.gitbook/assets/image%20%28341%29.png)
 
 ### 2-3. OCR\(Tesseract\)
 

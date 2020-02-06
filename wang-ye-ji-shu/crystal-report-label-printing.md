@@ -90,25 +90,25 @@ Field Object：該欄位在資料中對應到的值
 
 將FROM的Text Object調整為「FROM：」並調整字型
 
-![](../.gitbook/assets/image%20%28376%29.png)
+![](../.gitbook/assets/image%20%28378%29.png)
 
 調整位置
 
-![](../.gitbook/assets/image%20%28353%29.png)
+![](../.gitbook/assets/image%20%28355%29.png)
 
 插入線條
 
 ![](../.gitbook/assets/image%20%2822%29.png)
 
-![](../.gitbook/assets/image%20%28329%29.png)
+![](../.gitbook/assets/image%20%28330%29.png)
 
 依此類推，拉出Label的樣式
 
-![](../.gitbook/assets/image%20%28313%29.png)
+![](../.gitbook/assets/image%20%28314%29.png)
 
 其中ItemNo區，下方有一個BarCode條碼，因此再建一個ItemNo物件，將欄位名稱刪除
 
-![](../.gitbook/assets/image%20%28340%29.png)
+![](../.gitbook/assets/image%20%28342%29.png)
 
 將Field Object的字型調整成條碼字型
 
@@ -150,7 +150,7 @@ Field Object：該欄位在資料中對應到的值
 
 列印結果
 
-![](../.gitbook/assets/image%20%28375%29.png)
+![](../.gitbook/assets/image%20%28377%29.png)
 
 完整Sample Code
 

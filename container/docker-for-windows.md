@@ -8,13 +8,13 @@ DevOps議題中難免會提到Serverless、MicroService\(微服務\)，主要原
 
 Container基本架構如下：OS核心為共用，Container中只要安裝服務所需要的軟體即可\(例如iis\)
 
-![](../.gitbook/assets/image%20%28389%29.png)
+![](../.gitbook/assets/image%20%28391%29.png)
 
 傳統VM，每一個網站Server都需要有自己的os核心\(例如windows\)，再外加網站所需的服務\(例如iis\)
 
 然後os核心，以windows為例非常佔空間、記憶體，因此用此方式想做到MicroService勢必需要花費很多資料，故Docker才會在近年被愈來愈多軟體業廣範使用
 
-![Container vs VM](../.gitbook/assets/image%20%28337%29.png)
+![Container vs VM](../.gitbook/assets/image%20%28338%29.png)
 
 簡單的說，使用Docker的好處：可以透過建立好的Image檔，快速將服務啟動在Container\(容器\)中
 
@@ -30,7 +30,7 @@ Windows中使用Docker，需要開啟Containers及Hyper-V功能
 
 勾選Containers、Hyper-V
 
-![](../.gitbook/assets/image%20%28388%29.png)
+![](../.gitbook/assets/image%20%28390%29.png)
 
 ## 安裝前準備2：BIOS - VTx設定
 
@@ -50,7 +50,7 @@ BIOS - Virtualization Technology設定需打開，否則可能在Docker Containe
 
 安裝過程原則上依指示下一步到底即可 \(此頁面可以把Use Windows Containers選項打勾\)
 
-![](../.gitbook/assets/image%20%28324%29.png)
+![](../.gitbook/assets/image%20%28325%29.png)
 
 跳出此警告時，按ok即可\(會重開機\)
 
@@ -140,7 +140,7 @@ docker exec -it testapp1 cmd
 echo test > index.aspx
 ```
 
-![](../.gitbook/assets/image%20%28383%29.png)
+![](../.gitbook/assets/image%20%28385%29.png)
 
 測試
 
@@ -150,9 +150,9 @@ echo test > index.aspx
 
 asptestweb目錄如下
 
-![](../.gitbook/assets/image%20%28359%29.png)
+![](../.gitbook/assets/image%20%28361%29.png)
 
-![](../.gitbook/assets/image%20%28354%29.png)
+![](../.gitbook/assets/image%20%28356%29.png)
 
 docker容器中可以mount位置到Host磁碟 \(讓容器可以取得host資料\)，因此先刪除已建立的容器testapp1
 
@@ -183,7 +183,7 @@ docker exec -it testapp1 cmd
 xcopy /s c:\webfile c:\inetpub\wwwroot
 ```
 
-![](../.gitbook/assets/image%20%28334%29.png)
+![](../.gitbook/assets/image%20%28335%29.png)
 
 ![](../.gitbook/assets/image%20%28158%29.png)
 
@@ -206,7 +206,7 @@ docker stop testapp1
 docker commit testapp1 img_test
 ```
 
-![](../.gitbook/assets/image%20%28379%29.png)
+![](../.gitbook/assets/image%20%28381%29.png)
 
 ![](../.gitbook/assets/image%20%2841%29.png)
 
@@ -228,7 +228,7 @@ docker run --name testapp2 -p 2000:80 -d img_test
 
 容器testapp2建立完成後，即可以測試localhost:2000
 
-![](../.gitbook/assets/image%20%28349%29.png)
+![](../.gitbook/assets/image%20%28351%29.png)
 
 透過此方式，即可以快速部署web應用程式至任何有docker的環境上，該server不需要安裝iis、.net framework及相關複雜的設定，因此這些設定都在建立image時已經設定完畢
 
@@ -250,7 +250,7 @@ testweb則是使用asp.net core nanoserver版\(精簡\) Image建立的Image，�
 
 例如以下：
 
-![](../.gitbook/assets/image%20%28316%29.png)
+![](../.gitbook/assets/image%20%28317%29.png)
 
 以下說明使用方法：
 
@@ -260,11 +260,11 @@ testweb則是使用asp.net core nanoserver版\(精簡\) Image建立的Image，�
 
 在此根目錄新增檔案Dockerfile \(不一定要叫這個名稱\)，內容空白即可，並去除附檔名
 
-![](../.gitbook/assets/image%20%28356%29.png)
+![](../.gitbook/assets/image%20%28358%29.png)
 
 用文字編輯器開啟Dockerfile\(建議用vscode\)
 
-![](../.gitbook/assets/image%20%28355%29.png)
+![](../.gitbook/assets/image%20%28357%29.png)
 
 Dockerfile大致上需要做到的是
 
@@ -358,7 +358,7 @@ docker run --name testapp3 -p 3000:80 -d testweb
 
 一般container結合ci/cd流程時，通常也都會搭配使用dockerfile方式，去進行專案建置、nuget還原、copy檔案等作業，如下圖，相關指令可以參與docker官網介紹或是使用Visual Studio工具自動產生
 
-![](../.gitbook/assets/image%20%28316%29.png)
+![](../.gitbook/assets/image%20%28317%29.png)
 
 ```csharp
 FROM microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1803 AS base
@@ -413,7 +413,7 @@ Visual Studio 2019以後，有跟Docker整合，可以直接在Visual Studio中�
 
 Debug模式下 - 可以在container內偵錯，如下圖，其中172.26.197.81為container的虛擬ip
 
-![](../.gitbook/assets/image%20%28370%29.png)
+![](../.gitbook/assets/image%20%28372%29.png)
 
 可以觀察按下建置後，可以發現Visual Studio其實是先建置後，再執行Docker Build、docker run指令
 
@@ -431,15 +431,15 @@ release模式：tag為lastest；debug模式：tag為dev
 
 輸入docker ps，可以看到容器被建立
 
-![](../.gitbook/assets/image%20%28319%29.png)
+![](../.gitbook/assets/image%20%28320%29.png)
 
 因此輸入localhost:63377 \(每次可能不一樣\)，亦可進入到網站
 
-![](../.gitbook/assets/image%20%28307%29.png)
+![](../.gitbook/assets/image%20%28308%29.png)
 
 使用Visual Studio Docker整合功能，可以更簡單地使用Docker
 
 一般在偵錯時，建議還是先選擇IIS Express \(不用做docker build / docker run\)
 
-![](../.gitbook/assets/image%20%28369%29.png)
+![](../.gitbook/assets/image%20%28371%29.png)
 

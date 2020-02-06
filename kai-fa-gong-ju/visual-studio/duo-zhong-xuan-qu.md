@@ -32,5 +32,5 @@ Visual Studio中工具→選項→環境→鍵盤
 
 此時輸入任何值時，會直接修改全部選取的項目
 
-![](../../.gitbook/assets/image%20%28314%29.png)
+![](../../.gitbook/assets/image%20%28315%29.png)
 

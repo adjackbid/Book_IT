@@ -7,7 +7,7 @@
 * LogTool\(負責處理Log Handling\)
 * DBTool\(負責處理DB層資料CRUD\)
 
-![](../../.gitbook/assets/image%20%28309%29.png)
+![](../../.gitbook/assets/image%20%28310%29.png)
 
 LogTool在寫入Log時，需要寫入DB，因此會使用到DBTools
 
@@ -37,7 +37,7 @@ Package Source選擇自架的Nuget Server
 
 加入後，按下ok即可
 
-![](../../.gitbook/assets/image%20%28343%29.png)
+![](../../.gitbook/assets/image%20%28345%29.png)
 
 存檔後，即可看到metadata中會顯示Dependencies
 

@@ -37,7 +37,7 @@ docker run -d -p 443:443 -p 8080:80 -p 22:22 --name gitlab
 
 輸入密碼
 
-![](../../.gitbook/assets/image%20%28345%29.png)
+![](../../.gitbook/assets/image%20%28347%29.png)
 
 登入號帳為root
 
