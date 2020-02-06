@@ -1,5 +1,11 @@
 # Index
 
+## 2020.02.06
+
+### Added
+
+* [Crystal Report - Label Printing](wang-ye-ji-shu/crystal-report-label-printing.md)
+
 ## 2020.01.06
 
 ### Added

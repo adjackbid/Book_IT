@@ -21,6 +21,7 @@
   * [DashBoard](wang-ye-ji-shu/signalr/dashboard.md)
 * [ASP.Net Core](wang-ye-ji-shu/asp.net-core/README.md)
   * [IIS Deployment](wang-ye-ji-shu/asp.net-core/iis-deployment.md)
+* [Crystal Report - Label Printing](wang-ye-ji-shu/crystal-report-label-printing.md)
 
 ## 開發工具
 
