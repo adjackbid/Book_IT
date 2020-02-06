@@ -12,7 +12,7 @@ Crystal Report一般使用在報表用途，可以自定訂欄位及樣式，在
 
 {% embed url="https://www.crystalreports.com/crvs/confirm/" %}
 
-![](../.gitbook/assets/image%20%28265%29.png)
+![](../.gitbook/assets/image%20%28266%29.png)
 
 ## Demo
 
@@ -28,7 +28,7 @@ Crystal Report一般使用在報表用途，可以自定訂欄位及樣式，在
 
 Print Click事件 - 取得輸入的參數並呼叫PrintLabel Function\(暫不寫code\)
 
-![](../.gitbook/assets/image%20%28286%29.png)
+![](../.gitbook/assets/image%20%28288%29.png)
 
 加入資料集\(DataSet\) - 做為Crystal Report的資料來源
 
@@ -40,11 +40,11 @@ DataSet建立完成如下，可從左方工具箱新增DataTable至設計介面�
 
 ![](../.gitbook/assets/image%20%2874%29.png)
 
-![](../.gitbook/assets/image%20%28259%29.png)
+![](../.gitbook/assets/image%20%28260%29.png)
 
 在DataTable中新增資料行\(Column\)
 
-![](../.gitbook/assets/image%20%28281%29.png)
+![](../.gitbook/assets/image%20%28283%29.png)
 
 此範例，需要四個欄位如下，可視情況調整欄位的DataType \(string / int...\)
 
@@ -86,29 +86,29 @@ Text Object：預設值會為欄位名稱\(可修改\)，若不需要可以砍�
 
 Field Object：該欄位在資料中對應到的值
 
-![](../.gitbook/assets/image%20%28263%29.png)
+![](../.gitbook/assets/image%20%28264%29.png)
 
 將FROM的Text Object調整為「FROM：」並調整字型
 
-![](../.gitbook/assets/image%20%28374%29.png)
+![](../.gitbook/assets/image%20%28376%29.png)
 
 調整位置
 
-![](../.gitbook/assets/image%20%28351%29.png)
+![](../.gitbook/assets/image%20%28353%29.png)
 
 插入線條
 
 ![](../.gitbook/assets/image%20%2822%29.png)
 
-![](../.gitbook/assets/image%20%28327%29.png)
+![](../.gitbook/assets/image%20%28329%29.png)
 
 依此類推，拉出Label的樣式
 
-![](../.gitbook/assets/image%20%28311%29.png)
+![](../.gitbook/assets/image%20%28313%29.png)
 
 其中ItemNo區，下方有一個BarCode條碼，因此再建一個ItemNo物件，將欄位名稱刪除
 
-![](../.gitbook/assets/image%20%28338%29.png)
+![](../.gitbook/assets/image%20%28340%29.png)
 
 將Field Object的字型調整成條碼字型
 
@@ -150,7 +150,7 @@ Field Object：該欄位在資料中對應到的值
 
 列印結果
 
-![](../.gitbook/assets/image%20%28373%29.png)
+![](../.gitbook/assets/image%20%28375%29.png)
 
 完整Sample Code
 

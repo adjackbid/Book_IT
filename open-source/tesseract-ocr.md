@@ -16,7 +16,7 @@ Tesseract OCR是一個開源OCR Opensource，可針對各國語言進行OCR
 
 作法：在此限制下，執行概念如下
 
-![](../.gitbook/assets/image%20%28385%29.png)
+![](../.gitbook/assets/image%20%28387%29.png)
 
 ## 2. Develop
 
@@ -46,7 +46,7 @@ Visual Studio \(2017/2019\)建立新專案
 
 ![](../.gitbook/assets/image%20%28116%29.png)
 
-![](../.gitbook/assets/image%20%28336%29.png)
+![](../.gitbook/assets/image%20%28338%29.png)
 
 畫面左方中加入一個Button - Load Image：為了選取圖片來源
 
@@ -54,13 +54,13 @@ Visual Studio \(2017/2019\)建立新專案
 
 畫面右方新增一個pictureBox：顯示圖片用，因為圖片大小可能不會等於PictureBox大小，所以Size Mode要選擇Zoom，讓程式自動縮放圖片
 
-![](../.gitbook/assets/image%20%28254%29.png)
+![](../.gitbook/assets/image%20%28255%29.png)
 
 ![](../.gitbook/assets/image%20%28183%29.png)
 
 Button LoadImage Click事件處理
 
-![](../.gitbook/assets/image%20%28393%29.png)
+![](../.gitbook/assets/image%20%28395%29.png)
 
 開啟FileDialog，並限制可選擇的副檔名為bmp / jpg / png
 
@@ -101,7 +101,7 @@ Button LoadImage Click事件處理
 
 測試點選Button Load Image，可以成功跳出檔案選擇視窗
 
-![](../.gitbook/assets/image%20%28269%29.png)
+![](../.gitbook/assets/image%20%28270%29.png)
 
 選取檔案後，顯示在右方pictureBox中
 
@@ -174,7 +174,7 @@ Button LoadImage Click事件處理
 
 測試OK，可以依照選取的位置進行框選動作
 
-![](../.gitbook/assets/image%20%28282%29.png)
+![](../.gitbook/assets/image%20%28284%29.png)
 
 為方便顯示座標位置，新增一個richtextbox
 
@@ -230,7 +230,7 @@ Button LoadImage Click事件處理
 
 測試可以正常顯示座標位置
 
-![](../.gitbook/assets/image%20%28378%29.png)
+![](../.gitbook/assets/image%20%28380%29.png)
 
 新增方法ReportAllLocation方法顯示左上、右下座標並在Mouse UP事件中呼叫此方法\(Mouse Up為框選結束時間點\)
 
@@ -308,11 +308,11 @@ Button LoadImage Click事件處理
         }
 ```
 
-![](../.gitbook/assets/image%20%28316%29.png)
+![](../.gitbook/assets/image%20%28318%29.png)
 
 解決座標問題後，接著新增DataGridView，以顯示、記錄每一個框選的Label名稱、座標資料
 
-![](../.gitbook/assets/image%20%2839%29.png)
+![](../.gitbook/assets/image%20%28277%29.png)
 
 新增DataTable dtLabels並指定GridView的DataSource為dtLabels
 
@@ -322,7 +322,7 @@ Button LoadImage Click事件處理
 
 ![](../.gitbook/assets/image%20%28125%29.png)
 
-![](../.gitbook/assets/image%20%28291%29.png)
+![](../.gitbook/assets/image%20%28293%29.png)
 
 
 
@@ -351,6 +351,10 @@ Button LoadImage Click事件處理
                 dr_new["Y2"] = location2.Y;
 
                 dtLabels.Rows.Add(dr_new);
+
+                ttbLabel.Text = "";
+                ttbLabel.Focus();
+
             }
             catch (Exception ex)
             {
@@ -358,6 +362,8 @@ Button LoadImage Click事件處理
             }
         }
 ```
+
+![](../.gitbook/assets/image%20%28248%29.png)
 
 ### 
 

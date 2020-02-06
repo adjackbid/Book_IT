@@ -28,7 +28,7 @@ description: ASP.Net Core搭配SignalR示範ChatRoom功能
 
 安裝 =&gt; 將signalr.js安裝至專案根目錄wwwroot/lib/@microsoft/signalr中
 
-![](../../.gitbook/assets/image%20%28319%29.png)
+![](../../.gitbook/assets/image%20%28321%29.png)
 
 ![](../../.gitbook/assets/image%20%28219%29.png)
 
@@ -38,7 +38,7 @@ description: ASP.Net Core搭配SignalR示範ChatRoom功能
 
 建立ChatHub類別
 
-![](../../.gitbook/assets/image%20%28267%29.png)
+![](../../.gitbook/assets/image%20%28268%29.png)
 
 ```csharp
 using Microsoft.AspNetCore.SignalR;
@@ -97,7 +97,7 @@ Index頁面，新增2個input\(text\)、1個button、訊息列\(messagelist\)
 
 新增chat.js \(~/js/目錄下\)
 
-![](../../.gitbook/assets/image%20%28300%29.png)
+![](../../.gitbook/assets/image%20%28302%29.png)
 
 chat.js
 
@@ -211,7 +211,7 @@ namespace ChatRoom
 
 Debug Mode，開啟兩個視窗即可測試SignalR即時回應功能
 
-![](../../.gitbook/assets/image%20%28361%29.png)
+![](../../.gitbook/assets/image%20%28363%29.png)
 
 以上參考微軟官方Demo範例\([https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/signalr?view=aspnetcore-3.0&tabs=visual-studio](https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/signalr?view=aspnetcore-3.0&tabs=visual-studio)\)
 
