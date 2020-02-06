@@ -365,9 +365,10 @@ Button LoadImage Click事件處理
 
 ![](../.gitbook/assets/image%20%28248%29.png)
 
-### 
-
 ### 2-2. Image preprocess
+
+* [ ] 讀取Label設定 - 取得座標位置並將對應圖片取出
+* [ ] 圖片處理
 
 ### 2-3. OCR\(Tesseract\)
 
