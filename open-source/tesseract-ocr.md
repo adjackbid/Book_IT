@@ -16,7 +16,7 @@ Tesseract OCR是一個開源OCR Opensource，可針對各國語言進行OCR
 
 作法：在此限制下，執行概念如下
 
-![](../.gitbook/assets/image%20%28395%29.png)
+![](../.gitbook/assets/image%20%28399%29.png)
 
 ## 2. Develop
 
@@ -46,7 +46,7 @@ Visual Studio \(2017/2019\)建立新專案
 
 ![](../.gitbook/assets/image%20%28119%29.png)
 
-![](../.gitbook/assets/image%20%28344%29.png)
+![](../.gitbook/assets/image%20%28347%29.png)
 
 畫面左方中加入一個Button - Load Image：為了選取圖片來源
 
@@ -54,13 +54,13 @@ Visual Studio \(2017/2019\)建立新專案
 
 畫面右方新增一個pictureBox：顯示圖片用，因為圖片大小可能不會等於PictureBox大小，所以Size Mode要選擇Zoom，讓程式自動縮放圖片
 
-![](../.gitbook/assets/image%20%28260%29.png)
+![](../.gitbook/assets/image%20%28262%29.png)
 
-![](../.gitbook/assets/image%20%28186%29.png)
+![](../.gitbook/assets/image%20%28187%29.png)
 
 Button LoadImage Click事件處理
 
-![](../.gitbook/assets/image%20%28404%29.png)
+![](../.gitbook/assets/image%20%28408%29.png)
 
 開啟FileDialog，並限制可選擇的副檔名為bmp / jpg / png
 
@@ -101,7 +101,7 @@ Button LoadImage Click事件處理
 
 測試點選Button Load Image，可以成功跳出檔案選擇視窗
 
-![](../.gitbook/assets/image%20%28275%29.png)
+![](../.gitbook/assets/image%20%28277%29.png)
 
 選取檔案後，顯示在右方pictureBox中
 
@@ -117,7 +117,7 @@ Button LoadImage Click事件處理
 
 針對PictureBox1中的Mouse Down / Up / Move事件進行處理，並新增幾個變數紀錄需要的座標\(開始座標\(左上XY\)、結束座標\(右下XY\)\)
 
-![](../.gitbook/assets/image%20%28185%29.png)
+![](../.gitbook/assets/image%20%28186%29.png)
 
 其中Refresh\(\)可以觸發整個FORM重新繪製，因此搭配pictureBox1的Paint事件可以將紅框畫出
 
@@ -174,7 +174,7 @@ Button LoadImage Click事件處理
 
 測試OK，可以依照選取的位置進行框選動作
 
-![](../.gitbook/assets/image%20%28289%29.png)
+![](../.gitbook/assets/image%20%28292%29.png)
 
 為方便顯示座標位置，新增一個richtextbox
 
@@ -230,7 +230,7 @@ Button LoadImage Click事件處理
 
 測試可以正常顯示座標位置
 
-![](../.gitbook/assets/image%20%28388%29.png)
+![](../.gitbook/assets/image%20%28392%29.png)
 
 新增方法ReportAllLocation方法顯示左上、右下座標並在Mouse UP事件中呼叫此方法\(Mouse Up為框選結束時間點\)
 
@@ -257,7 +257,7 @@ Button LoadImage Click事件處理
 
 測試正常
 
-![](../.gitbook/assets/image%20%28218%29.png)
+![](../.gitbook/assets/image%20%28219%29.png)
 
 因為PictureBox是整個右半邊，因此X,Y起始點會在藍色標記位置，但圖片因為等比例縮放關係，不會對齊左上角，圖片的X、Y起始位置應為綠色框選位置
 
@@ -308,21 +308,21 @@ Button LoadImage Click事件處理
         }
 ```
 
-![](../.gitbook/assets/image%20%28324%29.png)
+![](../.gitbook/assets/image%20%28327%29.png)
 
 解決座標問題後，接著新增DataGridView，以顯示、記錄每一個框選的Label名稱、座標資料
 
-![](../.gitbook/assets/image%20%28282%29.png)
+![](../.gitbook/assets/image%20%28285%29.png)
 
 新增DataTable dtLabels並指定GridView的DataSource為dtLabels
 
-![](../.gitbook/assets/image%20%28244%29.png)
+![](../.gitbook/assets/image%20%28245%29.png)
 
 
 
 ![](../.gitbook/assets/image%20%28128%29.png)
 
-![](../.gitbook/assets/image%20%28298%29.png)
+![](../.gitbook/assets/image%20%28301%29.png)
 
 
 
@@ -363,28 +363,34 @@ Button LoadImage Click事件處理
         }
 ```
 
-![](../.gitbook/assets/image%20%28252%29.png)
+![](../.gitbook/assets/image%20%28254%29.png)
 
 ### 2-2. Image preprocess
 
 * [ ] 讀取Label設定 - 取得座標位置並將對應圖片取出
 * [ ] 圖片處理
 
-![](../.gitbook/assets/image%20%28311%29.png)
+![](../.gitbook/assets/image%20%28314%29.png)
 
-![](../.gitbook/assets/image%20%28401%29.png)
+![](../.gitbook/assets/image%20%28405%29.png)
 
-![](../.gitbook/assets/image%20%28346%29.png)
+![](../.gitbook/assets/image%20%28349%29.png)
 
 ![](../.gitbook/assets/image%20%2824%29.png)
 
-![](../.gitbook/assets/image%20%28373%29.png)
+![](../.gitbook/assets/image%20%28377%29.png)
 
 ![](../.gitbook/assets/image%20%2891%29.png)
 
-![](../.gitbook/assets/image%20%28189%29.png)
+![](../.gitbook/assets/image%20%28190%29.png)
 
-![](../.gitbook/assets/image%20%28256%29.png)
+![](../.gitbook/assets/image%20%28258%29.png)
+
+![](../.gitbook/assets/image%20%28362%29.png)
+
+![](../.gitbook/assets/image%20%28248%29.png)
+
+
 
 
 
