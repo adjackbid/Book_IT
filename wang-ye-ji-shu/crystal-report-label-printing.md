@@ -12,27 +12,27 @@ Crystal Report一般使用在報表用途，可以自定訂欄位及樣式，在
 
 {% embed url="https://www.crystalreports.com/crvs/confirm/" %}
 
-![](../.gitbook/assets/image%20%28273%29.png)
+![](../.gitbook/assets/image%20%28274%29.png)
 
 ## Demo
 
 建立Demo專案
 
-![](../.gitbook/assets/image%20%28246%29.png)
+![](../.gitbook/assets/image%20%28247%29.png)
 
 ![](../.gitbook/assets/image%20%2873%29.png)
 
 新增四個TextBox及一個列印Button
 
-![](../.gitbook/assets/image%20%28208%29.png)
+![](../.gitbook/assets/image%20%28209%29.png)
 
 Print Click事件 - 取得輸入的參數並呼叫PrintLabel Function\(暫不寫code\)
 
-![](../.gitbook/assets/image%20%28296%29.png)
+![](../.gitbook/assets/image%20%28298%29.png)
 
 加入資料集\(DataSet\) - 做為Crystal Report的資料來源
 
-![](../.gitbook/assets/image%20%28250%29.png)
+![](../.gitbook/assets/image%20%28251%29.png)
 
 ![](../.gitbook/assets/image%20%2877%29.png)
 
@@ -40,17 +40,17 @@ DataSet建立完成如下，可從左方工具箱新增DataTable至設計介面�
 
 ![](../.gitbook/assets/image%20%2876%29.png)
 
-![](../.gitbook/assets/image%20%28267%29.png)
+![](../.gitbook/assets/image%20%28268%29.png)
 
 在DataTable中新增資料行\(Column\)
 
-![](../.gitbook/assets/image%20%28291%29.png)
+![](../.gitbook/assets/image%20%28292%29.png)
 
 此範例，需要四個欄位如下，可視情況調整欄位的DataType \(string / int...\)
 
 ![](../.gitbook/assets/image%20%28200%29.png)
 
-![](../.gitbook/assets/image%20%28226%29.png)
+![](../.gitbook/assets/image%20%28227%29.png)
 
 新增Crystal Report物件
 
@@ -58,7 +58,7 @@ DataSet建立完成如下，可從左方工具箱新增DataTable至設計介面�
 
 選擇使用空白報表
 
-![](../.gitbook/assets/image%20%28237%29.png)
+![](../.gitbook/assets/image%20%28238%29.png)
 
 在欄位總管中 - 點選資料庫欄位 →右鍵點選資料庫專家
 
@@ -86,29 +86,29 @@ Text Object：預設值會為欄位名稱\(可修改\)，若不需要可以砍�
 
 Field Object：該欄位在資料中對應到的值
 
-![](../.gitbook/assets/image%20%28271%29.png)
+![](../.gitbook/assets/image%20%28272%29.png)
 
 將FROM的Text Object調整為「FROM：」並調整字型
 
-![](../.gitbook/assets/image%20%28388%29.png)
+![](../.gitbook/assets/image%20%28390%29.png)
 
 調整位置
 
-![](../.gitbook/assets/image%20%28364%29.png)
+![](../.gitbook/assets/image%20%28366%29.png)
 
 插入線條
 
 ![](../.gitbook/assets/image%20%2823%29.png)
 
-![](../.gitbook/assets/image%20%28338%29.png)
+![](../.gitbook/assets/image%20%28340%29.png)
 
 依此類推，拉出Label的樣式
 
-![](../.gitbook/assets/image%20%28322%29.png)
+![](../.gitbook/assets/image%20%28324%29.png)
 
 其中ItemNo區，下方有一個BarCode條碼，因此再建一個ItemNo物件，將欄位名稱刪除
 
-![](../.gitbook/assets/image%20%28350%29.png)
+![](../.gitbook/assets/image%20%28352%29.png)
 
 將Field Object的字型調整成條碼字型
 
@@ -150,7 +150,7 @@ Field Object：該欄位在資料中對應到的值
 
 列印結果
 
-![](../.gitbook/assets/image%20%28387%29.png)
+![](../.gitbook/assets/image%20%28389%29.png)
 
 完整Sample Code
 

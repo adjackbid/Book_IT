@@ -16,7 +16,7 @@ Tesseract OCR是一個開源OCR Opensource，可針對各國語言進行OCR
 
 作法：在此限制下，執行概念如下
 
-![](../.gitbook/assets/image%20%28399%29.png)
+![](../.gitbook/assets/image%20%28401%29.png)
 
 ## 2. Develop
 
@@ -46,7 +46,7 @@ Visual Studio \(2017/2019\)建立新專案
 
 ![](../.gitbook/assets/image%20%28119%29.png)
 
-![](../.gitbook/assets/image%20%28347%29.png)
+![](../.gitbook/assets/image%20%28349%29.png)
 
 畫面左方中加入一個Button - Load Image：為了選取圖片來源
 
@@ -54,13 +54,13 @@ Visual Studio \(2017/2019\)建立新專案
 
 畫面右方新增一個pictureBox：顯示圖片用，因為圖片大小可能不會等於PictureBox大小，所以Size Mode要選擇Zoom，讓程式自動縮放圖片
 
-![](../.gitbook/assets/image%20%28262%29.png)
+![](../.gitbook/assets/image%20%28263%29.png)
 
 ![](../.gitbook/assets/image%20%28187%29.png)
 
 Button LoadImage Click事件處理
 
-![](../.gitbook/assets/image%20%28408%29.png)
+![](../.gitbook/assets/image%20%28410%29.png)
 
 開啟FileDialog，並限制可選擇的副檔名為bmp / jpg / png
 
@@ -101,7 +101,7 @@ Button LoadImage Click事件處理
 
 測試點選Button Load Image，可以成功跳出檔案選擇視窗
 
-![](../.gitbook/assets/image%20%28277%29.png)
+![](../.gitbook/assets/image%20%28278%29.png)
 
 選取檔案後，顯示在右方pictureBox中
 
@@ -174,7 +174,7 @@ Button LoadImage Click事件處理
 
 測試OK，可以依照選取的位置進行框選動作
 
-![](../.gitbook/assets/image%20%28292%29.png)
+![](../.gitbook/assets/image%20%28293%29.png)
 
 為方便顯示座標位置，新增一個richtextbox
 
@@ -230,7 +230,7 @@ Button LoadImage Click事件處理
 
 測試可以正常顯示座標位置
 
-![](../.gitbook/assets/image%20%28392%29.png)
+![](../.gitbook/assets/image%20%28394%29.png)
 
 新增方法ReportAllLocation方法顯示左上、右下座標並在Mouse UP事件中呼叫此方法\(Mouse Up為框選結束時間點\)
 
@@ -257,7 +257,7 @@ Button LoadImage Click事件處理
 
 測試正常
 
-![](../.gitbook/assets/image%20%28219%29.png)
+![](../.gitbook/assets/image%20%28220%29.png)
 
 因為PictureBox是整個右半邊，因此X,Y起始點會在藍色標記位置，但圖片因為等比例縮放關係，不會對齊左上角，圖片的X、Y起始位置應為綠色框選位置
 
@@ -308,21 +308,21 @@ Button LoadImage Click事件處理
         }
 ```
 
-![](../.gitbook/assets/image%20%28327%29.png)
+![](../.gitbook/assets/image%20%28329%29.png)
 
 解決座標問題後，接著新增DataGridView，以顯示、記錄每一個框選的Label名稱、座標資料
 
-![](../.gitbook/assets/image%20%28285%29.png)
+![](../.gitbook/assets/image%20%28286%29.png)
 
 新增DataTable dtLabels並指定GridView的DataSource為dtLabels
 
-![](../.gitbook/assets/image%20%28245%29.png)
+![](../.gitbook/assets/image%20%28246%29.png)
 
 
 
 ![](../.gitbook/assets/image%20%28128%29.png)
 
-![](../.gitbook/assets/image%20%28301%29.png)
+![](../.gitbook/assets/image%20%28303%29.png)
 
 
 
@@ -363,36 +363,171 @@ Button LoadImage Click事件處理
         }
 ```
 
-![](../.gitbook/assets/image%20%28254%29.png)
+![](../.gitbook/assets/image%20%28255%29.png)
 
 ### 2-2. Image preprocess
 
 * [ ] 讀取Label設定 - 取得座標位置並將對應圖片取出
 * [ ] 圖片處理
 
-![](../.gitbook/assets/image%20%28314%29.png)
+![](../.gitbook/assets/image%20%28316%29.png)
 
-![](../.gitbook/assets/image%20%28405%29.png)
+![](../.gitbook/assets/image%20%28407%29.png)
 
-![](../.gitbook/assets/image%20%28349%29.png)
+![](../.gitbook/assets/image%20%28351%29.png)
 
 ![](../.gitbook/assets/image%20%2824%29.png)
 
-![](../.gitbook/assets/image%20%28377%29.png)
+![](../.gitbook/assets/image%20%28379%29.png)
 
 ![](../.gitbook/assets/image%20%2891%29.png)
 
 ![](../.gitbook/assets/image%20%28190%29.png)
 
-![](../.gitbook/assets/image%20%28258%29.png)
+![](../.gitbook/assets/image%20%28259%29.png)
 
-![](../.gitbook/assets/image%20%28362%29.png)
+![](../.gitbook/assets/image%20%28364%29.png)
 
-![](../.gitbook/assets/image%20%28248%29.png)
-
-
+![](../.gitbook/assets/image%20%28249%29.png)
 
 
+
+![](../.gitbook/assets/image%20%28203%29.png)
+
+
+
+![](../.gitbook/assets/image%20%28294%29.png)
+
+```csharp
+ private void btnGetTaggedImage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(dtLabels.Rows.Count == 0)
+                {
+                    return; //
+                }
+                string sImgPath = @".\img\";
+                ImageHelper ih = new ImageHelper();
+                string sLabelName = "";
+                Bitmap source = new Bitmap(pictureBox1.Image);
+                foreach(DataRow dr_label in dtLabels.Rows)
+                {
+                    sLabelName = dr_label["LABEL_NAME"].ToString();
+                    Point p1 = new Point((int)dr_label["X1"], (int)dr_label["Y1"]);
+                    Point p2 = new Point((int)dr_label["X2"], (int)dr_label["Y2"]);
+
+                    //抓取標記的範圍
+                    Bitmap img = ih.Crop(source, p1,p2);
+                    img.Save($"{sImgPath}{sLabelName}-Step1-Ori.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+
+                    //放大五倍
+                    img = ih.Resize(img, img.Width * 5, img.Height * 5);
+                    img.Save($"{sImgPath}{sLabelName}-Step2-Resize2.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+
+                    //轉成灰階
+                    img = ih.SetGrayscale(img);
+                    img.Save($"{sImgPath}{sLabelName}-Step3-SetGrayscale.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+
+                    //高斯模糊(為了解決文字解析度或字型造成缺口問題)
+                    img = ih.GaussianBlur(img);
+                    img.Save($"{sImgPath}{sLabelName}-Step4-GaussianBlur.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+
+                    //轉成絕對黑白
+                    img = ih.SetToBW(img, 190);
+                    img.Save($"{sImgPath}{sLabelName}-Step5-ConvertTo1Bpp1.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+
+                    //更新Image欄位
+                    dr_label.BeginEdit();
+                    dr_label["IMAGE"] = img;
+                    dr_label.EndEdit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+```
+
+
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AForge.Imaging;
+using AForge.Imaging.Filters;
+
+namespace TesseractDemo
+{
+    public class ImageHelper
+    {
+
+        public Bitmap Crop(Bitmap bmp, Point p1,Point p2)
+        {
+
+            Point location = new Point(Math.Min(p1.X, p2.X), Math.Min(p1.Y, p2.Y));
+            Size size = new Size(Math.Abs(p1.X - p2.X) + 1, Math.Abs(p1.Y - p2.Y) + 1);
+
+            Rectangle rectangle = new Rectangle(location, size);
+
+            // create filter
+            Crop filter = new Crop(rectangle);
+            // apply the filter
+            Bitmap newImage = filter.Apply(bmp);
+
+            return newImage;
+        }
+
+        public Bitmap Resize(Bitmap bmp, int newWidth, int newHeight)
+        {
+
+            // create filter
+            ResizeNearestNeighbor filter = new ResizeNearestNeighbor(newWidth, newHeight);
+            // apply the filter
+            Bitmap newImage = filter.Apply(bmp);
+
+            return newImage;
+        }
+
+        //SetGrayscale
+        public Bitmap SetGrayscale(Bitmap img)
+        {
+
+            // create grayscale filter (BT709)
+            Grayscale filter = new Grayscale(0.2125, 0.7154, 0.0721);
+            // apply the filter
+            Bitmap grayImage = filter.Apply(img);
+
+            return grayImage;
+        }
+
+
+        public Bitmap GaussianBlur(Bitmap bSource)
+        {
+            GaussianBlur gaussianBlur = new GaussianBlur(4, 11);//11
+
+            Bitmap bTemp = gaussianBlur.Apply(bSource);
+
+            return bTemp;
+        }
+
+        public Bitmap SetToBW(Bitmap bmp, int ithreshold)
+        {
+            // create filter
+            Threshold filter = new Threshold(ithreshold);
+            // apply the filter
+            filter.ApplyInPlace(bmp);
+            return bmp;
+        }
+    }
+}
+
+```
 
 ### 
 
