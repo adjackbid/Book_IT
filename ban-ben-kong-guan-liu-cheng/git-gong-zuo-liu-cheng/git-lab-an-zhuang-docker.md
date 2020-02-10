@@ -4,13 +4,13 @@ Windows上使用Docker安裝GitLab
 
 將Docker mode切換至Linux
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%288%29.png)
 
 docker hub可以找到官方建立好的gitlab Image
 
 [https://hub.docker.com/r/gitlab/gitlab-ce/](https://hub.docker.com/r/gitlab/gitlab-ce/)
 
-![](../../.gitbook/assets/image%20%2885%29.png)
+![](../../.gitbook/assets/image%20%2895%29.png)
 
 cmd中輸入
 
@@ -18,7 +18,7 @@ cmd中輸入
 docker pull gitlab/gitlab-ce
 ```
 
-![](../../.gitbook/assets/image%20%28300%29.png)
+![](../../.gitbook/assets/image%20%28317%29.png)
 
 建立Container
 
@@ -31,23 +31,23 @@ docker run -d -p 443:443 -p 8080:80 -p 22:22 --name gitlab
 
 測試：http://localhost:8080
 
-![](../../.gitbook/assets/image%20%28290%29.png)
+![](../../.gitbook/assets/image%20%28307%29.png)
 
 1到2分鐘後，再點一次icon
 
 輸入密碼
 
-![](../../.gitbook/assets/image%20%28357%29.png)
+![](../../.gitbook/assets/image%20%28374%29.png)
 
 登入號帳為root
 
-![](../../.gitbook/assets/image%20%28165%29.png)
+![](../../.gitbook/assets/image%20%28179%29.png)
 
 登入後，即可以新增帳號
 
 
 
-![](../../.gitbook/assets/image%20%2812%29.png)
+![](../../.gitbook/assets/image%20%2816%29.png)
 
 ToDo：smtp設定、Demo Project Create...
 

@@ -8,37 +8,37 @@ Grafana為開源的Dash Board管理平台\(Go語言編寫\)，可動態建立資
 
 官網：[https://grafana.com/grafana/](https://grafana.com/grafana/)
 
-![](../.gitbook/assets/image%20%28160%29.png)
+![](../.gitbook/assets/image%20%28174%29.png)
 
 ## Grafana架設方式
 
 Grafana有提供安裝程式，可於官網中Download頁面下載安裝檔
 
-![](../.gitbook/assets/image%20%28391%29.png)
+![](../.gitbook/assets/image%20%28410%29.png)
 
 Windows安裝時，可直接下載打包好的安裝檔即可
 
-![](../.gitbook/assets/image%20%28243%29.png)
+![](../.gitbook/assets/image%20%28259%29.png)
 
 下載完畢後，直接點選安裝檔
 
-![](../.gitbook/assets/image%20%28317%29.png)
+![](../.gitbook/assets/image%20%28334%29.png)
 
 安裝完畢後，至安裝目錄中\GrafanaLabs\grafana\conf資料下，copy一份sample.ini，並改名為custom.ini\(系統設置檔\)
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%2812%29.png)
 
 該檔案中，可設定進行相關設定\(例如認證方式、LDAP設定等\)
 
 主要需要調整的項目為server區的http\_port，預設值為3000，可依需求調整該值\(例如80等\)
 
-![](../.gitbook/assets/image%20%28120%29.png)
+![](../.gitbook/assets/image%20%28132%29.png)
 
 設定完畢後，執行bin資料夾下grafana-server.exe即可啟動網址服務
 
-![](../.gitbook/assets/image%20%2851%29.png)
+![](../.gitbook/assets/image%20%2860%29.png)
 
-![](../.gitbook/assets/image%20%28197%29.png)
+![](../.gitbook/assets/image%20%28213%29.png)
 
 服務啟動後，即可登入網站
 
@@ -48,55 +48,55 @@ Windows安裝時，可直接下載打包好的安裝檔即可
 
 註：Oracle需使用Grafana Enterprise版本才可使用
 
-![](../.gitbook/assets/image%20%28216%29.png)
+![](../.gitbook/assets/image%20%28232%29.png)
 
-![](../.gitbook/assets/image%20%28167%29.png)
+![](../.gitbook/assets/image%20%28181%29.png)
 
 設定host、db名稱、使用者帳號等資訊後，即可
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../.gitbook/assets/image%20%2826%29.png)
 
 ## 建立Dash Board
 
 接著即可建立Dash Board
 
-![](../.gitbook/assets/image%20%28412%29.png)
+![](../.gitbook/assets/image%20%28431%29.png)
 
 點選Choose Visualization - 選擇圖表類型
 
-![](../.gitbook/assets/image%20%2868%29.png)
+![](../.gitbook/assets/image%20%2878%29.png)
 
 選擇Data Source - 調整SQL
 
 註：圖表多數會使用到TIME、VALUE、METRIC欄位\(Series名稱\)
 
-![](../.gitbook/assets/image%20%28239%29.png)
+![](../.gitbook/assets/image%20%28255%29.png)
 
 例如以下：
 
-![](../.gitbook/assets/image%20%2871%29.png)
+![](../.gitbook/assets/image%20%2881%29.png)
 
 若不想要X軸為時間的話，可以在圖表設定中調整X軸模式為Series，則可以畫出長條圖，以Metric為一個X Value
 
-![](../.gitbook/assets/image%20%28215%29.png)
+![](../.gitbook/assets/image%20%28231%29.png)
 
 若有兩個以上資料來源亦可在Data Source頁面中，新增Query，並輸入SQL，即可畫出以下圖示
 
-![](../.gitbook/assets/image%20%28250%29.png)
+![](../.gitbook/assets/image%20%28266%29.png)
 
 圖表亦可以新增管制上下限
 
-![](../.gitbook/assets/image%20%28398%29.png)
+![](../.gitbook/assets/image%20%28417%29.png)
 
-![](../.gitbook/assets/image%20%28116%29.png)
+![](../.gitbook/assets/image%20%28128%29.png)
 
 最後按下Save即可\(右上方\)
 
-![](../.gitbook/assets/image%20%2827%29.png)
+![](../.gitbook/assets/image%20%2834%29.png)
 
 一個Dash Board可以新增多個圖表\(Panel\)，大小、位置可自行拖拉
 
-![](../.gitbook/assets/image%20%28350%29.png)
+![](../.gitbook/assets/image%20%28367%29.png)
 
 
 
@@ -104,31 +104,31 @@ Windows安裝時，可直接下載打包好的安裝檔即可
 
 若預設的圖表或功能不足時，可以至官網plugin中下載需要的圖表或功能\(例如Oracle Data Source支援\)
 
-![](../.gitbook/assets/image%20%28170%29.png)
+![](../.gitbook/assets/image%20%28184%29.png)
 
 圖表區會在Panel類別
 
-![](../.gitbook/assets/image%20%28380%29.png)
+![](../.gitbook/assets/image%20%28398%29.png)
 
 點選欲安裝的Plugin，例如Pie Chart。頁面中會有簡介及安裝說明\(一些元件會寫在Installation\)
 
 通常都會有grafana-cli指令，例如以下：grafana-cli plugins install grafana-piechart-panel
 
-![](../.gitbook/assets/image%20%28222%29.png)
+![](../.gitbook/assets/image%20%28238%29.png)
 
 grafana-cli程式放置在bin資料夾下
 
-![](../.gitbook/assets/image%20%2855%29.png)
+![](../.gitbook/assets/image%20%2864%29.png)
 
 進到bin資料夾後，將上方的位置列修改成cmd，即可快速進到cmd並位置於該資料夾下
 
-![](../.gitbook/assets/image%20%28244%29.png)
+![](../.gitbook/assets/image%20%28260%29.png)
 
 貼上cli指令→按下enter即可
 
-![](../.gitbook/assets/image%20%2865%29.png)
+![](../.gitbook/assets/image%20%2875%29.png)
 
 安裝完畢後，服務需要重啟才會生效，可至工作管理員→服務→grafana點選重新啟動即可
 
-![](../.gitbook/assets/image%20%28399%29.png)
+![](../.gitbook/assets/image%20%28418%29.png)
 

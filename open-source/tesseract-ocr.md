@@ -12,17 +12,17 @@ Tesseract OCR是一個開源OCR Opensource，可針對各國語言進行OCR
 
 限制：該程式無法將相關參數拋送
 
-![](../.gitbook/assets/image%20%28126%29.png)
+![](../.gitbook/assets/image%20%28138%29.png)
 
 作法：在此限制下，執行概念如下
 
-![](../.gitbook/assets/image%20%28401%29.png)
+![](../.gitbook/assets/image%20%28420%29.png)
 
 ## 2. Develop
 
 方便示意，假設機台程式UI如下，需要抓取的值為紅框所示
 
-![](../.gitbook/assets/image%20%2856%29.png)
+![](../.gitbook/assets/image%20%2865%29.png)
 
 To Do List：
 
@@ -44,23 +44,23 @@ Visual Studio \(2017/2019\)建立新專案
 
 選擇Windows Forms APP \(.Net Framework\)
 
-![](../.gitbook/assets/image%20%28119%29.png)
+![](../.gitbook/assets/image%20%28131%29.png)
 
-![](../.gitbook/assets/image%20%28349%29.png)
+![](../.gitbook/assets/image%20%28366%29.png)
 
 畫面左方中加入一個Button - Load Image：為了選取圖片來源
 
-![](../.gitbook/assets/image%20%2831%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 畫面右方新增一個pictureBox：顯示圖片用，因為圖片大小可能不會等於PictureBox大小，所以Size Mode要選擇Zoom，讓程式自動縮放圖片
 
-![](../.gitbook/assets/image%20%28263%29.png)
+![](../.gitbook/assets/image%20%28279%29.png)
 
-![](../.gitbook/assets/image%20%28187%29.png)
+![](../.gitbook/assets/image%20%28202%29.png)
 
 Button LoadImage Click事件處理
 
-![](../.gitbook/assets/image%20%28410%29.png)
+![](../.gitbook/assets/image%20%28429%29.png)
 
 開啟FileDialog，並限制可選擇的副檔名為bmp / jpg / png
 
@@ -101,7 +101,7 @@ Button LoadImage Click事件處理
 
 測試點選Button Load Image，可以成功跳出檔案選擇視窗
 
-![](../.gitbook/assets/image%20%28278%29.png)
+![](../.gitbook/assets/image%20%28295%29.png)
 
 選取檔案後，顯示在右方pictureBox中
 
@@ -109,15 +109,15 @@ Button LoadImage Click事件處理
 
 
 
-![](../.gitbook/assets/image%20%28151%29.png)
+![](../.gitbook/assets/image%20%28165%29.png)
 
 接著為了要做到讓使用者框選一個區塊的功能\(例如小畫家中的框選功能\)
 
-![](../.gitbook/assets/image%20%2849%29.png)
+![](../.gitbook/assets/image%20%2858%29.png)
 
 針對PictureBox1中的Mouse Down / Up / Move事件進行處理，並新增幾個變數紀錄需要的座標\(開始座標\(左上XY\)、結束座標\(右下XY\)\)
 
-![](../.gitbook/assets/image%20%28186%29.png)
+![](../.gitbook/assets/image%20%28201%29.png)
 
 其中Refresh\(\)可以觸發整個FORM重新繪製，因此搭配pictureBox1的Paint事件可以將紅框畫出
 
@@ -168,17 +168,17 @@ Button LoadImage Click事件處理
         }
 ```
 
-![](../.gitbook/assets/image%20%2864%29.png)
+![](../.gitbook/assets/image%20%2874%29.png)
 
 ## 
 
 測試OK，可以依照選取的位置進行框選動作
 
-![](../.gitbook/assets/image%20%28293%29.png)
+![](../.gitbook/assets/image%20%28310%29.png)
 
 為方便顯示座標位置，新增一個richtextbox
 
-![](../.gitbook/assets/image%20%28134%29.png)
+![](../.gitbook/assets/image%20%28146%29.png)
 
 加入方法回報座標\(傳入point\)並在mouse down / up / move事件中呼叫回報方法\(ReportLocation\)
 
@@ -230,7 +230,7 @@ Button LoadImage Click事件處理
 
 測試可以正常顯示座標位置
 
-![](../.gitbook/assets/image%20%28394%29.png)
+![](../.gitbook/assets/image%20%28413%29.png)
 
 新增方法ReportAllLocation方法顯示左上、右下座標並在Mouse UP事件中呼叫此方法\(Mouse Up為框選結束時間點\)
 
@@ -257,13 +257,13 @@ Button LoadImage Click事件處理
 
 測試正常
 
-![](../.gitbook/assets/image%20%28220%29.png)
+![](../.gitbook/assets/image%20%28236%29.png)
 
 因為PictureBox是整個右半邊，因此X,Y起始點會在藍色標記位置，但圖片因為等比例縮放關係，不會對齊左上角，圖片的X、Y起始位置應為綠色框選位置
 
-![](../.gitbook/assets/image%20%28113%29.png)
+![](../.gitbook/assets/image%20%28125%29.png)
 
-![](../.gitbook/assets/image%20%2879%29.png)
+![](../.gitbook/assets/image%20%2889%29.png)
 
 為了解決縮放問題，新增GetActualLocation方法，以取得圖片中真實位置
 
@@ -308,21 +308,21 @@ Button LoadImage Click事件處理
         }
 ```
 
-![](../.gitbook/assets/image%20%28329%29.png)
+![](../.gitbook/assets/image%20%28346%29.png)
 
 解決座標問題後，接著新增DataGridView，以顯示、記錄每一個框選的Label名稱、座標資料
 
-![](../.gitbook/assets/image%20%28286%29.png)
+![](../.gitbook/assets/image%20%28303%29.png)
 
 新增DataTable dtLabels並指定GridView的DataSource為dtLabels
 
-![](../.gitbook/assets/image%20%28246%29.png)
+![](../.gitbook/assets/image%20%28262%29.png)
 
 
 
-![](../.gitbook/assets/image%20%28128%29.png)
+![](../.gitbook/assets/image%20%28140%29.png)
 
-![](../.gitbook/assets/image%20%28303%29.png)
+![](../.gitbook/assets/image%20%28320%29.png)
 
 
 
@@ -363,40 +363,40 @@ Button LoadImage Click事件處理
         }
 ```
 
-![](../.gitbook/assets/image%20%28255%29.png)
+![](../.gitbook/assets/image%20%28271%29.png)
 
 ### 2-2. Image preprocess
 
 * [ ] 讀取Label設定 - 取得座標位置並將對應圖片取出
 * [ ] 圖片處理
 
-![](../.gitbook/assets/image%20%28316%29.png)
+![](../.gitbook/assets/image%20%28333%29.png)
 
-![](../.gitbook/assets/image%20%28407%29.png)
+![](../.gitbook/assets/image%20%28426%29.png)
 
-![](../.gitbook/assets/image%20%28351%29.png)
+![](../.gitbook/assets/image%20%28368%29.png)
 
-![](../.gitbook/assets/image%20%2824%29.png)
+![](../.gitbook/assets/image%20%2831%29.png)
 
-![](../.gitbook/assets/image%20%28379%29.png)
+![](../.gitbook/assets/image%20%28397%29.png)
 
-![](../.gitbook/assets/image%20%2891%29.png)
+![](../.gitbook/assets/image%20%28101%29.png)
 
-![](../.gitbook/assets/image%20%28190%29.png)
+![](../.gitbook/assets/image%20%28205%29.png)
 
-![](../.gitbook/assets/image%20%28259%29.png)
+![](../.gitbook/assets/image%20%28275%29.png)
 
-![](../.gitbook/assets/image%20%28364%29.png)
+![](../.gitbook/assets/image%20%28381%29.png)
 
-![](../.gitbook/assets/image%20%28249%29.png)
-
-
-
-![](../.gitbook/assets/image%20%28203%29.png)
+![](../.gitbook/assets/image%20%28265%29.png)
 
 
 
-![](../.gitbook/assets/image%20%28294%29.png)
+![](../.gitbook/assets/image%20%28219%29.png)
+
+
+
+![](../.gitbook/assets/image%20%28311%29.png)
 
 ```csharp
  private void btnGetTaggedImage_Click(object sender, EventArgs e)
@@ -529,11 +529,103 @@ namespace TesseractDemo
 
 ```
 
-### 
-
 ### 2-3. OCR\(Tesseract\)
 
-## 3. Application
+* [ ] 載入Tesseract OCR套件
+* [ ] 新增OCRHelper類別
+* [ ] 新增方法 - 傳入圖片並回傳OCR結果
+
+
+
+![](../.gitbook/assets/image%20%282%29.png)
+
+
+
+![](../.gitbook/assets/image%20%28285%29.png)
+
+
+
+{% embed url="https://tesseract-ocr.github.io/tessdoc/Data-Files" %}
+
+![](../.gitbook/assets/image%20%28149%29.png)
+
+![](../.gitbook/assets/image%20%2811%29.png)
+
+![](../.gitbook/assets/image%20%28194%29.png)
+
+![](../.gitbook/assets/image%20%28108%29.png)
+
+
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+using Tesseract;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace TesseractDemo
+{
+    public class OCRHelper
+    {
+        public static string OCR(Bitmap img)
+        {
+            TesseractEngine ocr = null;
+            string sResult = "";
+            try
+            {
+                ocr = new TesseractEngine("./tessdata", "eng"); //初始化 (一定要放在tessdata資料夾下)
+                ocr.SetVariable("tessedit_char_whitelist", "0123456789"); //強迫Char List，較準確
+
+                Page page = ocr.Process(img, PageSegMode.SingleLine);
+                sResult = page.GetText();//result
+                page.Dispose();
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                sResult = "";
+            }
+            finally
+            {
+                ocr?.Dispose();
+            }
+            return sResult.Replace(" ", "");
+        }
+    }
+}
+
+```
+
+![](../.gitbook/assets/image%20%2867%29.png)
+
+![](../.gitbook/assets/image%20%285%29.png)
+
+
+
+![](../.gitbook/assets/image%20%2853%29.png)
+
+![](../.gitbook/assets/image%20%287%29.png)
+
+![](../.gitbook/assets/image%20%28154%29.png)
+
+![](../.gitbook/assets/image%20%28113%29.png)
+
+![](../.gitbook/assets/image%20%28212%29.png)
+
+
+
+
+
+## 3. Improvement
+
+
 
 
 
