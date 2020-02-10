@@ -2,7 +2,7 @@
 
 Tesseract OCR是一個開源OCR Opensource，可針對各國語言進行OCR
 
-若條件算不複雜的需求時，可以使用這個套件解進OCR問題
+若條件算不複雜的需求時，可以使用這個套件解決OCR問題
 
 {% embed url="https://github.com/tesseract-ocr/tesseract" %}
 
@@ -28,7 +28,7 @@ To Do List：
 
 * [x] 提供設定圖片要抓取位置的功能\(坐標、名稱\) =&gt; Labeling
 * [x] 將每一個設定好的位置之影像截取出來並進行一定程度處理 =&gt; Preprocess
-* [x] 針對每一個處理過的圖片進行OCR辨示圖片中的文字
+* [x] 針對每一個處理過的圖片進行OCR辨示圖片中的文字 =&gt; OCR
 
 Visual Studio C\#為例進行程式開發
 
