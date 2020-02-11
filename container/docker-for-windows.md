@@ -8,13 +8,13 @@ DevOps議題中難免會提到Serverless、MicroService\(微服務\)，主要原
 
 Container基本架構如下：OS核心為共用，Container中只要安裝服務所需要的軟體即可\(例如iis\)
 
-![](../.gitbook/assets/image%20%28445%29.png)
+![](../.gitbook/assets/image%20%28454%29.png)
 
 傳統VM，每一個網站Server都需要有自己的os核心\(例如windows\)，再外加網站所需的服務\(例如iis\)
 
 然後os核心，以windows為例非常佔空間、記憶體，因此用此方式想做到MicroService勢必需要花費很多資料，故Docker才會在近年被愈來愈多軟體業廣範使用
 
-![Container vs VM](../.gitbook/assets/image%20%28387%29.png)
+![Container vs VM](../.gitbook/assets/image%20%28396%29.png)
 
 簡單的說，使用Docker的好處：可以透過建立好的Image檔，快速將服務啟動在Container\(容器\)中
 
@@ -26,51 +26,51 @@ Container基本架構如下：OS核心為共用，Container中只要安裝服務
 
 Windows中使用Docker，需要開啟Containers及Hyper-V功能
 
-![](../.gitbook/assets/image%20%28266%29.png)
+![](../.gitbook/assets/image%20%28273%29.png)
 
 勾選Containers、Hyper-V
 
-![](../.gitbook/assets/image%20%28444%29.png)
+![](../.gitbook/assets/image%20%28453%29.png)
 
 ## 安裝前準備2：BIOS - VTx設定
 
 BIOS - Virtualization Technology設定需打開，否則可能在Docker Container Run時出現Container無法運行錯誤
 
-![](../.gitbook/assets/image%20%2865%29.png)
+![](../.gitbook/assets/image%20%2868%29.png)
 
 ## Docker for Windows安裝
 
 下載路徑：[https://docs.docker.com/docker-for-windows/install/](https://docs.docker.com/docker-for-windows/install/)
 
-![](../.gitbook/assets/image%20%28286%29.png)
+![](../.gitbook/assets/image%20%28293%29.png)
 
 安裝大約900mb
 
-![](../.gitbook/assets/image%20%28348%29.png)
+![](../.gitbook/assets/image%20%28355%29.png)
 
 安裝過程原則上依指示下一步到底即可 \(此頁面可以把Use Windows Containers選項打勾\)
 
-![](../.gitbook/assets/image%20%28374%29.png)
+![](../.gitbook/assets/image%20%28382%29.png)
 
 跳出此警告時，按ok即可\(會重開機\)
 
 
 
-![](../.gitbook/assets/image%20%28243%29.png)
+![](../.gitbook/assets/image%20%28250%29.png)
 
 重開機完畢後，Docker Desktop會自動開啟如下
 
-![](../.gitbook/assets/image%20%28237%29.png)
+![](../.gitbook/assets/image%20%28244%29.png)
 
 開啟命令提示字元\(cmd\)，輸入docker version，若有看到版本號正確顯示即代表docker正常進行中
 
-![](../.gitbook/assets/image%20%28138%29.png)
+![](../.gitbook/assets/image%20%28142%29.png)
 
 ## Demo - ASP.Net MVC部署在容器
 
 ### 1.準備一個建立完成的ASP.Net MVC網站如下
 
-![](../.gitbook/assets/image%20%28225%29.png)
+![](../.gitbook/assets/image%20%28232%29.png)
 
 ### 2.準備/下載 Asp.Net MVC執行環境的Image檔 \(可從Docker Hub下載\)
 
@@ -80,21 +80,21 @@ ASP.Net MVC\(非.Net Core\)可以選擇ASP.Net 4.8的Image
 
 docker下載Image可以透過網站中提供指令\(docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8\)
 
-![](../.gitbook/assets/image%20%28222%29.png)
+![](../.gitbook/assets/image%20%28229%29.png)
 
 在cmd中輸入docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8
 
 \(docker pull 下載Image\)
 
-![](../.gitbook/assets/image%20%2898%29.png)
+![](../.gitbook/assets/image%20%28101%29.png)
 
 開始下載Image檔
 
-![](../.gitbook/assets/image%20%28209%29.png)
+![](../.gitbook/assets/image%20%28215%29.png)
 
 下載完成後，docker Images可列出所有本機Images
 
-![](../.gitbook/assets/image%20%28132%29.png)
+![](../.gitbook/assets/image%20%28136%29.png)
 
 簡易測試Image
 
@@ -106,11 +106,11 @@ docker下載Image可以透過網站中提供指令\(docker pull mcr.microsoft.co
 docker run --name testapp1 -p 1000:80 -d 7becd5ccb930
 ```
 
-![](../.gitbook/assets/image%20%28103%29.png)
+![](../.gitbook/assets/image%20%28107%29.png)
 
 執行後，可以輸入docker ps確認目前運行中的容器
 
-![](../.gitbook/assets/image%20%2837%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 確認容器\(container\)運作無誤後，開啟browser，連線至localhost:1000
 
@@ -118,7 +118,7 @@ docker run --name testapp1 -p 1000:80 -d 7becd5ccb930
 
 出現以下錯誤，即代表iis運作正常，但無內容
 
-![](../.gitbook/assets/image%20%28264%29.png)
+![](../.gitbook/assets/image%20%28271%29.png)
 
 進入container - testapp1，並開啟cmd
 
@@ -126,13 +126,13 @@ docker run --name testapp1 -p 1000:80 -d 7becd5ccb930
 docker exec -it testapp1 cmd
 ```
 
-![](../.gitbook/assets/image%20%28291%29.png)
+![](../.gitbook/assets/image%20%28298%29.png)
 
-![](../.gitbook/assets/image%20%28110%29.png)
+![](../.gitbook/assets/image%20%28114%29.png)
 
 進入inetpub/wwwroot，確認無檔案
 
-![](../.gitbook/assets/image%20%2875%29.png)
+![](../.gitbook/assets/image%20%2878%29.png)
 
 產生測試用頁面
 
@@ -140,19 +140,19 @@ docker exec -it testapp1 cmd
 echo test > index.aspx
 ```
 
-![](../.gitbook/assets/image%20%28438%29.png)
+![](../.gitbook/assets/image%20%28447%29.png)
 
 測試
 
-![](../.gitbook/assets/image%20%2849%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
 ### 3.將檔案放置進Container中
 
 asptestweb目錄如下
 
-![](../.gitbook/assets/image%20%28412%29.png)
+![](../.gitbook/assets/image%20%28421%29.png)
 
-![](../.gitbook/assets/image%20%28407%29.png)
+![](../.gitbook/assets/image%20%28416%29.png)
 
 docker容器中可以mount位置到Host磁碟 \(讓容器可以取得host資料\)，因此先刪除已建立的容器testapp1
 
@@ -167,7 +167,7 @@ docker rm testapp1
 docker run --name testapp1 -p 1000:80 -v D:\WebFile\ASPTestWeb:c:\webfile -d 7becd
 ```
 
-![](../.gitbook/assets/image%20%28130%29.png)
+![](../.gitbook/assets/image%20%28134%29.png)
 
 進入容器testapp1後，可以看到webfile資料\(其會對應host的d:\webfile\asptestweb資料夾\)
 
@@ -175,7 +175,7 @@ docker run --name testapp1 -p 1000:80 -v D:\WebFile\ASPTestWeb:c:\webfile -d 7be
 docker exec -it testapp1 cmd
 ```
 
-![](../.gitbook/assets/image%20%28314%29.png)
+![](../.gitbook/assets/image%20%28321%29.png)
 
 將檔案copy到inetpub/wwwroot資料夾\(iis根目錄\)
 
@@ -183,13 +183,13 @@ docker exec -it testapp1 cmd
 xcopy /s c:\webfile c:\inetpub\wwwroot
 ```
 
-![](../.gitbook/assets/image%20%28384%29.png)
+![](../.gitbook/assets/image%20%28392%29.png)
 
-![](../.gitbook/assets/image%20%28186%29.png)
+![](../.gitbook/assets/image%20%28191%29.png)
 
 copy完成後，可以測試網站localhost:1000
 
-![](../.gitbook/assets/image%20%2834%29.png)
+![](../.gitbook/assets/image%20%2835%29.png)
 
 ### 4.將container封裝成Image檔
 
@@ -206,9 +206,9 @@ docker stop testapp1
 docker commit testapp1 img_test
 ```
 
-![](../.gitbook/assets/image%20%28434%29.png)
+![](../.gitbook/assets/image%20%28443%29.png)
 
-![](../.gitbook/assets/image%20%2853%29.png)
+![](../.gitbook/assets/image%20%2856%29.png)
 
 建立完成後，可以在image列表中查詢到該image
 
@@ -216,7 +216,7 @@ docker commit testapp1 img_test
 docker images
 ```
 
-![](../.gitbook/assets/image%20%28344%29.png)
+![](../.gitbook/assets/image%20%28351%29.png)
 
 透過新建的img\_test建立一個新的容器測試testapp2
 
@@ -224,11 +224,11 @@ docker images
 docker run --name testapp2 -p 2000:80 -d img_test
 ```
 
-![](../.gitbook/assets/image%20%28151%29.png)
+![](../.gitbook/assets/image%20%28156%29.png)
 
 容器testapp2建立完成後，即可以測試localhost:2000
 
-![](../.gitbook/assets/image%20%28400%29.png)
+![](../.gitbook/assets/image%20%28409%29.png)
 
 透過此方式，即可以快速部署web應用程式至任何有docker的環境上，該server不需要安裝iis、.net framework及相關複雜的設定，因此這些設定都在建立image時已經設定完畢
 
@@ -242,7 +242,7 @@ testweb則是使用asp.net core nanoserver版\(精簡\) Image建立的Image，�
 
 \(一台Docker Server可以起N個容器服務\)
 
-![](../.gitbook/assets/image%20%28282%29.png)
+![](../.gitbook/assets/image%20%28289%29.png)
 
 ### 5.使用Dockfile建立Image
 
@@ -250,21 +250,21 @@ testweb則是使用asp.net core nanoserver版\(精簡\) Image建立的Image，�
 
 例如以下：
 
-![](../.gitbook/assets/image%20%28366%29.png)
+![](../.gitbook/assets/image%20%28373%29.png)
 
 以下說明使用方法：
 
 假設已建立完成網站如下：
 
-![](../.gitbook/assets/image%20%28323%29.png)
+![](../.gitbook/assets/image%20%28330%29.png)
 
 在此根目錄新增檔案Dockerfile \(不一定要叫這個名稱\)，內容空白即可，並去除附檔名
 
-![](../.gitbook/assets/image%20%28409%29.png)
+![](../.gitbook/assets/image%20%28418%29.png)
 
 用文字編輯器開啟Dockerfile\(建議用vscode\)
 
-![](../.gitbook/assets/image%20%28408%29.png)
+![](../.gitbook/assets/image%20%28417%29.png)
 
 Dockerfile大致上需要做到的是
 
@@ -292,21 +292,21 @@ COPY . .
 
 編寫完的Dockerfile檔如下：
 
-![](../.gitbook/assets/image%20%28262%29.png)
+![](../.gitbook/assets/image%20%28269%29.png)
 
 在網站目錄下，執行cmd進到命令提示字元視窗
 
 快速的方式為用檔案總管到該資料下
 
-![](../.gitbook/assets/image%20%28125%29.png)
+![](../.gitbook/assets/image%20%28129%29.png)
 
 將上方的位置列改成cmd
 
-![](../.gitbook/assets/image%20%28236%29.png)
+![](../.gitbook/assets/image%20%28243%29.png)
 
 按下enter即可
 
-![](../.gitbook/assets/image%20%28173%29.png)
+![](../.gitbook/assets/image%20%28178%29.png)
 
 接下用docker指令去建置docker image檔並使用dockerfile進行相關設定
 
@@ -326,13 +326,13 @@ docker build為建置image指令
 
 在cmd中執行上述指令
 
-![](../.gitbook/assets/image%20%28297%29.png)
+![](../.gitbook/assets/image%20%28304%29.png)
 
-![](../.gitbook/assets/image%20%2848%29.png)
+![](../.gitbook/assets/image%20%2850%29.png)
 
 執行成功後，可以輸入docker images檢示目前所有Image
 
-![](../.gitbook/assets/image%20%28325%29.png)
+![](../.gitbook/assets/image%20%28332%29.png)
 
 測試建立好的Image檔，使用docker run去產生container\(容器\)
 
@@ -348,17 +348,17 @@ docker run --name testapp3 -p 3000:80 -d testweb
 
 成功Run起容器
 
-![](../.gitbook/assets/image%20%28183%29.png)
+![](../.gitbook/assets/image%20%28188%29.png)
 
 測試網站 http://localhost:3000
 
-![](../.gitbook/assets/image%20%28117%29.png)
+![](../.gitbook/assets/image%20%28121%29.png)
 
 利用此法即可以透過指令化方式，建立一個Image並包含web應用程式服務，因此若有另一台server需要建立此服務，即可以直接下載該Image後，就可以直接快速部署一個網站
 
 一般container結合ci/cd流程時，通常也都會搭配使用dockerfile方式，去進行專案建置、nuget還原、copy檔案等作業，如下圖，相關指令可以參與docker官網介紹或是使用Visual Studio工具自動產生
 
-![](../.gitbook/assets/image%20%28366%29.png)
+![](../.gitbook/assets/image%20%28373%29.png)
 
 ```csharp
 FROM microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1803 AS base
@@ -389,31 +389,31 @@ Visual Studio 2019以後，有跟Docker整合，可以直接在Visual Studio中�
 
 假設現有的網站專案如下
 
-![](../.gitbook/assets/image%20%28263%29.png)
+![](../.gitbook/assets/image%20%28270%29.png)
 
 用Visual Studio 2019開啟，在專案按右鍵→加入→容器支援 \(英文版Docker Support\)
 
-![](../.gitbook/assets/image%20%28251%29.png)
+![](../.gitbook/assets/image%20%28258%29.png)
 
 點選後，Visual Studio將會針對專案進行Docker相關設定及檢查
 
-![](../.gitbook/assets/image%20%28115%29.png)
+![](../.gitbook/assets/image%20%28119%29.png)
 
 若本地沒有需要的image時，可能需要花一點時間進行image下載
 
-![](../.gitbook/assets/image%20%28179%29.png)
+![](../.gitbook/assets/image%20%28184%29.png)
 
 完成後，專案內會產生Dockerfile
 
-![](../.gitbook/assets/image%20%2855%29.png)
+![](../.gitbook/assets/image%20%2858%29.png)
 
 專案偵測目標可以選擇docker
 
-![](../.gitbook/assets/image%20%28204%29.png)
+![](../.gitbook/assets/image%20%28210%29.png)
 
 Debug模式下 - 可以在container內偵錯，如下圖，其中172.26.197.81為container的虛擬ip
 
-![](../.gitbook/assets/image%20%28424%29.png)
+![](../.gitbook/assets/image%20%28433%29.png)
 
 可以觀察按下建置後，可以發現Visual Studio其實是先建置後，再執行Docker Build、docker run指令
 
@@ -421,25 +421,25 @@ Debug模式下 - 可以在container內偵錯，如下圖，其中172.26.197.81�
 docker build -f "D:\vs2017\ASPWebTest\ASPWebTest\Dockerfile" --force-rm -t aspwebtest  --label "com.microsoft.created-by=visual-studio" --label "com.microsoft.visual-studio.project-name=ASPWebTest" "D:\vs2017\ASPWebTest\ASPWebTest"
 ```
 
-![](../.gitbook/assets/image%20%28304%29.png)
+![](../.gitbook/assets/image%20%28311%29.png)
 
 因此在cmd中輸入docker images，可以看到Image會被產生
 
 release模式：tag為lastest；debug模式：tag為dev
 
-![](../.gitbook/assets/image%20%28334%29.png)
+![](../.gitbook/assets/image%20%28341%29.png)
 
 輸入docker ps，可以看到容器被建立
 
-![](../.gitbook/assets/image%20%28369%29.png)
+![](../.gitbook/assets/image%20%28377%29.png)
 
 因此輸入localhost:63377 \(每次可能不一樣\)，亦可進入到網站
 
-![](../.gitbook/assets/image%20%28357%29.png)
+![](../.gitbook/assets/image%20%28364%29.png)
 
 使用Visual Studio Docker整合功能，可以更簡單地使用Docker
 
 一般在偵錯時，建議還是先選擇IIS Express \(不用做docker build / docker run\)
 
-![](../.gitbook/assets/image%20%28423%29.png)
+![](../.gitbook/assets/image%20%28432%29.png)
 
