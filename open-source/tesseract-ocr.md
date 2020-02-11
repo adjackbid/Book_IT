@@ -182,6 +182,8 @@ Button LoadImage Click事件處理
 
 加入方法回報座標\(傳入point\)並在mouse down / up / move事件中呼叫回報方法\(ReportLocation\)
 
+回報位置，傳入Point，顯示X、Y座標
+
 ```csharp
         private void ReportLoaction(Point location1)
         {
@@ -189,7 +191,7 @@ Button LoadImage Click事件處理
         }
 ```
 
-
+Mouse事件處理：框選位置\(pLeftUpper、pRightDown要Reset\)、Refresh\(\)會觸發畫面重繪
 
 ```csharp
   private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
@@ -322,9 +324,11 @@ Button LoadImage Click事件處理
 
 ![](../.gitbook/assets/image%20%28153%29.png)
 
+Label輸入新增Enter事件處理 - ttbLabel\_KeyDown
+
 ![](../.gitbook/assets/image%20%28347%29.png)
 
-
+因需取得實際在圖片上的座標位置\(非ui上的\)，因此需Call GetActualLocation\(\)
 
 ```csharp
         private void ttbLabel_KeyDown(object sender, KeyEventArgs e)
@@ -370,21 +374,39 @@ Button LoadImage Click事件處理
 * [x] 讀取Label設定 - 取得座標位置並將對應圖片取出
 * [x] 圖片處理 - 將圖片進行前處理，以利後續OCR使用
 
+新增GetTagged Image Button
+
 ![](../.gitbook/assets/image%20%28362%29.png)
+
+為了方便顯示Tagged的圖片，因此在gvLabel中新增Image欄位\(為了顯示圖片\)
 
 ![](../.gitbook/assets/image%20%28459%29.png)
 
+ImageLayout要調整為Zoom
+
 ![](../.gitbook/assets/image%20%28399%29.png)
+
+為了進行影像處理，使AForge.Imaging套件，進行圖片處理
 
 ![](../.gitbook/assets/image%20%2834%29.png)
 
+新增ImageProcessHelper類別，裡面實作AForge方法
+
 ![](../.gitbook/assets/image%20%28428%29.png)
+
+因為需要將圖片中特定位置截取圖片，新增Crop方法
 
 ![](../.gitbook/assets/image%20%28111%29.png)
 
+dtLabels新增IMAGE欄位，以記錄圖片
+
 ![](../.gitbook/assets/image%20%28226%29.png)
 
+GetTaggedImage Click事件，宣告告ImageHelper，針對每一個Tag好的座標進行Crop動作並存入IMAGE欄位
+
 ![](../.gitbook/assets/image%20%28297%29.png)
+
+測試框選兩個位欄位，按下GetTaggetImage前，圖示為空
 
 ![](../.gitbook/assets/image%20%28412%29.png)
 
