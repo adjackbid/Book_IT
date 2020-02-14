@@ -26,6 +26,7 @@
 ## 開發工具
 
 * [Visual Studio](kai-fa-gong-ju/visual-studio/README.md)
+  * [常見基本設定](kai-fa-gong-ju/visual-studio/chang-jian-ji-ben-she-ding.md)
   * [多重選取](kai-fa-gong-ju/visual-studio/duo-zhong-xuan-qu.md)
 
 ## 資料庫相關
