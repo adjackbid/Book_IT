@@ -571,19 +571,29 @@ namespace TesseractDemo
 
 ![](../.gitbook/assets/image%20%28314%29.png)
 
-
+下載訓練好的OCR Model
 
 {% embed url="https://tesseract-ocr.github.io/tessdoc/Data-Files" %}
+
+選擇English語言的Model
 
 ![](../.gitbook/assets/image%20%28164%29.png)
 
 ![](../.gitbook/assets/image%20%2813%29.png)
 
+下載完成後，專案執行檔根目錄下，建立tessdata資料夾\(名稱一定要是tessdata\)，將下載的檔案中eng.traineddata放在該資料下
+
 ![](../.gitbook/assets/image%20%28216%29.png)
+
+建立OCRHelper類別
 
 ![](../.gitbook/assets/image%20%28118%29.png)
 
+在OCRHelper類別中，建立一個STATIC方法\(這樣才不需要new OCRHelper物件就可以直接使用該方法\)
 
+Tesseract OCR使用方法很簡單，1. 宣告Engine 2. 宣告Page並圖片傳入 3. 呼叫Page.GetText方法即可
+
+其中因為測試對象都是數字，所以可以指定OCR Engine判斷文字時，從0~9中挑選最有可能者
 
 ```csharp
 using System;
