@@ -1,6 +1,12 @@
+---
+description: 'C# Oracle UDT Custom Type Procedure'
+---
+
 # Oracle User Define Type \(UDT\)
 
-DB端建立類別、測試用Procedure
+C\# 呼叫Oracle Function / Procedure時，如果要使用DB上的自定義類似，需在C\#中實作IOracleCustomType
+
+1.DB端建立類別、測試用Procedure
 
 ```sql
 DROP TYPE PERSON;
@@ -33,7 +39,7 @@ END;
 
 ```
 
-C\#. Add Class \(IOracleCusomType實作\)
+2. C\#. Add Class \(IOracleCusomType實作\)
 
 ```csharp
 public class PersonDto : IOracleCustomType
@@ -74,7 +80,7 @@ public class PersonDto : IOracleCustomType
 }
 ```
 
-
+3. 建立Connection / Command並傳入Parameter \(OracleDbType要選Object\)
 
 ```csharp
 using (OracleConnection conn = new OracleConnection(sConnStr))
