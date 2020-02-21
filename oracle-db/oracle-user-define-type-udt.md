@@ -1,76 +1,104 @@
 # Oracle User Define Type \(UDT\)
 
+
+
 ```sql
-create type Person as object
+DROP TYPE PERSON;
+CREATE TYPE PERSON AS OBJECT
 (
-    Person_Name NVARCHAR2(10),
-    Age integer
+    NAME VARCHAR2(10),
+    AGE NUMBER(10)
 );
 ```
 
-
-
-![](../.gitbook/assets/image%20%28268%29.png)
-
-
-
 ```sql
-CREATE OR REPLACE FUNCTION FUNTEST(P IN PERSON)
-RETURN nvarchar2 IS
+CREATE OR REPLACE PROCEDURE PTEST(P IN PERSON,O OUT NVARCHAR2) 
+IS            
+          
+BEGIN   
+    
+    INSERT INTO TEST(A) VALUES(P.NAME);
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE(P.NAME);
+    O := 'OK';
+    
+EXCEPTION
 
-BEGIN
+When Others Then
+    ROLLBACK;
+    O := 'ERROR';
 
-   RETURN P.PERSON_NAME;
-
-   EXCEPTION
-   When Others Then
-   RETURN 'error...';
-END; 
-/
-```
-
-```sql
-SELECT FUNTEST(PERSON('JACK',10)) AS TEST FROM DUAL;
-```
-
-![](../.gitbook/assets/image%20%28474%29.png)
-
-
-
-
-
-```sql
-CREATE TYPE PERSON_LIST AS TABLE OF PERSON;
-```
-
-![](../.gitbook/assets/image%20%28398%29.png)
-
-
-
-```sql
-CREATE OR REPLACE FUNCTION FUNTEST2(PS IN PERSON_LIST)
-RETURN nvarchar2 IS
-
-BEGIN
-
-   RETURN PS(2).PERSON_NAME;
-
-   EXCEPTION
-   When Others Then
-   RETURN 'error...';
 END;
-/
+
 
 ```
 
-```sql
-SELECT FUNTEST2(PERSON_LIST(PERSON('A',1),PERSON('B',2))) AS TEST2
-  FROM DUAL
+```csharp
+using (OracleConnection conn = new OracleConnection(sConnStr))
+                {
+                    conn.Open();
+                    using (OracleCommand cmd = new OracleCommand("PTEST", conn)) //PTEST = Procedure Name
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                        PersonDto p = new PersonDto() { NAME = "bbb", AGE = 456 };
+
+                        OracleParameter p1 = new OracleParameter();
+                        p1.OracleDbType = OracleDbType.Object;
+                        p1.Direction = System.Data.ParameterDirection.Input;
+                        p1.UdtTypeName = "PERSON";
+                        p1.Value = p;
+                        p1.IsNullable = false;
+                        p1.ParameterName = "P";
+                        cmd.Parameters.Add(p1);
+
+                        OracleParameter pr = new OracleParameter();
+                        pr.OracleDbType = OracleDbType.NVarchar2;
+                        pr.Direction = System.Data.ParameterDirection.Output;
+                        pr.Size = 100;
+                        cmd.Parameters.Add(pr);
+                        cmd.ExecuteNonQuery();
+                        sResult = (string)(OracleString)cmd.Parameters[1].Value;
+                    }
+                }
 ```
 
-![](../.gitbook/assets/image%20%28382%29.png)
+```csharp
+public class PersonDto : IOracleCustomType
+        {
+
+            //[OracleObjectMapping("NAME")]
+            [OracleObjectMapping("NAME")]
+            public string NAME { get; set; }
+
+            //[OracleObjectMapping("AGE")]
+            [OracleObjectMapping("AGE")]
+            public decimal AGE { get; set; }
 
 
+            public void FromCustomObject(OracleConnection con, IntPtr pUdt)
+            {
+                OracleUdt.SetValue(con, pUdt, "NAME", NAME);
+                OracleUdt.SetValue(con, pUdt, "AGE", AGE);
+            }
+
+            public void ToCustomObject(OracleConnection con, IntPtr pUdt)
+            {
+                NAME = (string)OracleUdt.GetValue(con, pUdt, "NAME");
+                AGE = (decimal)OracleUdt.GetValue(con, pUdt, "AGE");
+            }
 
 
+            [OracleCustomTypeMapping("PERSON")]
+            public class PERSONFactory : IOracleCustomTypeFactory
+            {
+                //Implementation of interface IOracleCustomTypeFactory method CreateObject.
+                //Return a new .NET custom type object representing an Oracle UDT object.
+                public IOracleCustomType CreateObject()
+                {
+                    return new PersonDto();
+                }
+            }
+        }
+```
 
