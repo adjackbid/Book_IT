@@ -1,2 +1,2 @@
-# Oracle DB
+# Oracle PL/SQL
 
