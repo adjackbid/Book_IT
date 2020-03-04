@@ -8,7 +8,7 @@ Serilog：功能類似Nlog，但效能較佳
 
 {% embed url="https://serilog.net/" %}
 
-![](../.gitbook/assets/image%20%28485%29.png)
+![](../.gitbook/assets/image%20%28486%29.png)
 
 Datalust Seq平台：可自架，以檔案方式存儲log，但可以用類似SQL語法查詢log紀錄
 
@@ -114,7 +114,7 @@ namespace Web1
 
 輸入後，可以看到console中出現相關log即表示
 
-![](../.gitbook/assets/image%20%28485%29.png)
+![](../.gitbook/assets/image%20%28486%29.png)
 
 實際進去網站後，再看log，可以發現該套件會寫入非常完整的log紀錄，並有View / Action執行的時間
 
@@ -148,7 +148,7 @@ Datalust - Seq，這個平台可以將log以xml方式儲存並支援sql語法查
 
 修改專案Program.cs - 新增WriteTo.Seq 設定將Log寫入Seq系統中 \(Seq系統預設網址為localhost:5341\)
 
-![](../.gitbook/assets/image%20%28426%29.png)
+![](../.gitbook/assets/image%20%28427%29.png)
 
 安裝Datalust Seq平台\(服務\)
 
@@ -164,7 +164,7 @@ Seq官網：[https://datalust.co/seq](https://datalust.co/seq)
 
 安裝完畢後，第一次啟動時，需要設定網址及Log存放位置
 
-![](../.gitbook/assets/image%20%28435%29.png)
+![](../.gitbook/assets/image%20%28436%29.png)
 
 設定完畢後，可以登入Seq的網頁\(即localhost:5341\) \(目前無log\)
 
@@ -210,7 +210,7 @@ ASP.Net Webform要使用Serilog時，目前沒有像ASP.Net Core有實作好的�
 
 Search - Serilog.Sinks.Seq套件，安裝最新版本即可
 
-![](../.gitbook/assets/image%20%28438%29.png)
+![](../.gitbook/assets/image%20%28439%29.png)
 
 #### 3.測試Serilog
 
@@ -268,7 +268,7 @@ namespace SerilogDemo
 
 實務上，log中通常會帶入相關參數\(例如http Request Status、User ID、或是其它自定義參數\)
 
-![](../.gitbook/assets/image%20%28441%29.png)
+![](../.gitbook/assets/image%20%28442%29.png)
 
 #### 4. 新增參數\(Enrich\)
 
@@ -293,7 +293,7 @@ Serilog在建立log物件時，可以用Enrich方法新增參數至log中
         }
 ```
 
-![](../.gitbook/assets/image%20%28446%29.png)
+![](../.gitbook/assets/image%20%28447%29.png)
 
 用此方式加入參數，比較適合用在程式名稱這類型參數\(不需動態取得值\)
 
@@ -382,7 +382,7 @@ namespace SerilogDemo
 
 測試結果：
 
-![](../.gitbook/assets/image%20%28460%29.png)
+![](../.gitbook/assets/image%20%28461%29.png)
 
 #### 6.情境實作 - 基本網站/系統需要的log功能
 
@@ -592,7 +592,7 @@ Serilog預設有不同層級的EventLevel，因此需針對不同Log層級進行
 
 測試：可以得到兩筆log, 其中Error層級，因為有傳入Exception物件，因此可以得到完整錯誤內容及Trace資訊\(程式碼第幾行\)
 
-![](../.gitbook/assets/image%20%28449%29.png)
+![](../.gitbook/assets/image%20%28450%29.png)
 
 5. 新增Trace ID
 
@@ -679,7 +679,7 @@ About頁面中，Button1 Click事件最上方先初始化Log
 
 新增CompleteLog方法，以紀錄結束時間並寫入Log紀錄
 
-![](../.gitbook/assets/image%20%28480%29.png)
+![](../.gitbook/assets/image%20%28481%29.png)
 
 完整LogHelper
 
@@ -862,7 +862,7 @@ Enrich.FromLogContext 宣告事件參數使用LogContext
 
 ![](../.gitbook/assets/image%20%28149%29.png)
 
-![](../.gitbook/assets/image%20%28461%29.png)
+![](../.gitbook/assets/image%20%28462%29.png)
 
 完整LogHelper
 
@@ -983,7 +983,7 @@ namespace SerilogDemo
 
 若不想每一個頁面都要重新宣告、設定Log物件\(如下圖\)，可以建立基底類別，相關設定在基底類別實作
 
-![](../.gitbook/assets/image%20%28472%29.png)
+![](../.gitbook/assets/image%20%28473%29.png)
 
 建立BasePage類別
 
@@ -1047,7 +1047,7 @@ LogHelper物件已在BasePage中宣告完畢，因此不需在另外宣告
 
 例如：OnLoad沒有TraceID，主要原因為TraceID是在Button1 Click事件開始時給定的\(Log.Init\)
 
-![](../.gitbook/assets/image%20%28487%29.png)
+![](../.gitbook/assets/image%20%28488%29.png)
 
 以定義上來說TraceID是設計給事件用的，而非整個Request，因此需要將LogHelper修改
 
@@ -1064,7 +1064,7 @@ LogHelper物件已在BasePage中宣告完畢，因此不需在另外宣告
 
 BasePage中加入InitRequestTraceID
 
-![](../.gitbook/assets/image%20%28445%29.png)
+![](../.gitbook/assets/image%20%28446%29.png)
 
 測試結果：每一個Request log中都有相同的TraceID\(紅\)，事件中亦有自己的獨立TraceID\(藍\)
 

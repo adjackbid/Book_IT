@@ -18,7 +18,7 @@ Windows可以接直在Microsoft商店中直接下載安裝
 
 開啟後，點選「Create a new package」
 
-![](../../.gitbook/assets/image%20%28428%29.png)
+![](../../.gitbook/assets/image%20%28429%29.png)
 
 在Package metadata區塊中，可以編輯套件的資訊\(名稱、版本、作者、相依性\)
 

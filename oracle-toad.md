@@ -28,7 +28,7 @@ View → Toad Options → Editor - Auto Replacement
 
 可以設定成tst
 
-![](.gitbook/assets/image%20%28479%29.png)
+![](.gitbook/assets/image%20%28480%29.png)
 
 ![](.gitbook/assets/image%20%28232%29.png)
 

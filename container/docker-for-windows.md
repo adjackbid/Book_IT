@@ -8,7 +8,7 @@ DevOps議題中難免會提到Serverless、MicroService\(微服務\)，主要原
 
 Container基本架構如下：OS核心為共用，Container中只要安裝服務所需要的軟體即可\(例如iis\)
 
-![](../.gitbook/assets/image%20%28471%29.png)
+![](../.gitbook/assets/image%20%28472%29.png)
 
 傳統VM，每一個網站Server都需要有自己的os核心\(例如windows\)，再外加網站所需的服務\(例如iis\)
 
@@ -30,7 +30,7 @@ Windows中使用Docker，需要開啟Containers及Hyper-V功能
 
 勾選Containers、Hyper-V
 
-![](../.gitbook/assets/image%20%28470%29.png)
+![](../.gitbook/assets/image%20%28471%29.png)
 
 ## 安裝前準備2：BIOS - VTx設定
 
@@ -140,7 +140,7 @@ docker exec -it testapp1 cmd
 echo test > index.aspx
 ```
 
-![](../.gitbook/assets/image%20%28462%29.png)
+![](../.gitbook/assets/image%20%28463%29.png)
 
 測試
 
@@ -150,9 +150,9 @@ echo test > index.aspx
 
 asptestweb目錄如下
 
-![](../.gitbook/assets/image%20%28436%29.png)
+![](../.gitbook/assets/image%20%28437%29.png)
 
-![](../.gitbook/assets/image%20%28431%29.png)
+![](../.gitbook/assets/image%20%28432%29.png)
 
 docker容器中可以mount位置到Host磁碟 \(讓容器可以取得host資料\)，因此先刪除已建立的容器testapp1
 
@@ -206,7 +206,7 @@ docker stop testapp1
 docker commit testapp1 img_test
 ```
 
-![](../.gitbook/assets/image%20%28458%29.png)
+![](../.gitbook/assets/image%20%28459%29.png)
 
 ![](../.gitbook/assets/image%20%2858%29.png)
 
@@ -260,11 +260,11 @@ testweb則是使用asp.net core nanoserver版\(精簡\) Image建立的Image，�
 
 在此根目錄新增檔案Dockerfile \(不一定要叫這個名稱\)，內容空白即可，並去除附檔名
 
-![](../.gitbook/assets/image%20%28433%29.png)
+![](../.gitbook/assets/image%20%28434%29.png)
 
 用文字編輯器開啟Dockerfile\(建議用vscode\)
 
-![](../.gitbook/assets/image%20%28432%29.png)
+![](../.gitbook/assets/image%20%28433%29.png)
 
 Dockerfile大致上需要做到的是
 
@@ -413,7 +413,7 @@ Visual Studio 2019以後，有跟Docker整合，可以直接在Visual Studio中�
 
 Debug模式下 - 可以在container內偵錯，如下圖，其中172.26.197.81為container的虛擬ip
 
-![](../.gitbook/assets/image%20%28448%29.png)
+![](../.gitbook/assets/image%20%28449%29.png)
 
 可以觀察按下建置後，可以發現Visual Studio其實是先建置後，再執行Docker Build、docker run指令
 
@@ -441,5 +441,5 @@ release模式：tag為lastest；debug模式：tag為dev
 
 一般在偵錯時，建議還是先選擇IIS Express \(不用做docker build / docker run\)
 
-![](../.gitbook/assets/image%20%28447%29.png)
+![](../.gitbook/assets/image%20%28448%29.png)
 

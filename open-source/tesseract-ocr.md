@@ -16,7 +16,7 @@ Tesseract OCR是一個開源OCR Opensource，可針對各國語言進行OCR
 
 作法：在此限制下，執行概念如下
 
-![](../.gitbook/assets/image%20%28468%29.png)
+![](../.gitbook/assets/image%20%28469%29.png)
 
 ## 2. Develop
 
@@ -60,7 +60,7 @@ Visual Studio \(2017/2019\)建立新專案
 
 Button LoadImage Click事件處理
 
-![](../.gitbook/assets/image%20%28481%29.png)
+![](../.gitbook/assets/image%20%28482%29.png)
 
 開啟FileDialog，並限制可選擇的副檔名為bmp / jpg / png
 
@@ -232,7 +232,7 @@ Mouse事件處理：框選位置\(pLeftUpper、pRightDown要Reset\)、Refresh\(\
 
 測試可以正常顯示座標位置
 
-![](../.gitbook/assets/image%20%28459%29.png)
+![](../.gitbook/assets/image%20%28460%29.png)
 
 新增方法ReportAllLocation方法顯示左上、右下座標並在Mouse UP事件中呼叫此方法\(Mouse Up為框選結束時間點\)
 
@@ -380,7 +380,7 @@ Label輸入新增Enter事件處理 - ttbLabel\_KeyDown
 
 為了方便顯示Tagged的圖片，因此在gvLabel中新增Image欄位\(為了顯示圖片\)
 
-![](../.gitbook/assets/image%20%28478%29.png)
+![](../.gitbook/assets/image%20%28479%29.png)
 
 ImageLayout要調整為Zoom
 
@@ -392,7 +392,7 @@ ImageLayout要調整為Zoom
 
 新增ImageProcessHelper類別，裡面實作AForge方法
 
-![](../.gitbook/assets/image%20%28443%29.png)
+![](../.gitbook/assets/image%20%28444%29.png)
 
 因為需要將圖片中特定位置截取圖片，新增Crop方法
 
@@ -408,7 +408,7 @@ GetTaggedImage Click事件，宣告告ImageHelper，針對每一個Tag好的座�
 
 測試框選兩個位欄位，按下GetTaggetImage前，圖示為空
 
-![](../.gitbook/assets/image%20%28427%29.png)
+![](../.gitbook/assets/image%20%28428%29.png)
 
 點選Get Tagged Image後，將圖片顯示在image欄位中
 
@@ -671,7 +671,7 @@ namespace TesseractDemo
 
 ![](../.gitbook/assets/image%20%28177%29.png)
 
-![](../.gitbook/assets/image%20%28467%29.png)
+![](../.gitbook/assets/image%20%28468%29.png)
 
 ![](../.gitbook/assets/image%20%28201%29.png)
 
@@ -983,7 +983,7 @@ private async Task ImagePreProcessAsync()
 
 ![](../.gitbook/assets/image%20%2856%29.png)
 
-![](../.gitbook/assets/image%20%28474%29.png)
+![](../.gitbook/assets/image%20%28475%29.png)
 
 ![](../.gitbook/assets/image%20%28105%29.png)
 

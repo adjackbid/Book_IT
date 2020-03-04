@@ -28,5 +28,44 @@ v_test NVARCHAR2(100) := N'測試';
 
 ![](../.gitbook/assets/image%20%28266%29.png)
 
+## Composite DataTypes
 
+複合變數的主要特性為可以包含一個以上的值，主要的資料型態有RECORD、COLLECTION兩種類型
+
+### RECORD
+
+類似C\#的Structure，可以在其中定義多個欄位的一種型態，例如：
+
+```sql
+DECLARE
+    --定義RECORD型態
+    TYPE REC_TEST IS RECORD
+    (
+        A NVARCHAR2(10),
+        B NVARCHAR2(20)
+    );
+    
+    --宣告一個變數且型別為REC_TEST
+    v_test REC_TEST;
+BEGIN
+
+    v_test.A := 'a123';
+    v_test.B := 'b456';
+    
+    DBMS_OUTPUT.PUT_LINE(v_test.A || v_test.B);
+
+END;
+```
+
+![](../.gitbook/assets/image%20%28425%29.png)
+
+### COLLECTION
+
+Collection為一個有序的集合，每一個項目都有相同的資料型態
+
+Oracle支援的Collection型態共有三種：
+
+1. VARRAY Datatype
+2. Nested Table Datatype
+3. Associative Array Datatype\(Index-by Tables\)
 

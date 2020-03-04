@@ -90,11 +90,11 @@ Field Object：該欄位在資料中對應到的值
 
 將FROM的Text Object調整為「FROM：」並調整字型
 
-![](../.gitbook/assets/image%20%28455%29.png)
+![](../.gitbook/assets/image%20%28456%29.png)
 
 調整位置
 
-![](../.gitbook/assets/image%20%28429%29.png)
+![](../.gitbook/assets/image%20%28430%29.png)
 
 插入線條
 
@@ -150,7 +150,7 @@ Field Object：該欄位在資料中對應到的值
 
 列印結果
 
-![](../.gitbook/assets/image%20%28454%29.png)
+![](../.gitbook/assets/image%20%28455%29.png)
 
 完整Sample Code
 
