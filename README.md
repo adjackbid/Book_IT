@@ -1,5 +1,15 @@
 # Index
 
+## 2020.03.04
+
+### [PL/SQL Block](oracle-db/pl-sql-block.md)
+
+PL/SQL Block基礎說明
+
+### [DataTypes](oracle-db/datatypes.md)
+
+Oracle資料型態重點說明
+
 ## 2020.02.21
 
 ### [Oracle User Define Type\(UDT\)](oracle-db/oracle-user-define-type-udt.md) 
