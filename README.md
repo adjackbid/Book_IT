@@ -4,13 +4,19 @@
 
 ### [Oracle User Define Type\(UDT\)](oracle-db/oracle-user-define-type-udt.md) 
 
+C\#呼叫Oracel Procedure或Function時，如何使用自定義的類別傳入
+
 ## 2020.02.06
 
 ### [Crystal Report - Label Printing](wang-ye-ji-shu/crystal-report-label-printing.md)
 
+C\#利用Crystal Report建立標籤範本並列印標籤
+
 ## 2020.01.06
 
 ### [Oracle Toad Tips](oracle-toad.md)
+
+Oracle Toad中幾個常見，但很少人知道的功能
 
 ## 2020.01.02
 
@@ -22,9 +28,13 @@
 
 ### [ASP.Net WebForm + Serilog](open-source/serilog-and-datalust-seq.md#asp-net-webform-serilog)
 
+ASP.Net WebForm自己實作Serilog範例
+
 ## 2019.12.25
 
 ### [Open Source - Serilog & Datalust Seq](open-source/serilog-and-datalust-seq.md)
+
+好用的Log套件使用說明及管理平台
 
 ## 2019.11.18
 
@@ -46,32 +56,29 @@
 
 ## 2019.11.05
 
-### Added
+### [SignalR - Chat Room\(ASP.Net Core Demo\)](wang-ye-ji-shu/signalr/)
 
-* [SignalR - ChatRoom \(ASP.Net Core Demo\)](wang-ye-ji-shu/signalr/chatroom.md)
-* [ASP.Net Core - IIS Deployment](wang-ye-ji-shu/asp.net-core/iis-deployment.md)
+### [ASP.Net Core - IIS Deployment](wang-ye-ji-shu/asp.net-core/iis-deployment.md)
 
 ## 2019.10.30
 
-### Added
-
-* [Visual Studio - 多重選取](kai-fa-gong-ju/visual-studio/duo-zhong-xuan-qu.md)
+### [Visual Studio - 多重選取](kai-fa-gong-ju/visual-studio/duo-zhong-xuan-qu.md)
 
 ## 2019.10.28
 
-### Added
+### [Nuget Package建立](ban-ben-kong-guan-liu-cheng/nuget/nuget-package-jian-li.md)
 
-* [Nuget Package建立](ban-ben-kong-guan-liu-cheng/nuget/nuget-package-jian-li.md)
-* [Nuget Package發佈](ban-ben-kong-guan-liu-cheng/nuget/nuget-package-fa-bu.md)
-* [Nuget Package安裝](ban-ben-kong-guan-liu-cheng/nuget/nuget-package-an-zhuang.md)
-* [Demo-相依性](ban-ben-kong-guan-liu-cheng/nuget/demo-xiang-yi-xing.md)
-* [Demo-版控](ban-ben-kong-guan-liu-cheng/nuget/demo-ban-kong.md)
+### [Nuget Package發佈](ban-ben-kong-guan-liu-cheng/nuget/nuget-package-fa-bu.md)
+
+### [Nuget Package安裝](ban-ben-kong-guan-liu-cheng/nuget/nuget-package-an-zhuang.md)
+
+### [Nuget Demo相依性](ban-ben-kong-guan-liu-cheng/nuget/demo-xiang-yi-xing.md)
+
+### [Nuget Demo版控流程](ban-ben-kong-guan-liu-cheng/nuget/demo-ban-kong.md)
 
 ## 2019.10.25
 
-### Added
-
-* [Nuget Server建置說明](ban-ben-kong-guan-liu-cheng/nuget/nuget-server-jian-zhi.md)
+### [Nuget Server建置說明](ban-ben-kong-guan-liu-cheng/nuget/)
 
 
 

@@ -8,13 +8,13 @@ description: ASP.Net Core搭配SignalR示範ChatRoom功能
 
 建立ASP.Net Core Web應用程式
 
-![](../../.gitbook/assets/image%20%28210%29.png)
+![](../../.gitbook/assets/image%20%28211%29.png)
 
-![](../../.gitbook/assets/image%20%2883%29.png)
+![](../../.gitbook/assets/image%20%2884%29.png)
 
 選擇Web應用程式
 
-![](../../.gitbook/assets/image%20%28108%29.png)
+![](../../.gitbook/assets/image%20%28109%29.png)
 
 ## 新增用戶端程式庫
 
@@ -28,9 +28,9 @@ description: ASP.Net Core搭配SignalR示範ChatRoom功能
 
 安裝 =&gt; 將signalr.js安裝至專案根目錄wwwroot/lib/@microsoft/signalr中
 
-![](../../.gitbook/assets/image%20%28388%29.png)
+![](../../.gitbook/assets/image%20%28389%29.png)
 
-![](../../.gitbook/assets/image%20%28264%29.png)
+![](../../.gitbook/assets/image%20%28265%29.png)
 
 ## Hub建立
 
@@ -38,7 +38,7 @@ description: ASP.Net Core搭配SignalR示範ChatRoom功能
 
 建立ChatHub類別
 
-![](../../.gitbook/assets/image%20%28323%29.png)
+![](../../.gitbook/assets/image%20%28324%29.png)
 
 ```csharp
 using Microsoft.AspNetCore.SignalR;
@@ -60,7 +60,7 @@ namespace ChatRoom.Hubs
 
 Index頁面，新增2個input\(text\)、1個button、訊息列\(messagelist\)
 
-![](../../.gitbook/assets/image%20%28275%29.png)
+![](../../.gitbook/assets/image%20%28276%29.png)
 
 ```aspnet
 @page
@@ -97,7 +97,7 @@ Index頁面，新增2個input\(text\)、1個button、訊息列\(messagelist\)
 
 新增chat.js \(~/js/目錄下\)
 
-![](../../.gitbook/assets/image%20%28365%29.png)
+![](../../.gitbook/assets/image%20%28366%29.png)
 
 chat.js
 
@@ -135,7 +135,7 @@ document.getElementById("sendButton").addEventListener("click", function (event)
 
 將signalr.js copy至js資料下 \(從lib\@microsoft\signalr\dist\browser\)
 
-![](../../.gitbook/assets/image%20%28230%29.png)
+![](../../.gitbook/assets/image%20%28231%29.png)
 
 ## 服務DI注入
 
@@ -143,7 +143,7 @@ Startup.cs中將SignalR注入 \(ConfigureService Method中\)
 
 並設定Endpoint
 
-![](../../.gitbook/assets/image%20%28141%29.png)
+![](../../.gitbook/assets/image%20%28142%29.png)
 
 ```csharp
 using System;
@@ -211,7 +211,7 @@ namespace ChatRoom
 
 Debug Mode，開啟兩個視窗即可測試SignalR即時回應功能
 
-![](../../.gitbook/assets/image%20%28435%29.png)
+![](../../.gitbook/assets/image%20%28436%29.png)
 
 以上參考微軟官方Demo範例\([https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/signalr?view=aspnetcore-3.0&tabs=visual-studio](https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/signalr?view=aspnetcore-3.0&tabs=visual-studio)\)
 
@@ -219,7 +219,7 @@ Debug Mode，開啟兩個視窗即可測試SignalR即時回應功能
 
 UI調整\(Index.cshtml\) 新增連線Button、目前人數Label
 
-![](../../.gitbook/assets/image%20%28221%29.png)
+![](../../.gitbook/assets/image%20%28222%29.png)
 
 ```aspnet
 @page
@@ -267,7 +267,7 @@ chat.js修改
 
 connectToHub物件加入Click EvenListener：按下連線Button後，才進行連線、調整計數器
 
-![](../../.gitbook/assets/image%20%2830%29.png)
+![](../../.gitbook/assets/image%20%2831%29.png)
 
 chat.js
 
@@ -389,5 +389,5 @@ namespace ChatRoom.Hubs
 
 註：測試時，若chat.js沒有重新載入修改後的版本\(因為有catch\)，可按Ctrl+F5即會重新載入js檔
 
-![](../../.gitbook/assets/image%20%28237%29.png)
+![](../../.gitbook/assets/image%20%28238%29.png)
 
