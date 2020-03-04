@@ -18,17 +18,17 @@ View → Toad Options → Editor - Auto Replacement
 
 輸入完sfr按下空格鍵後
 
-![](.gitbook/assets/image%20%28393%29.png)
+![](.gitbook/assets/image%20%28394%29.png)
 
 將依設定自動取代成select \* from
 
-![](.gitbook/assets/image%20%28401%29.png)
+![](.gitbook/assets/image%20%28402%29.png)
 
 常用的情境為有些欄位很長，而且很常打，可以把它設成Auto Replace，例如交易時間\(TransactionTime\)
 
 可以設定成tst
 
-![](.gitbook/assets/image%20%28478%29.png)
+![](.gitbook/assets/image%20%28479%29.png)
 
 ![](.gitbook/assets/image%20%28232%29.png)
 
@@ -42,9 +42,9 @@ Toad有類似Code Snippets功能，可以將常用的程式碼片段包裝成Cod
 
 View → Toad Options → Behavior - Code templates
 
-![](.gitbook/assets/image%20%28399%29.png)
+![](.gitbook/assets/image%20%28400%29.png)
 
-![](.gitbook/assets/image%20%28336%29.png)
+![](.gitbook/assets/image%20%28337%29.png)
 
 點選Add
 
@@ -56,13 +56,13 @@ View → Toad Options → Behavior - Code templates
 
 新增完後，點選該簡碼並在下方空白處，新增寫入對應的Code，其中變數可以用&加變數名稱
 
-![](.gitbook/assets/image%20%28367%29.png)
+![](.gitbook/assets/image%20%28368%29.png)
 
 建立完成後，需調整Code Template呼叫的熱鍵 \(因為預設為Ctrl + Space 會與輸入法切換相衝\)
 
 View → Toad Options → Editor - Behavior - Key mapping
 
-![](.gitbook/assets/image%20%28409%29.png)
+![](.gitbook/assets/image%20%28410%29.png)
 
 找到Code templates popup，將Primary由Ctrl + Space改成想要的熱鍵\(例如Ctrl + Q\)
 
@@ -76,7 +76,7 @@ View → Toad Options → Editor - Behavior - Key mapping
 
 ![](.gitbook/assets/image%20%28180%29.png)
 
-![](.gitbook/assets/image%20%28380%29.png)
+![](.gitbook/assets/image%20%28381%29.png)
 
 部門內應用：可以將部門內常用的Code Template建立好，在匯出成檔案，讓其它人匯入，即可讓新進人員快速上手
 

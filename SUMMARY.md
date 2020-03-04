@@ -35,6 +35,7 @@
 * [Oracle PL/SQL](oracle-db/README.md)
   * [PL/SQL Block](oracle-db/pl-sql-block.md)
   * [Oracle User Define Type \(UDT\)](oracle-db/oracle-user-define-type-udt.md)
+  * [DataTypes](oracle-db/datatypes.md)
 * [Oracle Client](oracle-client.md)
 
 ## Open Source

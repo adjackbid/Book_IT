@@ -10,7 +10,7 @@ Visual Studio中工具→選項→環境→鍵盤
 
 找到「編輯.插入下一步相符的游標」後，設定如下圖紅框，熱鍵可自行決定，按下指定即可
 
-![](../../.gitbook/assets/image%20%28359%29.png)
+![](../../.gitbook/assets/image%20%28360%29.png)
 
 ## 功能說明
 
@@ -20,11 +20,11 @@ Visual Studio中工具→選項→環境→鍵盤
 
 選取需要修改的值，例如test
 
-![](../../.gitbook/assets/image%20%28331%29.png)
+![](../../.gitbook/assets/image%20%28332%29.png)
 
 按鍵功能熱鍵\(例如：Ctrl + D\)。Visual Studio會再選取可視範圍內相同名稱的值\(每按一次\)
 
-![](../../.gitbook/assets/image%20%28270%29.png)
+![](../../.gitbook/assets/image%20%28271%29.png)
 
 連按五次，即可選取全部需要修改的值
 
@@ -32,5 +32,5 @@ Visual Studio中工具→選項→環境→鍵盤
 
 此時輸入任何值時，會直接修改全部選取的項目
 
-![](../../.gitbook/assets/image%20%28382%29.png)
+![](../../.gitbook/assets/image%20%28383%29.png)
 
