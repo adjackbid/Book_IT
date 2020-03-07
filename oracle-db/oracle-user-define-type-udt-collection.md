@@ -86,69 +86,75 @@ C\#：使用自定義的Oracle Collection型別，同樣要實作IOracleCustomTy
 
 ```csharp
 public class PersonListDto : IOracleCustomType
+{
+    [OracleArrayMapping()]
+    public PersonDto[] PersonDtos;
+
+    public void FromCustomObject(OracleConnection con, IntPtr pUdt)
     {
-        [OracleArrayMapping()]
-        public PersonDto[] PersonDtos;
+        OracleUdt.SetValue(con, pUdt, 0, PersonDtos);
+    }
 
-        public void FromCustomObject(OracleConnection con, IntPtr pUdt)
+    public void ToCustomObject(OracleConnection con, IntPtr pUdt)
+    {
+        PersonDtos = (PersonDto[])OracleUdt.GetValue(con, pUdt, 0);
+    }
+
+    [OracleCustomTypeMapping("PERSON_LIST")]
+    public class PersonListFactory : IOracleCustomTypeFactory, IOracleArrayTypeFactory
+    {
+        public IOracleCustomType CreateObject()
         {
-            OracleUdt.SetValue(con, pUdt, 0, PersonDtos);
+            return new PersonListDto();
         }
 
-        public void ToCustomObject(OracleConnection con, IntPtr pUdt)
+        public Array CreateArray(int numElems)
         {
-            PersonDtos = (PersonDto[])OracleUdt.GetValue(con, pUdt, 0);
+            return new PersonDto[numElems];
         }
 
-        [OracleCustomTypeMapping("PERSON_LIST")]
-        public class PersonListFactory : IOracleCustomTypeFactory, IOracleArrayTypeFactory
+        public Array CreateStatusArray(int numElems)
         {
-            public IOracleCustomType CreateObject()
-            {
-                return new PersonListDto();
-            }
-
-            public Array CreateArray(int numElems)
-            {
-                return new PersonDto[numElems];
-            }
-
-            public Array CreateStatusArray(int numElems)
-            {
-                return null;
-            }
+            return null;
         }
     }
+}
 ```
 
 傳入參數OracleDbType需選擇Array
 
 ```csharp
-using (OracleCommand cmd = new OracleCommand("PTEST2", conn))
+using (OracleConnection conn = new OracleConnection(sConnStr))
 {
-    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-    PersonListDto p = new PersonListDto();
-    PersonDto[] p_array = new PersonDto[] { new PersonDto() {NAME="a",AGE=1 },
-                                            new PersonDto() { NAME = "b",AGE=2 } };
-    p.PersonDtos = p_array;
-
-    OracleParameter p1 = new OracleParameter();
-    p1.OracleDbType = OracleDbType.Array;
-    p1.Direction = System.Data.ParameterDirection.Input;
-    p1.UdtTypeName = "PERSON_LIST";
-    p1.Value = p;
-    p1.IsNullable = false;
-    p1.ParameterName = "P";
-    cmd.Parameters.Add(p1);
-
-    OracleParameter pr = new OracleParameter();
-    pr.OracleDbType = OracleDbType.NVarchar2;
-    pr.Direction = System.Data.ParameterDirection.Output;
-    pr.Size = 100;
-    cmd.Parameters.Add(pr);
-    cmd.ExecuteNonQuery();
-    sResult = (string)(OracleString)cmd.Parameters[1].Value;
+    conn.Open();
+    using (OracleCommand cmd = new OracleCommand("PTEST2", conn))
+    {
+        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+    
+        PersonListDto p = new PersonListDto();
+        
+        //兩筆測試資料
+        PersonDto[] p_array = new PersonDto[] { new PersonDto() {NAME="a",AGE=1 },
+                                                new PersonDto() { NAME = "b",AGE=2 } };
+        p.PersonDtos = p_array;
+    
+        OracleParameter p1 = new OracleParameter();
+        p1.OracleDbType = OracleDbType.Array;
+        p1.Direction = System.Data.ParameterDirection.Input;
+        p1.UdtTypeName = "PERSON_LIST";
+        p1.Value = p;
+        p1.IsNullable = false;
+        p1.ParameterName = "P";
+        cmd.Parameters.Add(p1);
+    
+        OracleParameter pr = new OracleParameter();
+        pr.OracleDbType = OracleDbType.NVarchar2;
+        pr.Direction = System.Data.ParameterDirection.Output;
+        pr.Size = 100;
+        cmd.Parameters.Add(pr);
+        cmd.ExecuteNonQuery();
+        sResult = (string)(OracleString)cmd.Parameters[1].Value;
+    }
 }
 ```
 
