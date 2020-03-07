@@ -22,6 +22,8 @@
 * [ASP.Net Core](wang-ye-ji-shu/asp.net-core/README.md)
   * [IIS Deployment](wang-ye-ji-shu/asp.net-core/iis-deployment.md)
 * [Crystal Report - Label Printing](wang-ye-ji-shu/crystal-report-label-printing.md)
+* [Web API](wang-ye-ji-shu/web-api/README.md)
+  * [Auto Dispatch Web API](wang-ye-ji-shu/web-api/auto-dispatch-web-api.md)
 
 ## 開發工具
 

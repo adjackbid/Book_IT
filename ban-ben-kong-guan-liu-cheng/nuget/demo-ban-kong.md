@@ -2,7 +2,7 @@
 
 一般大型程式，通常會引用多個外部元件，例如以下範例程式，參考了DBTools.dll、LogTool.dll
 
-![](../../.gitbook/assets/image%20%28406%29.png)
+![](../../.gitbook/assets/image%20%28407%29.png)
 
 ![](../../.gitbook/assets/image%20%2842%29.png)
 
@@ -18,11 +18,11 @@
 
 ![](../../.gitbook/assets/image%20%28123%29.png)
 
-![](../../.gitbook/assets/image%20%28487%29.png)
+![](../../.gitbook/assets/image%20%28488%29.png)
 
 第一次專案開啟後，會出現參考遺失的警告
 
-![](../../.gitbook/assets/image%20%28478%29.png)
+![](../../.gitbook/assets/image%20%28479%29.png)
 
 重新建置專案後，Visual Studio會依照packages.config中設定去Nuget Server抓取對應套件、版本並安裝至專案中。
 
@@ -34,11 +34,11 @@
 
 當Nuget套件更新版本時，Nuget解決方案頁面亦會出現更新項目
 
-![](../../.gitbook/assets/image%20%28315%29.png)
+![](../../.gitbook/assets/image%20%28316%29.png)
 
 點選安裝即可完成更版。
 
 此版控程式，搭配CI/CD \(Jenkins等DevOps工具\)可有效管理/更新dll檔使用及避免用錯版本問題
 
-![](../../.gitbook/assets/image%20%28399%29.png)
+![](../../.gitbook/assets/image%20%28400%29.png)
 

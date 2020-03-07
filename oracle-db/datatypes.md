@@ -57,7 +57,7 @@ BEGIN
 END;
 ```
 
-![](../.gitbook/assets/image%20%28425%29.png)
+![](../.gitbook/assets/image%20%28426%29.png)
 
 ### COLLECTION
 
