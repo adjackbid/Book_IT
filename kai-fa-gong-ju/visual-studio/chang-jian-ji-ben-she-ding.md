@@ -4,19 +4,19 @@
 
 ## 取消起始頁
 
-![](../../.gitbook/assets/image%20%28352%29.png)
+![](../../.gitbook/assets/image%20%28353%29.png)
 
-![](../../.gitbook/assets/image%20%28386%29.png)
+![](../../.gitbook/assets/image%20%28387%29.png)
 
-![](../../.gitbook/assets/image%20%28295%29.png)
+![](../../.gitbook/assets/image%20%28296%29.png)
 
 ## 字型設定
 
-![](../../.gitbook/assets/image%20%28281%29.png)
+![](../../.gitbook/assets/image%20%28282%29.png)
 
-![](../../.gitbook/assets/image%20%28477%29.png)
+![](../../.gitbook/assets/image%20%28478%29.png)
 
 
 
-![](../../.gitbook/assets/image%20%28211%29.png)
+![](../../.gitbook/assets/image%20%28212%29.png)
 

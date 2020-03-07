@@ -1,5 +1,11 @@
 # Index
 
+## 2020.03.08
+
+### [Oracle User Define Type\(UDT\) - Collection](oracle-db/oracle-user-define-type-udt-collection.md)
+
+C\#呼叫Oracle Procedure時，如果需要傳入多筆自定義的類別之實作方法
+
 ## 2020.03.07
 
 ### [Auto Dispatch Web API](wang-ye-ji-shu/web-api/auto-dispatch-web-api.md)
