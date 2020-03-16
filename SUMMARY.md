@@ -35,6 +35,7 @@
 
 * [Oracle Toad Tips](oracle-toad.md)
 * [Oracle PL/SQL](oracle-db/README.md)
+  * [常用查詢](oracle-db/chang-yong-cha-xun.md)
   * [PL/SQL Block](oracle-db/pl-sql-block.md)
   * [DataTypes](oracle-db/datatypes.md)
   * [Oracle User Define Type \(UDT\)](oracle-db/oracle-user-define-type-udt.md)
