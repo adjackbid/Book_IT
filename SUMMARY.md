@@ -24,6 +24,8 @@
 * [Crystal Report - Label Printing](wang-ye-ji-shu/crystal-report-label-printing.md)
 * [Web API](wang-ye-ji-shu/web-api/README.md)
   * [Auto Dispatch Web API](wang-ye-ji-shu/web-api/auto-dispatch-web-api.md)
+* [Blazor](wang-ye-ji-shu/blazor/README.md)
+  * [CH1](wang-ye-ji-shu/blazor/ch1.md)
 
 ## 開發工具
 
