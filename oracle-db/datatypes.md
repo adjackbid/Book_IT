@@ -26,7 +26,7 @@ v_test NVARCHAR2(100) := N'測試';
 
 註：不加也不會發生什麼事…
 
-![](../.gitbook/assets/image%20%28271%29.png)
+![](../.gitbook/assets/image%20%28275%29.png)
 
 ## Composite DataTypes
 
@@ -57,7 +57,7 @@ BEGIN
 END;
 ```
 
-![](../.gitbook/assets/image%20%28433%29.png)
+![](../.gitbook/assets/image%20%28443%29.png)
 
 ### COLLECTION
 
