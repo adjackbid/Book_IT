@@ -18,7 +18,7 @@ Windows可以接直在Microsoft商店中直接下載安裝
 
 開啟後，點選「Create a new package」
 
-![](../../.gitbook/assets/image%20%28447%29.png)
+![](../../.gitbook/assets/image%20%28448%29.png)
 
 在Package metadata區塊中，可以編輯套件的資訊\(名稱、版本、作者、相依性\)
 
@@ -48,9 +48,9 @@ Windows可以接直在Microsoft商店中直接下載安裝
 
 ![](../../.gitbook/assets/image%20%2872%29.png)
 
-![&#x8A3B;&#xFF1A;.pdb&#x6A94;&#x53EF;&#x8996;&#x60C5;&#x6CC1;&#x52A0;&#x5165;&#xFF0C;&#x5176;&#x53EF;&#x8B93;&#x4F7F;&#x7528;&#x7AEF;debug tracing&#x7528;](../../.gitbook/assets/image%20%28239%29.png)
+![&#x8A3B;&#xFF1A;.pdb&#x6A94;&#x53EF;&#x8996;&#x60C5;&#x6CC1;&#x52A0;&#x5165;&#xFF0C;&#x5176;&#x53EF;&#x8B93;&#x4F7F;&#x7528;&#x7AEF;debug tracing&#x7528;](../../.gitbook/assets/image%20%28240%29.png)
 
-![](../../.gitbook/assets/image%20%28339%29.png)
+![](../../.gitbook/assets/image%20%28340%29.png)
 
 加入完成後，在存檔前，可以先用工具分析Package是否有設定問題
 
@@ -60,13 +60,13 @@ Tools→Analyze Packge
 
 Package Analysis出現無任何問題，即可存檔
 
-![](../../.gitbook/assets/image%20%28351%29.png)
+![](../../.gitbook/assets/image%20%28352%29.png)
 
 File→Save As
 
 ![](../../.gitbook/assets/image%20%2816%29.png)
 
-![](../../.gitbook/assets/image%20%28225%29.png)
+![](../../.gitbook/assets/image%20%28226%29.png)
 
 後續將產生的.nupkg檔發佈至Nuget Server上即可使用
 

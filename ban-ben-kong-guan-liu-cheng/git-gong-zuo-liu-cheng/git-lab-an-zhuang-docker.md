@@ -18,7 +18,7 @@ cmd中輸入
 docker pull gitlab/gitlab-ce
 ```
 
-![](../../.gitbook/assets/image%20%28369%29.png)
+![](../../.gitbook/assets/image%20%28370%29.png)
 
 建立Container
 
@@ -31,17 +31,17 @@ docker run -d -p 443:443 -p 8080:80 -p 22:22 --name gitlab
 
 測試：http://localhost:8080
 
-![](../../.gitbook/assets/image%20%28356%29.png)
+![](../../.gitbook/assets/image%20%28357%29.png)
 
 1到2分鐘後，再點一次icon
 
 輸入密碼
 
-![](../../.gitbook/assets/image%20%28437%29.png)
+![](../../.gitbook/assets/image%20%28438%29.png)
 
 登入號帳為root
 
-![](../../.gitbook/assets/image%20%28205%29.png)
+![](../../.gitbook/assets/image%20%28206%29.png)
 
 登入後，即可以新增帳號
 
