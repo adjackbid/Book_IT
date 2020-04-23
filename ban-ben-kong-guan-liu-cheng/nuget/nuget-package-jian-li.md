@@ -18,7 +18,7 @@ Windows可以接直在Microsoft商店中直接下載安裝
 
 開啟後，點選「Create a new package」
 
-![](../../.gitbook/assets/image%20%28448%29.png)
+![](../../.gitbook/assets/image%20%28451%29.png)
 
 在Package metadata區塊中，可以編輯套件的資訊\(名稱、版本、作者、相依性\)
 
@@ -60,7 +60,7 @@ Tools→Analyze Packge
 
 Package Analysis出現無任何問題，即可存檔
 
-![](../../.gitbook/assets/image%20%28352%29.png)
+![](../../.gitbook/assets/image%20%28353%29.png)
 
 File→Save As
 

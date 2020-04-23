@@ -17,13 +17,13 @@ VS2017/VS2019建立ASP網頁應用程式\(空白\)
 
 ![](../../.gitbook/assets/image%20%2876%29.png)
 
-![](../../.gitbook/assets/image%20%28490%29.png)
+![](../../.gitbook/assets/image%20%28493%29.png)
 
 ![](../../.gitbook/assets/image%20%28326%29.png)
 
 安裝Nuget.Server套件 \(工具=&gt;Nuget套件管理員=&gt;管理方案的Nuget套件\)
 
-![](../../.gitbook/assets/image%20%28371%29.png)
+![](../../.gitbook/assets/image%20%28374%29.png)
 
 輸入Nuget.Server
 
@@ -31,7 +31,7 @@ VS2017/VS2019建立ASP網頁應用程式\(空白\)
 
 點選安裝
 
-![](../../.gitbook/assets/image%20%28454%29.png)
+![](../../.gitbook/assets/image%20%28457%29.png)
 
 安裝完畢，Nuget Server物件將自動產生如下：
 
@@ -41,7 +41,7 @@ VS2017/VS2019建立ASP網頁應用程式\(空白\)
 
 ![](../../.gitbook/assets/image%20%2880%29.png)
 
-![](../../.gitbook/assets/image%20%28464%29.png)
+![](../../.gitbook/assets/image%20%28467%29.png)
 
 註：需將NugetServer根目錄下Packages資料權限進行調整
 

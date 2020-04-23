@@ -12,11 +12,11 @@ Tesseract OCR是一個開源OCR Opensource，可針對各國語言進行OCR
 
 限制：該程式無法將相關參數拋送
 
-![](../.gitbook/assets/image%20%28362%29.png)
+![](../.gitbook/assets/image%20%28363%29.png)
 
 作法：在此限制下，執行概念如下
 
-![](../.gitbook/assets/image%20%28492%29.png)
+![](../.gitbook/assets/image%20%28495%29.png)
 
 ## 2. Develop
 
@@ -46,7 +46,7 @@ Visual Studio \(2017/2019\)建立新專案
 
 ![](../.gitbook/assets/image%20%28150%29.png)
 
-![](../.gitbook/assets/image%20%28429%29.png)
+![](../.gitbook/assets/image%20%28432%29.png)
 
 畫面左方中加入一個Button - Load Image：為了選取圖片來源
 
@@ -60,7 +60,7 @@ Visual Studio \(2017/2019\)建立新專案
 
 Button LoadImage Click事件處理
 
-![](../.gitbook/assets/image%20%28505%29.png)
+![](../.gitbook/assets/image%20%28508%29.png)
 
 開啟FileDialog，並限制可選擇的副檔名為bmp / jpg / png
 
@@ -174,7 +174,7 @@ Button LoadImage Click事件處理
 
 測試OK，可以依照選取的位置進行框選動作
 
-![](../.gitbook/assets/image%20%28361%29.png)
+![](../.gitbook/assets/image%20%28362%29.png)
 
 為方便顯示座標位置，新增一個richtextbox
 
@@ -232,7 +232,7 @@ Mouse事件處理：框選位置\(pLeftUpper、pRightDown要Reset\)、Refresh\(\
 
 測試可以正常顯示座標位置
 
-![](../.gitbook/assets/image%20%28483%29.png)
+![](../.gitbook/assets/image%20%28486%29.png)
 
 新增方法ReportAllLocation方法顯示左上、右下座標並在Mouse UP事件中呼叫此方法\(Mouse Up為框選結束時間點\)
 
@@ -310,11 +310,11 @@ Mouse事件處理：框選位置\(pLeftUpper、pRightDown要Reset\)、Refresh\(\
         }
 ```
 
-![](../.gitbook/assets/image%20%28406%29.png)
+![](../.gitbook/assets/image%20%28409%29.png)
 
 解決座標問題後，接著新增DataGridView，以顯示、記錄每一個框選的Label名稱、座標資料
 
-![](../.gitbook/assets/image%20%28353%29.png)
+![](../.gitbook/assets/image%20%28354%29.png)
 
 新增DataTable dtLabels並指定GridView的DataSource為dtLabels
 
@@ -326,7 +326,7 @@ Mouse事件處理：框選位置\(pLeftUpper、pRightDown要Reset\)、Refresh\(\
 
 Label輸入新增Enter事件處理 - ttbLabel\_KeyDown
 
-![](../.gitbook/assets/image%20%28373%29.png)
+![](../.gitbook/assets/image%20%28376%29.png)
 
 因需取得實際在圖片上的座標位置\(非ui上的\)，因此需Call GetActualLocation\(\)
 
@@ -376,15 +376,15 @@ Label輸入新增Enter事件處理 - ttbLabel\_KeyDown
 
 新增GetTagged Image Button
 
-![](../.gitbook/assets/image%20%28390%29.png)
+![](../.gitbook/assets/image%20%28393%29.png)
 
 為了方便顯示Tagged的圖片，因此在gvLabel中新增Image欄位\(為了顯示圖片\)
 
-![](../.gitbook/assets/image%20%28502%29.png)
+![](../.gitbook/assets/image%20%28505%29.png)
 
 ImageLayout要調整為Zoom
 
-![](../.gitbook/assets/image%20%28431%29.png)
+![](../.gitbook/assets/image%20%28434%29.png)
 
 為了進行影像處理，使AForge.Imaging套件，進行圖片處理
 
@@ -392,7 +392,7 @@ ImageLayout要調整為Zoom
 
 新增ImageProcessHelper類別，裡面實作AForge方法
 
-![](../.gitbook/assets/image%20%28465%29.png)
+![](../.gitbook/assets/image%20%28468%29.png)
 
 因為需要將圖片中特定位置截取圖片，新增Crop方法
 
@@ -408,7 +408,7 @@ GetTaggedImage Click事件，宣告告ImageHelper，針對每一個Tag好的座�
 
 測試框選兩個位欄位，按下GetTaggetImage前，圖示為空
 
-![](../.gitbook/assets/image%20%28447%29.png)
+![](../.gitbook/assets/image%20%28450%29.png)
 
 點選Get Tagged Image後，將圖片顯示在image欄位中
 
@@ -422,7 +422,7 @@ GetTaggedImage Click事件，宣告告ImageHelper，針對每一個Tag好的座�
 
 新增幾個圖片前處理動作
 
-![](../.gitbook/assets/image%20%28363%29.png)
+![](../.gitbook/assets/image%20%28366%29.png)
 
 ```csharp
  private void btnGetTaggedImage_Click(object sender, EventArgs e)
@@ -667,11 +667,11 @@ namespace TesseractDemo
 
 ![](../.gitbook/assets/image%20%28111%29.png)
 
-![](../.gitbook/assets/image%20%28379%29.png)
+![](../.gitbook/assets/image%20%28382%29.png)
 
 ![](../.gitbook/assets/image%20%28181%29.png)
 
-![](../.gitbook/assets/image%20%28491%29.png)
+![](../.gitbook/assets/image%20%28494%29.png)
 
 ![](../.gitbook/assets/image%20%28207%29.png)
 
@@ -755,15 +755,15 @@ namespace TesseractDemo
 
 ![](../.gitbook/assets/image%20%28314%29.png)
 
-![](../.gitbook/assets/image%20%28380%29.png)
+![](../.gitbook/assets/image%20%28383%29.png)
 
 ![](../.gitbook/assets/image%20%28139%29.png)
 
-![](../.gitbook/assets/image%20%28347%29.png)
+![](../.gitbook/assets/image%20%28348%29.png)
 
 ![](../.gitbook/assets/image%20%28186%29.png)
 
-![](../.gitbook/assets/image%20%28350%29.png)
+![](../.gitbook/assets/image%20%28351%29.png)
 
 ![](../.gitbook/assets/image%20%28168%29.png)
 
@@ -922,7 +922,7 @@ private async Task ImagePreProcessAsync()
 
 ![](../.gitbook/assets/image%20%282%29.png)
 
-![](../.gitbook/assets/image%20%28407%29.png)
+![](../.gitbook/assets/image%20%28410%29.png)
 
 ![](../.gitbook/assets/image%20%2841%29.png)
 
@@ -983,7 +983,7 @@ private async Task ImagePreProcessAsync()
 
 ![](../.gitbook/assets/image%20%2857%29.png)
 
-![](../.gitbook/assets/image%20%28498%29.png)
+![](../.gitbook/assets/image%20%28501%29.png)
 
 ![](../.gitbook/assets/image%20%28107%29.png)
 

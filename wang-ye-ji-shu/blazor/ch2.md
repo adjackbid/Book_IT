@@ -1,6 +1,6 @@
 # CH2
 
-![](../../.gitbook/assets/image%20%28441%29.png)
+![](../../.gitbook/assets/image%20%28444%29.png)
 
 ![](../../.gitbook/assets/image%20%28125%29.png)
 
@@ -12,7 +12,7 @@
 
 
 
-![](../../.gitbook/assets/image%20%28474%29.png)
+![](../../.gitbook/assets/image%20%28477%29.png)
 
 ```csharp
 <h3>MyNotes</h3>
@@ -44,7 +44,7 @@
 
 ![](../../.gitbook/assets/image%20%28232%29.png)
 
-![](../../.gitbook/assets/image%20%28389%29.png)
+![](../../.gitbook/assets/image%20%28392%29.png)
 
 ![](../../.gitbook/assets/image%20%28324%29.png)
 
@@ -58,11 +58,11 @@
 
 
 
-![](../../.gitbook/assets/image%20%28459%29.png)
+![](../../.gitbook/assets/image%20%28462%29.png)
 
 ## 2-2
 
-![](../../.gitbook/assets/image%20%28467%29.png)
+![](../../.gitbook/assets/image%20%28470%29.png)
 
 ```aspnet
 @*透過route方式*@
@@ -124,7 +124,7 @@
 
 ```
 
-![](../../.gitbook/assets/image%20%28378%29.png)
+![](../../.gitbook/assets/image%20%28381%29.png)
 
 
 

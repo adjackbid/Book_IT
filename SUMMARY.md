@@ -28,6 +28,7 @@
   * [CH1](wang-ye-ji-shu/blazor/ch1.md)
   * [CH2](wang-ye-ji-shu/blazor/ch2.md)
   * [CH3](wang-ye-ji-shu/blazor/ch3.md)
+  * [CH4](wang-ye-ji-shu/blazor/ch4.md)
 
 ## 開發工具
 
