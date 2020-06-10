@@ -12,17 +12,17 @@ Tesseract OCR是一個開源OCR Opensource，可針對各國語言進行OCR
 
 限制：該程式無法將相關參數拋送
 
-![](../.gitbook/assets/image%20%28363%29.png)
+![](../.gitbook/assets/image%20%28324%29%20%281%29.png)
 
 作法：在此限制下，執行概念如下
 
-![](../.gitbook/assets/image%20%28495%29.png)
+![](../.gitbook/assets/image%20%28345%29.png)
 
 ## 2. Develop
 
 方便示意，假設機台程式UI如下，需要抓取的值為紅框所示
 
-![](../.gitbook/assets/image%20%2875%29.png)
+![](../.gitbook/assets/image%20%2850%29.png)
 
 To Do List：
 
@@ -44,23 +44,23 @@ Visual Studio \(2017/2019\)建立新專案
 
 選擇Windows Forms APP \(.Net Framework\)
 
-![](../.gitbook/assets/image%20%28150%29.png)
+![](../.gitbook/assets/image%20%28106%29.png)
 
-![](../.gitbook/assets/image%20%28432%29.png)
+![](../.gitbook/assets/image%20%28300%29.png)
 
 畫面左方中加入一個Button - Load Image：為了選取圖片來源
 
-![](../.gitbook/assets/image%20%2846%29.png)
+![](../.gitbook/assets/image%20%2825%29.png)
 
 畫面右方新增一個pictureBox：顯示圖片用，因為圖片大小可能不會等於PictureBox大小，所以Size Mode要選擇Zoom，讓程式自動縮放圖片
 
-![](../.gitbook/assets/image%20%28325%29.png)
+![](../.gitbook/assets/image%20%28227%29.png)
 
-![](../.gitbook/assets/image%20%28238%29.png)
+![](../.gitbook/assets/image%20%28164%29.png)
 
 Button LoadImage Click事件處理
 
-![](../.gitbook/assets/image%20%28508%29.png)
+![](../.gitbook/assets/image%20%28353%29.png)
 
 開啟FileDialog，並限制可選擇的副檔名為bmp / jpg / png
 
@@ -101,7 +101,7 @@ Button LoadImage Click事件處理
 
 測試點選Button Load Image，可以成功跳出檔案選擇視窗
 
-![](../.gitbook/assets/image%20%28343%29.png)
+![](../.gitbook/assets/image%20%28238%29.png)
 
 選取檔案後，顯示在右方pictureBox中
 
@@ -109,15 +109,15 @@ Button LoadImage Click事件處理
 
 
 
-![](../.gitbook/assets/image%20%28191%29.png)
+![](../.gitbook/assets/image%20%28133%29%20%281%29.png)
 
 接著為了要做到讓使用者框選一個區塊的功能\(例如小畫家中的框選功能\)
 
-![](../.gitbook/assets/image%20%2867%29.png)
+![](../.gitbook/assets/image%20%2843%29%20%281%29.png)
 
 針對PictureBox1中的Mouse Down / Up / Move事件進行處理，並新增幾個變數紀錄需要的座標\(開始座標\(左上XY\)、結束座標\(右下XY\)\)
 
-![](../.gitbook/assets/image%20%28237%29.png)
+![](../.gitbook/assets/image%20%28163%29.png)
 
 其中Refresh\(\)可以觸發整個FORM重新繪製，因此搭配pictureBox1的Paint事件可以將紅框畫出
 
@@ -168,17 +168,17 @@ Button LoadImage Click事件處理
         }
 ```
 
-![](../.gitbook/assets/image%20%2884%29.png)
+![](../.gitbook/assets/image%20%2858%29.png)
 
 ## 
 
 測試OK，可以依照選取的位置進行框選動作
 
-![](../.gitbook/assets/image%20%28362%29.png)
+![](../.gitbook/assets/image%20%28250%29.png)
 
 為方便顯示座標位置，新增一個richtextbox
 
-![](../.gitbook/assets/image%20%28166%29.png)
+![](../.gitbook/assets/image%20%28120%29.png)
 
 加入方法回報座標\(傳入point\)並在mouse down / up / move事件中呼叫回報方法\(ReportLocation\)
 
@@ -232,7 +232,7 @@ Mouse事件處理：框選位置\(pLeftUpper、pRightDown要Reset\)、Refresh\(\
 
 測試可以正常顯示座標位置
 
-![](../.gitbook/assets/image%20%28486%29.png)
+![](../.gitbook/assets/image%20%28338%29.png)
 
 新增方法ReportAllLocation方法顯示左上、右下座標並在Mouse UP事件中呼叫此方法\(Mouse Up為框選結束時間點\)
 
@@ -259,13 +259,13 @@ Mouse事件處理：框選位置\(pLeftUpper、pRightDown要Reset\)、Refresh\(\
 
 測試正常
 
-![](../.gitbook/assets/image%20%28272%29.png)
+![](../.gitbook/assets/image%20%28192%29.png)
 
 因為PictureBox是整個右半邊，因此X,Y起始點會在藍色標記位置，但圖片因為等比例縮放關係，不會對齊左上角，圖片的X、Y起始位置應為綠色框選位置
 
-![](../.gitbook/assets/image%20%28143%29.png)
+![](../.gitbook/assets/image%20%28100%29.png)
 
-![](../.gitbook/assets/image%20%28101%29.png)
+![](../.gitbook/assets/image%20%2869%29.png)
 
 為了解決縮放問題，新增GetActualLocation方法，以取得圖片中真實位置
 
@@ -310,23 +310,23 @@ Mouse事件處理：框選位置\(pLeftUpper、pRightDown要Reset\)、Refresh\(\
         }
 ```
 
-![](../.gitbook/assets/image%20%28409%29.png)
+![](../.gitbook/assets/image%20%28281%29%20%282%29.png)
 
 解決座標問題後，接著新增DataGridView，以顯示、記錄每一個框選的Label名稱、座標資料
 
-![](../.gitbook/assets/image%20%28354%29.png)
+![](../.gitbook/assets/image%20%28277%29.png)
 
 新增DataTable dtLabels並指定GridView的DataSource為dtLabels
 
-![](../.gitbook/assets/image%20%28302%29.png)
+![](../.gitbook/assets/image%20%28216%29%20%281%29.png)
 
 
 
-![](../.gitbook/assets/image%20%28160%29.png)
+![](../.gitbook/assets/image%20%28125%29%20%282%29.png)
 
 Label輸入新增Enter事件處理 - ttbLabel\_KeyDown
 
-![](../.gitbook/assets/image%20%28376%29.png)
+![](../.gitbook/assets/image%20%28293%29.png)
 
 因需取得實際在圖片上的座標位置\(非ui上的\)，因此需Call GetActualLocation\(\)
 
@@ -367,7 +367,7 @@ Label輸入新增Enter事件處理 - ttbLabel\_KeyDown
         }
 ```
 
-![](../.gitbook/assets/image%20%28312%29.png)
+![](../.gitbook/assets/image%20%28248%29%20%281%29.png)
 
 ### 2-2. Image preprocess
 
@@ -376,53 +376,53 @@ Label輸入新增Enter事件處理 - ttbLabel\_KeyDown
 
 新增GetTagged Image Button
 
-![](../.gitbook/assets/image%20%28393%29.png)
+![](../.gitbook/assets/image%20%28314%29.png)
 
 為了方便顯示Tagged的圖片，因此在gvLabel中新增Image欄位\(為了顯示圖片\)
 
-![](../.gitbook/assets/image%20%28505%29.png)
+![](../.gitbook/assets/image%20%28405%29.png)
 
 ImageLayout要調整為Zoom
 
-![](../.gitbook/assets/image%20%28434%29.png)
+![](../.gitbook/assets/image%20%28349%29.png)
 
 為了進行影像處理，使AForge.Imaging套件，進行圖片處理
 
-![](../.gitbook/assets/image%20%2836%29.png)
+![](../.gitbook/assets/image%20%2824%29.png)
 
 新增ImageProcessHelper類別，裡面實作AForge方法
 
-![](../.gitbook/assets/image%20%28468%29.png)
+![](../.gitbook/assets/image%20%28377%29%20%282%29.png)
 
 因為需要將圖片中特定位置截取圖片，新增Crop方法
 
-![](../.gitbook/assets/image%20%28116%29.png)
+![](../.gitbook/assets/image%20%2891%29.png)
 
 dtLabels新增IMAGE欄位，以記錄圖片
 
-![](../.gitbook/assets/image%20%28241%29.png)
+![](../.gitbook/assets/image%20%28190%29.png)
 
 GetTaggedImage Click事件，宣告告ImageHelper，針對每一個Tag好的座標進行Crop動作並存入IMAGE欄位
 
-![](../.gitbook/assets/image%20%28317%29.png)
+![](../.gitbook/assets/image%20%28258%29.png)
 
 測試框選兩個位欄位，按下GetTaggetImage前，圖示為空
 
-![](../.gitbook/assets/image%20%28450%29.png)
+![](../.gitbook/assets/image%20%28362%29.png)
 
 點選Get Tagged Image後，將圖片顯示在image欄位中
 
-![](../.gitbook/assets/image%20%28306%29.png)
+![](../.gitbook/assets/image%20%28248%29.png)
 
 在進行ocr前，針對圖片需要進行特別的前處理，一般最常見為放大、灰階、絕對黑白，以增加辨示度\(因為ocr model訓練時，通常是用絕對黑白或灰階圖片進行訓練\)
 
 新增img資料夾
 
-![](../.gitbook/assets/image%20%28255%29.png)
+![](../.gitbook/assets/image%20%28219%29.png)
 
 新增幾個圖片前處理動作
 
-![](../.gitbook/assets/image%20%28366%29.png)
+![](../.gitbook/assets/image%20%28311%29.png)
 
 ```csharp
  private void btnGetTaggedImage_Click(object sender, EventArgs e)
@@ -565,11 +565,11 @@ namespace TesseractDemo
 
 在專案中點選Nuget套件管理，查詢Tesseract，選擇Tesseract套件進行安裝
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image%20%282%29%20%281%29.png)
 
 安裝完套件後，會新增x64、x84資料夾\(包含OCR Engine\)、Tesseract.dll
 
-![](../.gitbook/assets/image%20%28331%29.png)
+![](../.gitbook/assets/image%20%28285%29.png)
 
 下載訓練好的OCR Model
 
@@ -577,17 +577,17 @@ namespace TesseractDemo
 
 選擇English語言的Model
 
-![](../.gitbook/assets/image%20%28171%29.png)
+![](../.gitbook/assets/image%20%28149%29.png)
 
-![](../.gitbook/assets/image%20%2813%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 下載完成後，專案執行檔根目錄下，建立tessdata資料夾\(名稱一定要是tessdata\)，將下載的檔案中eng.traineddata放在該資料下
 
-![](../.gitbook/assets/image%20%28228%29.png)
+![](../.gitbook/assets/image%20%28194%29%20%281%29.png)
 
 建立OCRHelper類別
 
-![](../.gitbook/assets/image%20%28123%29.png)
+![](../.gitbook/assets/image%20%28108%29.png)
 
 在OCRHelper類別中，建立一個STATIC方法\(這樣才不需要new OCRHelper物件就可以直接使用該方法\)
 
@@ -641,21 +641,21 @@ namespace TesseractDemo
 
 ```
 
-![](../.gitbook/assets/image%20%2877%29.png)
+![](../.gitbook/assets/image%20%2867%29.png)
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%285%29.png)
 
 
 
-![](../.gitbook/assets/image%20%2862%29.png)
+![](../.gitbook/assets/image%20%2853%29.png)
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%287%29.png)
 
-![](../.gitbook/assets/image%20%28176%29.png)
+![](../.gitbook/assets/image%20%28154%29.png)
 
-![](../.gitbook/assets/image%20%28129%29.png)
+![](../.gitbook/assets/image%20%28113%29.png)
 
-![](../.gitbook/assets/image%20%28248%29.png)
+![](../.gitbook/assets/image%20%28212%29.png)
 
 
 
@@ -665,17 +665,17 @@ namespace TesseractDemo
 
 
 
-![](../.gitbook/assets/image%20%28111%29.png)
+![](../.gitbook/assets/image%20%28101%29.png)
 
-![](../.gitbook/assets/image%20%28382%29.png)
+![](../.gitbook/assets/image%20%28339%29.png)
 
-![](../.gitbook/assets/image%20%28181%29.png)
+![](../.gitbook/assets/image%20%28165%29.png)
 
-![](../.gitbook/assets/image%20%28494%29.png)
+![](../.gitbook/assets/image%20%28436%29.png)
 
-![](../.gitbook/assets/image%20%28207%29.png)
+![](../.gitbook/assets/image%20%28187%29.png)
 
-![](../.gitbook/assets/image%20%2844%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 
 
@@ -741,31 +741,31 @@ namespace TesseractDemo
         }
 ```
 
-![](../.gitbook/assets/image%20%2895%29.png)
+![](../.gitbook/assets/image%20%2887%29.png)
 
 ### 3.2 框選問題1 - Zoom In/Out
 
-![](../.gitbook/assets/image%20%28337%29.png)
+![](../.gitbook/assets/image%20%28302%29.png)
 
-![](../.gitbook/assets/image%20%28322%29.png)
+![](../.gitbook/assets/image%20%28289%29.png)
 
 
 
-![](../.gitbook/assets/image%20%28215%29.png)
+![](../.gitbook/assets/image%20%28194%29.png)
 
-![](../.gitbook/assets/image%20%28314%29.png)
+![](../.gitbook/assets/image%20%28283%29.png)
 
-![](../.gitbook/assets/image%20%28383%29.png)
+![](../.gitbook/assets/image%20%28340%29.png)
 
-![](../.gitbook/assets/image%20%28139%29.png)
+![](../.gitbook/assets/image%20%28133%29.png)
 
-![](../.gitbook/assets/image%20%28348%29.png)
+![](../.gitbook/assets/image%20%28323%29.png)
 
-![](../.gitbook/assets/image%20%28186%29.png)
+![](../.gitbook/assets/image%20%28177%29.png)
 
-![](../.gitbook/assets/image%20%28351%29.png)
+![](../.gitbook/assets/image%20%28326%29.png)
 
-![](../.gitbook/assets/image%20%28168%29.png)
+![](../.gitbook/assets/image%20%28161%29.png)
 
 ### 3.3 圖片處理 - 非同步
 
@@ -922,9 +922,9 @@ private async Task ImagePreProcessAsync()
 
 ![](../.gitbook/assets/image%20%282%29.png)
 
-![](../.gitbook/assets/image%20%28410%29.png)
+![](../.gitbook/assets/image%20%28376%29.png)
 
-![](../.gitbook/assets/image%20%2841%29.png)
+![](../.gitbook/assets/image%20%2839%29.png)
 
 ```csharp
         public Bitmap Invert(Bitmap img)
@@ -981,11 +981,11 @@ private async Task ImagePreProcessAsync()
         }
 ```
 
-![](../.gitbook/assets/image%20%2857%29.png)
+![](../.gitbook/assets/image%20%2854%29.png)
 
-![](../.gitbook/assets/image%20%28501%29.png)
+![](../.gitbook/assets/image%20%28457%29.png)
 
-![](../.gitbook/assets/image%20%28107%29.png)
+![](../.gitbook/assets/image%20%28102%29%20%281%29.png)
 
 
 

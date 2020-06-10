@@ -131,7 +131,7 @@ Example： 傳入
 
 測試\(PostMan\)：
 
-![](../../.gitbook/assets/image%20%28318%29.png)
+![](../../.gitbook/assets/image%20%28308%29.png)
 
 完整程式碼：[github](https://github.com/adjackbid/DispatchWebAPI)
 

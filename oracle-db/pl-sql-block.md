@@ -43,9 +43,9 @@ END;
 
 呼叫Procedure可以使用Exec或自定義Block後執行整段SQL
 
-![](../.gitbook/assets/image%20%28492%29.png)
+![](../.gitbook/assets/image%20%28466%29.png)
 
-![](../.gitbook/assets/image%20%28104%29.png)
+![](../.gitbook/assets/image%20%28102%29.png)
 
 ## Function
 
@@ -60,7 +60,7 @@ END;
 
 Function可以在選取欄位中使用，例如：
 
-![](../.gitbook/assets/image%20%28503%29.png)
+![](../.gitbook/assets/image%20%28477%29%20%281%29.png)
 
 或是WHERE條件中使用
 
@@ -79,9 +79,9 @@ SELECT F_SUM_AB(&A,&B)
 
 執行時，就會跳出變數輸入對話框，決定A、B變數
 
-![](../.gitbook/assets/image%20%28496%29.png)
+![](../.gitbook/assets/image%20%28470%29%20%281%29.png)
 
 輸入完後，就會帶入該變數
 
-![](../.gitbook/assets/image%20%28397%29.png)
+![](../.gitbook/assets/image%20%28377%29.png)
 

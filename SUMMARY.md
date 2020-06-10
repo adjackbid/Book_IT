@@ -5,6 +5,7 @@
 ## 程式碼控管相關 <a id="ban-ben-kong-guan-liu-cheng"></a>
 
 * [Git](ban-ben-kong-guan-liu-cheng/git-gong-zuo-liu-cheng/README.md)
+  * [GitHub 只下載特定資料夾](ban-ben-kong-guan-liu-cheng/git-gong-zuo-liu-cheng/github-zhi-xia-zai-te-ding-zi-liao-ga.md)
   * [Git Lab安裝\(Docker\)](ban-ben-kong-guan-liu-cheng/git-gong-zuo-liu-cheng/git-lab-an-zhuang-docker.md)
 * [Nuget](ban-ben-kong-guan-liu-cheng/nuget/README.md)
   * [Nuget Server建置](ban-ben-kong-guan-liu-cheng/nuget/nuget-server-jian-zhi.md)
