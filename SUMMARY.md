@@ -41,6 +41,8 @@
 
 ## 資料庫相關
 
+---
+
 * [Oracle Toad Tips](oracle-toad.md)
 * [Oracle PL/SQL](oracle-db/README.md)
   * [常用查詢](oracle-db/chang-yong-cha-xun.md)
@@ -49,6 +51,7 @@
   * [Oracle User Define Type \(UDT\)](oracle-db/oracle-user-define-type-udt.md)
   * [Oracle User Define Type \(UDT\) - Collection](oracle-db/oracle-user-define-type-udt-collection.md)
 * [Oracle Client](oracle-client.md)
+* [Oracle Grant](oracle-grant.md)
 
 ## Open Source
 
