@@ -30,7 +30,7 @@ Func可以被Invoke
             Console.WriteLine(result);
 ```
 
-![](../../.gitbook/assets/image%20%28295%29.png)
+![](../../.gitbook/assets/image%20%28297%29.png)
 
 
 
@@ -56,7 +56,7 @@ LIST中每一個元件會INVOKE FUNC \(t=&gt; t.Length &gt; 0\) 並回傳string
 
 使用expression tres 案例
 
-![](../../.gitbook/assets/image%20%28294%29.png)
+![](../../.gitbook/assets/image%20%28295%29.png)
 
 expression tree是一種表示式，執行時 entity framework會透過expression tree特性
 
@@ -70,7 +70,7 @@ expression tree是一種表示式，執行時 entity framework會透過expressio
 
 
 
-![](../../.gitbook/assets/image%20%28292%29.png)
+![](../../.gitbook/assets/image%20%28294%29.png)
 
 ![](../../.gitbook/assets/image%20%28286%29.png)
 
@@ -80,5 +80,5 @@ expression tree是一種表示式，執行時 entity framework會透過expressio
 
 
 
-![](../../.gitbook/assets/image%20%28290%29.png)
+![](../../.gitbook/assets/image%20%28292%29.png)
 
