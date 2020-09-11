@@ -71,19 +71,19 @@ description: 在 Blazor 專案內呼叫 JavaScript 程式碼 1
 
 
 
-![](../../.gitbook/assets/image%20%28358%29.png)
+![](../../.gitbook/assets/image%20%28366%29.png)
 
 
 
-![](../../.gitbook/assets/image%20%28356%29.png)
+![](../../.gitbook/assets/image%20%28360%29.png)
 
 
 
-![](../../.gitbook/assets/image%20%28334%29.png)
+![](../../.gitbook/assets/image%20%28335%29.png)
 
 
 
-![](../../.gitbook/assets/image%20%28369%29.png)
+![](../../.gitbook/assets/image%20%28375%29.png)
 
 注入JSRuntime\(執行JS用\)
 
@@ -277,13 +277,13 @@ description: 在 Blazor 專案內呼叫 JavaScript 程式碼 1
 
 
 
-![](../../.gitbook/assets/image%20%28350%29.png)
-
 ![](../../.gitbook/assets/image%20%28351%29.png)
 
-![](../../.gitbook/assets/image%20%28368%29.png)
+![](../../.gitbook/assets/image%20%28352%29.png)
 
-![](../../.gitbook/assets/image%20%28361%29.png)
+![](../../.gitbook/assets/image%20%28374%29.png)
+
+![](../../.gitbook/assets/image%20%28368%29.png)
 
 using，減少重覆USING，在import中加入
 
@@ -293,11 +293,11 @@ using，減少重覆USING，在import中加入
 
 POP MODAL放在app.razor中，\(每一頁都可以使用\)
 
-![](../../.gitbook/assets/image%20%28360%29.png)
+![](../../.gitbook/assets/image%20%28367%29.png)
 
 新增CSS USING
 
-![](../../.gitbook/assets/image%20%28367%29.png)
+![](../../.gitbook/assets/image%20%28373%29.png)
 
 using Js
 
@@ -357,7 +357,7 @@ using Js
 
 ```
 
-![](../../.gitbook/assets/image%20%28337%29.png)
+![](../../.gitbook/assets/image%20%28341%29.png)
 
 ```csharp
 @inject IModalService ModalService
@@ -402,7 +402,7 @@ using Js
 
 
 
-![](../../.gitbook/assets/image%20%28348%29.png)
+![](../../.gitbook/assets/image%20%28350%29.png)
 
 
 

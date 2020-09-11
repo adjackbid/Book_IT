@@ -18,11 +18,11 @@ define json prop name
 
 
 
-![](../../.gitbook/assets/image%20%28341%29.png)
+![](../../.gitbook/assets/image%20%28342%29.png)
 
 
 
-![](../../.gitbook/assets/image%20%28374%29.png)
+![](../../.gitbook/assets/image%20%28380%29.png)
 
 controller
 
@@ -89,5 +89,5 @@ namespace BlazorAppTest.Controllers
 
 test
 
-![](../../.gitbook/assets/image%20%28352%29.png)
+![](../../.gitbook/assets/image%20%28355%29.png)
 
