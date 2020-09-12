@@ -29,6 +29,7 @@
 * [Web API](wang-ye-ji-shu/web-api/README.md)
   * [Auto Dispatch Web API](wang-ye-ji-shu/web-api/auto-dispatch-web-api.md)
 * [Blazor](wang-ye-ji-shu/blazor/README.md)
+  * [使用者身分驗證](wang-ye-ji-shu/blazor/shi-yong-zhe-shen-fen-yan-zheng.md)
   * [CH8](wang-ye-ji-shu/blazor/ch8.md)
   * [CH7](wang-ye-ji-shu/blazor/ch7.md)
   * [CH6](wang-ye-ji-shu/blazor/ch6.md)
