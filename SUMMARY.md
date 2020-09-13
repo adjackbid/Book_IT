@@ -20,6 +20,8 @@
 * [C\#](wang-ye-ji-shu/c/README.md)
   * [Untitled](wang-ye-ji-shu/c/untitled.md)
   * [Var 隱含型別](wang-ye-ji-shu/c/var-yin-han-xing-bie.md)
+* [Winform - 使用者控制項](wang-ye-ji-shu/winform-shi-yong-zhe-kong-zhi-xiang.md)
+* [Winfrom - 自訂UI](wang-ye-ji-shu/winfrom-zi-ding-ui.md)
 * [SignalR](wang-ye-ji-shu/signalr/README.md)
   * [ChatRoom](wang-ye-ji-shu/signalr/chatroom.md)
   * [DashBoard](wang-ye-ji-shu/signalr/dashboard.md)
