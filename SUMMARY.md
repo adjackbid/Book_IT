@@ -51,6 +51,7 @@
   * [Nuget](kai-fa-gong-ju/visual-studio/nuget.md)
   * [Visual Studio擴充套件](kai-fa-gong-ju/visual-studio/visual-studio-kuo-chong-tao-jian.md)
   * [Code Snippet](kai-fa-gong-ju/visual-studio/code-snippet.md)
+  * [程式碼搭配工具箱使用](kai-fa-gong-ju/visual-studio/cheng-shi-ma-da-pei-gong-ju-xiang-shi-yong.md)
 
 ## 資料庫相關
 
