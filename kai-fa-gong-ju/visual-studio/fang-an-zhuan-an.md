@@ -20,7 +20,7 @@
 
 ![](../../.gitbook/assets/image%20%28452%29.png)
 
-![](../../.gitbook/assets/image%20%28487%29.png)
+![](../../.gitbook/assets/image%20%28488%29.png)
 
 在專案中新增檔案時，除了新增的檔案會被git認定為新檔案，同時專案檔也會被修改\(因為檔案清單變化了\)
 
