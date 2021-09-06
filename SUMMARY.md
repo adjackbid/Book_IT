@@ -48,6 +48,8 @@
   * [常見基本設定](kai-fa-gong-ju/visual-studio/chang-jian-ji-ben-she-ding.md)
   * [多重選取](kai-fa-gong-ju/visual-studio/duo-zhong-xuan-qu.md)
   * [方案 & 專案](kai-fa-gong-ju/visual-studio/fang-an-zhuan-an.md)
+  * [Nuget](kai-fa-gong-ju/visual-studio/nuget.md)
+  * [Visual Studio擴充套件](kai-fa-gong-ju/visual-studio/visual-studio-kuo-chong-tao-jian.md)
 
 ## 資料庫相關
 
