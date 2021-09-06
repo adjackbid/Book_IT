@@ -47,6 +47,7 @@
 * [Visual Studio](kai-fa-gong-ju/visual-studio/README.md)
   * [常見基本設定](kai-fa-gong-ju/visual-studio/chang-jian-ji-ben-she-ding.md)
   * [多重選取](kai-fa-gong-ju/visual-studio/duo-zhong-xuan-qu.md)
+  * [方案 & 專案](kai-fa-gong-ju/visual-studio/fang-an-zhuan-an.md)
 
 ## 資料庫相關
 
