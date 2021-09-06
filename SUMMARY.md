@@ -50,6 +50,7 @@
   * [方案 & 專案](kai-fa-gong-ju/visual-studio/fang-an-zhuan-an.md)
   * [Nuget](kai-fa-gong-ju/visual-studio/nuget.md)
   * [Visual Studio擴充套件](kai-fa-gong-ju/visual-studio/visual-studio-kuo-chong-tao-jian.md)
+  * [Code Snippet](kai-fa-gong-ju/visual-studio/code-snippet.md)
 
 ## 資料庫相關
 
