@@ -53,6 +53,7 @@
   * [Code Snippet](kai-fa-gong-ju/visual-studio/code-snippet.md)
   * [程式碼搭配工具箱使用](kai-fa-gong-ju/visual-studio/cheng-shi-ma-da-pei-gong-ju-xiang-shi-yong.md)
   * [快速移至特定檔案](kai-fa-gong-ju/visual-studio/kuai-su-yi-zhi-te-ding-dang-an.md)
+  * [C\# Interactive](kai-fa-gong-ju/visual-studio/c-interactive.md)
 
 ## 資料庫相關
 
