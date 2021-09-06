@@ -8,5 +8,5 @@
 
 ![](../../.gitbook/assets/image%20%28467%29.png)
 
-![](../../.gitbook/assets/image%20%28476%29.png)
+![](../../.gitbook/assets/image%20%28479%29.png)
 

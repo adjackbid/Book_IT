@@ -8,7 +8,7 @@
 
 因此一般建議安裝擴充套件 - Snippet Designer為常見的簡易使用工具
 
-![](../../.gitbook/assets/image%20%28471%29.png)
+![](../../.gitbook/assets/image%20%28472%29.png)
 
 例如以下，for回圈，若要建立快速簡碼時，可在程式碼處，按下右鍵
 

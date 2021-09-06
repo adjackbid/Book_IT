@@ -8,7 +8,7 @@
 
 檔案打開後，可以發現內容為包含的所有專案設定
 
-![](../../.gitbook/assets/image%20%28473%29.png)
+![](../../.gitbook/assets/image%20%28476%29.png)
 
 ## 專案\(Project\)
 
@@ -20,9 +20,9 @@
 
 ![](../../.gitbook/assets/image%20%28452%29.png)
 
-![](../../.gitbook/assets/image%20%28480%29.png)
+![](../../.gitbook/assets/image%20%28483%29.png)
 
 在專案中新增檔案時，除了新增的檔案會被git認定為新檔案，同時專案檔也會被修改\(因為檔案清單變化了\)
 
-![](../../.gitbook/assets/image%20%28472%29.png)
+![](../../.gitbook/assets/image%20%28475%29.png)
 
