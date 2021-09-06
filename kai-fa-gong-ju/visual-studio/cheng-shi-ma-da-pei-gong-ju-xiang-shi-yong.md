@@ -6,7 +6,7 @@ Code Snippet可以用簡碼達到快速產生程式功能
 
 做法為：框選程式碼，直接拉到工具箱中即可
 
-![](../../.gitbook/assets/image%20%28483%29.png)
+![](../../.gitbook/assets/image%20%28484%29.png)
 
 
 
